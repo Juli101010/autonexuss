@@ -1054,3 +1054,83 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Toda investigación de oportunidades debe pasar por QA antes de contacto externo.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-055
+
+- ID: TASK-055
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear módulo de auto-mejora controlada para Autonexus OS
+- Tipo: sistema interno + auto-mejora + gobierno
+- Objeto de trabajo: scripts/autonexus_self_improve.ps1
+- Agente sugerido: Agente PM + Agente Automatizaciones + Agente QA
+- Skill sugerido: Orquestación de Agentes + QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Módulo de auto-mejora controlada creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede proponer, aprobar y aplicar mejoras internas con control de Dirección.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-056
+
+- ID: TASK-056
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Proponer auto-mejora: MEJORA-001
+- Tipo: auto-mejora + propuesta
+- Objeto de trabajo: .\output\mejoras\mejora_mejora_001.md
+- Agente sugerido: Agente PM + Agente QA + Agente Automatizaciones
+- Skill sugerido: Orquestación de Agentes + QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Propuesta de auto-mejora creada
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede proponer mejoras internas sin aplicarlas automáticamente.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-057
+
+- ID: TASK-057
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Aprobar auto-mejora: MEJORA-001
+- Tipo: auto-mejora + aprobación
+- Objeto de trabajo: .\output\mejoras\mejora_mejora_001.json
+- Agente sugerido: Agente PM + Agente QA + Agente Automatizaciones
+- Skill sugerido: Orquestación de Agentes + QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Auto-mejora aprobada por Dirección
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Las mejoras internas requieren aprobación antes de aplicarse.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-058
+
+- ID: TASK-058
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Aplicar auto-mejora: MEJORA-001
+- Tipo: auto-mejora + aplicación controlada
+- Objeto de trabajo: .\brain\governance\applied_improvements.md
+- Agente sugerido: Agente PM + Agente QA + Agente Automatizaciones
+- Skill sugerido: Orquestación de Agentes + QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Auto-mejora aplicada con control de Dirección
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede aplicar mejoras internas aprobadas y dejar trazabilidad.
+- Actualización de grafo: Registrar evento asociado a la tarea.

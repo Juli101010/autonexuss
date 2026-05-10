@@ -1,0 +1,18 @@
+﻿{
+    "id":  "MEJORA-001",
+    "status":  "applied",
+    "created_at":  "2026-05-10 02:45:15",
+    "requested_by":  "Direccion",
+    "category":  "agentes",
+    "request":  "Permitir que Autonexus OS proponga cambios en agentes, skills, rutas, pipelines y políticas internas, manteniendo siempre aprobación de Dirección.",
+    "requires_direction_approval":  true,
+    "risk":  "medio",
+    "can_apply_automatically":  true,
+    "affected_areas":  [
+                           "brain/governance",
+                           "scripts",
+                           "TASKS.md",
+                           "graph/events.json"
+                       ],
+    "rollback":  "usar git revert del commit aplicado"
+}

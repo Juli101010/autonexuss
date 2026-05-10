@@ -1,0 +1,35 @@
+﻿{
+    "version":  "0.1",
+    "owner":  "Direccion",
+    "principio":  "Autonexus OS puede proponer y aplicar mejoras internas solo con aprobacion de Direccion.",
+    "direccion_controla":  true,
+    "requiere_aprobacion_para":  [
+                                     "crear nuevos agentes",
+                                     "crear nuevos skills",
+                                     "modificar politicas internas",
+                                     "cambiar permisos internos",
+                                     "activar automatizaciones",
+                                     "conectar credenciales",
+                                     "publicar contenido externo",
+                                     "enviar mensajes a clientes",
+                                     "tocar sistemas productivos"
+                                 ],
+    "puede_auto_proponer":  [
+                                "nuevos agentes",
+                                "nuevos skills",
+                                "nuevos pipelines",
+                                "mejoras de panel",
+                                "mejoras de QA",
+                                "mejoras de documentacion",
+                                "mejoras de rutas",
+                                "cambios de restricciones internas"
+                            ],
+    "modo_yolo":  {
+                      "permitido":  false,
+                      "descripcion":  "Solo puede existir como modo controlado, con alcance limitado, evidencia y aprobacion de Direccion."
+                  },
+    "rollback":  {
+                     "obligatorio":  true,
+                     "mecanismo":  "Git commit antes y despues de cada cambio relevante."
+                 }
+}
