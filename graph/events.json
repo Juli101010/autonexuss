@@ -124,5 +124,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "El router clasifica tareas según palabras clave y detecta casos mixtos.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_009",
+        "timestamp":  "2026-05-10T04:57:19.6483067Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-009",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Primera propuesta base Odoo creada como borrador interno",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "El sistema ya puede pasar de registrar una tarea a producir un entregable base.",
+        "final_responsible":  "direccion"
     }
 ]

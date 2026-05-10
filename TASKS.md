@@ -193,3 +193,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El router clasifica tareas según palabras clave y detecta casos mixtos.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-009
+
+- ID: TASK-009
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Ejecutar TASK-008 creando la primera propuesta base Odoo y el flujo interno de propuesta comercial Odoo
+- Tipo: comercial + Odoo
+- Objeto de trabajo: output/propuestas/propuesta_base_odoo.md
+- Agente sugerido: Agente Comercial + Agente Odoo + Agente QA
+- Skill sugerido: Propuesta Cliente + Auditoría Odoo + QA Preproducción
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Primera propuesta base Odoo creada como borrador interno
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema ya puede pasar de registrar una tarea a producir un entregable base.
+- Actualización de grafo: Registrar evento asociado a la tarea.
