@@ -1,0 +1,53 @@
+﻿{
+  "version": "0.1",
+  "agentes": [
+    {
+      "id": "direccion",
+      "nombre": "Dirección",
+      "rol": "Observa, decide, aprueba, rechaza y bloquea acciones sensibles.",
+      "permiso_maximo": 5
+    },
+    {
+      "id": "agente_pm",
+      "nombre": "Agente PM",
+      "rol": "Interpreta pedidos, clasifica tareas, decide ruta y coordina agentes.",
+      "permiso_maximo": 2
+    },
+    {
+      "id": "agente_comercial",
+      "nombre": "Agente Comercial",
+      "rol": "Crea propuestas, estructura argumentos comerciales y adapta entregables a clientes.",
+      "permiso_maximo": 2
+    },
+    {
+      "id": "agente_odoo",
+      "nombre": "Agente Odoo",
+      "rol": "Analiza necesidades Odoo, alcance técnico, módulos, riesgos y fases.",
+      "permiso_maximo": 2
+    },
+    {
+      "id": "agente_qa",
+      "nombre": "Agente QA",
+      "rol": "Revisa riesgos, calidad, permisos, entregabilidad y bloqueos.",
+      "permiso_maximo": 2
+    },
+    {
+      "id": "agente_documentador",
+      "nombre": "Agente Documentador",
+      "rol": "Guarda aprendizajes, reportes, procesos y memoria operativa.",
+      "permiso_maximo": 1
+    },
+    {
+      "id": "agente_automatizaciones",
+      "nombre": "Agente Automatizaciones",
+      "rol": "Diseña pipelines, scripts, hooks, n8n y automatizaciones futuras.",
+      "permiso_maximo": 3
+    },
+    {
+      "id": "agente_webdev",
+      "nombre": "Agente Web/Dev",
+      "rol": "Crea paneles, interfaces, scripts, dashboards y mejoras visuales.",
+      "permiso_maximo": 2
+    }
+  ]
+}

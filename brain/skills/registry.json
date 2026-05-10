@@ -1,0 +1,30 @@
+﻿{
+  "version": "0.1",
+  "skills": [
+    {
+      "id": "propuesta_cliente",
+      "nombre": "Propuesta Cliente",
+      "uso": "Convertir diagnóstico y necesidad en propuesta comercial."
+    },
+    {
+      "id": "auditoria_odoo",
+      "nombre": "Auditoría Odoo",
+      "uso": "Revisar alcance técnico, módulos, riesgos y fases Odoo."
+    },
+    {
+      "id": "qa_preproduccion",
+      "nombre": "QA Preproducción",
+      "uso": "Validar entregables antes de uso externo."
+    },
+    {
+      "id": "cierre_tarea",
+      "nombre": "Cierre de Tarea",
+      "uso": "Registrar resultado, aprendizaje y evento."
+    },
+    {
+      "id": "orquestacion_agentes",
+      "nombre": "Orquestación de Agentes",
+      "uso": "Simular conversación operativa y decisión de ruta."
+    }
+  ]
+}
