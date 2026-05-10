@@ -684,5 +684,47 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "Ninguna automatización debe activarse sin QA y aprobación.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_052",
+        "timestamp":  "2026-05-10T05:41:14.9929583Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-052",
+        "permission_level":  3,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Pipeline de investigación creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS necesita un módulo de investigación profunda separado de Odoo, documentos, web y automatizaciones.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_053",
+        "timestamp":  "2026-05-10T05:41:16.2373037Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-053",
+        "permission_level":  3,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Diseño de investigación profunda creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS puede preparar investigaciones y prospección con fuentes, queries, scoring y CSV base.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_054",
+        "timestamp":  "2026-05-10T05:41:16.8624353Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-054",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "QA de investigación generado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Toda investigación de oportunidades debe pasar por QA antes de contacto externo.",
+        "final_responsible":  "direccion"
     }
 ]

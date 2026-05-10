@@ -994,3 +994,63 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Ninguna automatización debe activarse sin QA y aprobación.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-052
+
+- ID: TASK-052
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear pipeline de investigación y prospección para oportunidades comerciales y scraping controlado
+- Tipo: sistema interno + investigación + prospección
+- Objeto de trabajo: scripts/autonexus_research.ps1
+- Agente sugerido: Agente PM + Agente Comercial + Agente Automatizaciones + Agente QA
+- Skill sugerido: Orquestación de Agentes + QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Pipeline de investigación creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS necesita un módulo de investigación profunda separado de Odoo, documentos, web y automatizaciones.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-053
+
+- ID: TASK-053
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Diseñar investigación/prospección: Oportunidades Odoo habla hispana
+- Tipo: investigación + prospección + scraping
+- Objeto de trabajo: .\output\investigacion\investigacion_oportunidades_odoo_habla_hispana.md
+- Agente sugerido: Agente PM + Agente Comercial + Agente Automatizaciones
+- Skill sugerido: Orquestación de Agentes + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Diseño de investigación profunda creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede preparar investigaciones y prospección con fuentes, queries, scoring y CSV base.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-054
+
+- ID: TASK-054
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA de investigación/prospección: Oportunidades Odoo habla hispana
+- Tipo: QA + investigación + prospección
+- Objeto de trabajo: .\output\reportes\qa_investigacion_oportunidades_odoo_habla_hispana.md
+- Agente sugerido: Agente QA + Agente PM
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: QA de investigación generado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Toda investigación de oportunidades debe pasar por QA antes de contacto externo.
+- Actualización de grafo: Registrar evento asociado a la tarea.
