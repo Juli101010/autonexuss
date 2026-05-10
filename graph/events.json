@@ -152,5 +152,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "Toda propuesta comercial Odoo debe pasar por QA antes de enviarse a un cliente real.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_011",
+        "timestamp":  "2026-05-10T05:00:41.3802082Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-011",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Plantilla comercial Odoo completa creada como base interna mejorada",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Las propuestas Odoo deben separar diagnóstico, fases, supuestos, exclusiones, riesgos y aprobación de Dirección.",
+        "final_responsible":  "direccion"
     }
 ]

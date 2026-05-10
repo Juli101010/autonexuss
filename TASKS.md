@@ -233,3 +233,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Toda propuesta comercial Odoo debe pasar por QA antes de enviarse a un cliente real.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-011
+
+- ID: TASK-011
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Mejorar la propuesta base Odoo creando una plantilla comercial completa con diagnóstico, fases, supuestos, exclusiones y entregables
+- Tipo: comercial + Odoo
+- Objeto de trabajo: output/propuestas/plantilla_propuesta_odoo_completa.md
+- Agente sugerido: Agente Comercial + Agente Odoo + Agente QA
+- Skill sugerido: Propuesta Cliente + Auditoría Odoo + QA Preproducción
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Plantilla comercial Odoo completa creada como base interna mejorada
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Las propuestas Odoo deben separar diagnóstico, fases, supuestos, exclusiones, riesgos y aprobación de Dirección.
+- Actualización de grafo: Registrar evento asociado a la tarea.
