@@ -1,0 +1,163 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autonexus OS · Panel Local</title>
+<style>
+:root {
+  --bg: #0b1020;
+  --panel: #121a2f;
+  --panel2: #17213b;
+  --text: #edf3ff;
+  --muted: #95a3b8;
+  --line: rgba(255,255,255,.12);
+  --accent: #66e4ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Segoe UI, Arial, sans-serif;
+  background: radial-gradient(circle at top left, rgba(102,228,255,.16), transparent 35%), var(--bg);
+  color: var(--text);
+}
+main { max-width: 1220px; margin: 0 auto; padding: 28px; }
+header {
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  border-radius: 24px;
+  margin-bottom: 18px;
+}
+h1 { margin: 0 0 8px; font-size: 30px; }
+h2 { margin: 0 0 14px; font-size: 19px; }
+p { color: var(--muted); margin: 0; line-height: 1.5; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+.card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 16px;
+}
+.metric b { font-size: 28px; display: block; margin-bottom: 4px; color: var(--accent); }
+.metric span { color: var(--muted); font-size: 13px; }
+section { margin: 18px 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+}
+th, td {
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  padding: 10px;
+  font-size: 13px;
+  vertical-align: top;
+}
+th { color: var(--accent); background: var(--panel2); }
+.muted { color: var(--muted); font-size: 12px; }
+.command {
+  background: #060913;
+  border: 1px solid var(--line);
+  padding: 14px;
+  border-radius: 16px;
+  color: #d7ecff;
+  overflow-x: auto;
+}
+@media(max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  main { padding: 16px; }
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Autonexus OS · Panel Local</h1>
+  <p>Estado generado el 2026-05-10 02:26:09. Este panel resume clientes, propuestas, reportes, scripts y eventos del sistema.</p>
+</header>
+
+<div class="grid">
+  <div class="card metric"><b>6</b><span>Clientes</span></div>
+  <div class="card metric"><b>2</b><span>Proyectos</span></div>
+  <div class="card metric"><b>3</b><span>Procesos</span></div>
+  <div class="card metric"><b>9</b><span>Propuestas</span></div>
+  <div class="card metric"><b>7</b><span>Reportes</span></div>
+  <div class="card metric"><b>11</b><span>Scripts</span></div>
+</div>
+
+<section class="card">
+  <h2>Comando principal</h2>
+  <div class="command">powershell -ExecutionPolicy Bypass -File .\scripts\autonexus_odoo.ps1 -Nombre "Cliente Demo" -TipoEmpresa "Empresa de servicios" -Necesidad "Ordenar CRM, ventas y propuestas"</div>
+</section>
+
+<section class="card">
+  <h2>Últimos clientes</h2>
+  <table>
+    <thead><tr><th>Archivo</th><th>Fecha</th><th>Ubicación</th></tr></thead>
+    <tbody><tr><td>cliente_ferreteria_san_martin.md</td><td>2026-05-10 02:22</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\brain\clientes</td></tr>
+<tr><td>cliente_empresa_demo_delta.md</td><td>2026-05-10 02:19</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\brain\clientes</td></tr>
+<tr><td>cliente_cliente_real_x.md</td><td>2026-05-10 02:16</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\brain\clientes</td></tr>
+<tr><td>cliente_empresa_demo_gamma.md</td><td>2026-05-10 02:14</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\brain\clientes</td></tr>
+<tr><td>cliente_empresa_demo_beta.md</td><td>2026-05-10 02:07</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\brain\clientes</td></tr>
+<tr><td>cliente_demo_distribuidora_alfa.md</td><td>2026-05-10 02:01</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\brain\clientes</td></tr></tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Últimas propuestas</h2>
+  <table>
+    <thead><tr><th>Archivo</th><th>Fecha</th><th>Ubicación</th></tr></thead>
+    <tbody><tr><td>propuesta_odoo_ferreteria_san_martin_generada.md</td><td>2026-05-10 02:22</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\propuestas</td></tr>
+<tr><td>propuesta_odoo_empresa_demo_delta_generada.md</td><td>2026-05-10 02:19</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\propuestas</td></tr>
+<tr><td>propuesta_odoo_cliente_real_x_generada.md</td><td>2026-05-10 02:16</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\propuestas</td></tr>
+<tr><td>propuesta_odoo_empresa_demo_gamma_generada.md</td><td>2026-05-10 02:14</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\propuestas</td></tr>
+<tr><td>propuesta_odoo_empresa_demo_beta_generada.md</td><td>2026-05-10 02:07</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\propuestas</td></tr>
+<tr><td>propuesta_odoo_distribuidora_alfa_generada.md</td><td>2026-05-10 02:05</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\propuestas</td></tr>
+<tr><td>propuesta_odoo_distribuidora_alfa.md</td><td>2026-05-10 02:01</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\propuestas</td></tr>
+<tr><td>plantilla_propuesta_odoo_completa.md</td><td>2026-05-10 02:00</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\propuestas</td></tr></tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Últimos reportes</h2>
+  <table>
+    <thead><tr><th>Archivo</th><th>Fecha</th><th>Ubicación</th></tr></thead>
+    <tbody><tr><td>estado_autonexus_os.md</td><td>2026-05-10 02:24</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\reportes</td></tr>
+<tr><td>qa_propuesta_odoo_ferreteria_san_martin_generada.md</td><td>2026-05-10 02:22</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\reportes</td></tr>
+<tr><td>qa_propuesta_odoo_empresa_demo_delta_generada.md</td><td>2026-05-10 02:19</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\reportes</td></tr>
+<tr><td>qa_propuesta_odoo_cliente_real_x_generada.md</td><td>2026-05-10 02:16</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\reportes</td></tr>
+<tr><td>qa_propuesta_odoo_empresa_demo_gamma_generada.md</td><td>2026-05-10 02:14</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\reportes</td></tr>
+<tr><td>qa_propuesta_odoo_empresa_demo_beta_generada.md</td><td>2026-05-10 02:09</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\reportes</td></tr>
+<tr><td>qa_propuesta_base_odoo.md</td><td>2026-05-10 01:58</td><td class='muted'>C:\Users\julia\OneDrive\Escritorio\AutonexusOS_v0_1\AutonexusOS_v0_1\output\reportes</td></tr></tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Últimos eventos del grafo</h2>
+  <table>
+    <thead><tr><th>ID</th><th>Acción</th><th>Objeto</th><th>Estado</th><th>Riesgo</th></tr></thead>
+    <tbody><tr><td>event_task_025</td><td>registrar_tarea</td><td>TASK-025</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_026</td><td>registrar_tarea</td><td>TASK-026</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_027</td><td>registrar_tarea</td><td>TASK-027</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_028</td><td>registrar_tarea</td><td>TASK-028</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_029</td><td>registrar_tarea</td><td>TASK-029</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_030</td><td>registrar_tarea</td><td>TASK-030</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_031</td><td>registrar_tarea</td><td>TASK-031</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_035</td><td>registrar_tarea</td><td>TASK-035</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_036</td><td>registrar_tarea</td><td>TASK-036</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_037</td><td>registrar_tarea</td><td>TASK-037</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_038</td><td>registrar_tarea</td><td>TASK-038</td><td>registrado</td><td>1</td></tr>
+<tr><td>event_task_039</td><td>registrar_tarea</td><td>TASK-039</td><td>registrado</td><td>1</td></tr></tbody>
+  </table>
+</section>
+
+</main>
+</body>
+</html>

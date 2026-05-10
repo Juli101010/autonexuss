@@ -516,5 +516,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "El sistema necesita reportes de estado para no depender de revisar archivos manualmente.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_040",
+        "timestamp":  "2026-05-10T05:26:10.6669941Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-040",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Panel HTML local creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "El sistema necesita una vista local para controlar clientes, propuestas, reportes y eventos.",
+        "final_responsible":  "direccion"
     }
 ]

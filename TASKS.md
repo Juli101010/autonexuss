@@ -754,3 +754,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El sistema necesita reportes de estado para no depender de revisar archivos manualmente.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-040
+
+- ID: TASK-040
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear panel HTML local de estado de Autonexus OS
+- Tipo: sistema interno + panel + control
+- Objeto de trabajo: ui/panel_autonexus.html
+- Agente sugerido: Agente PM + Agente Web/Dev + Agente Documentador
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Panel HTML local creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema necesita una vista local para controlar clientes, propuestas, reportes y eventos.
+- Actualización de grafo: Registrar evento asociado a la tarea.
