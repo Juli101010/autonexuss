@@ -110,5 +110,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "Cuando una tarea contiene intención comercial y técnica, debe asignarse a más de un agente.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_008",
+        "timestamp":  "2026-05-10T04:55:58.2173054Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-008",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Tarea clasificada y registrada por el router operativo",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "El router clasifica tareas según palabras clave y detecta casos mixtos.",
+        "final_responsible":  "direccion"
     }
 ]

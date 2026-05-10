@@ -173,3 +173,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Cuando una tarea contiene intención comercial y técnica, debe asignarse a más de un agente.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-008
+
+- ID: TASK-008
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Preparar una propuesta comercial para un cliente que quiere implementar Odoo
+- Tipo: comercial + Odoo
+- Objeto de trabajo: Propuesta comercial Odoo
+- Agente sugerido: Agente Comercial + Agente Odoo
+- Skill sugerido: Propuesta Cliente + Auditoría Odoo
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Tarea clasificada y registrada por el router operativo
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El router clasifica tareas según palabras clave y detecta casos mixtos.
+- Actualización de grafo: Registrar evento asociado a la tarea.
