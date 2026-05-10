@@ -1,0 +1,36 @@
+﻿{
+  "policy_name": "Autonexus Hooks Policy",
+  "version": "0.1",
+  "hooks": [
+    {
+      "event": "before_execute",
+      "action": "clasificar riesgo y permiso",
+      "requires_direction": false
+    },
+    {
+      "event": "before_modify_files",
+      "action": "verificar alcance y archivos afectados",
+      "requires_direction": true
+    },
+    {
+      "event": "before_commit",
+      "action": "validar QA, secretos y rollback",
+      "requires_direction": false
+    },
+    {
+      "event": "after_commit",
+      "action": "registrar aprendizaje y actualizar panel",
+      "requires_direction": false
+    },
+    {
+      "event": "before_yolo",
+      "action": "pedir aprobacion explicita de Direccion",
+      "requires_direction": true
+    },
+    {
+      "event": "before_external_action",
+      "action": "bloquear envios, produccion, credenciales o acciones externas sin aprobacion",
+      "requires_direction": true
+    }
+  ]
+}

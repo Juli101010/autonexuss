@@ -1,0 +1,46 @@
+﻿{
+  "tools": [
+    {
+      "id": "ollama_deepseek",
+      "name": "DeepSeek local via Ollama",
+      "status": "active",
+      "cost": "local"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "status": "active",
+      "cost": "free_public_repo"
+    },
+    {
+      "id": "panel_html",
+      "name": "Panel HTML local",
+      "status": "active",
+      "cost": "local"
+    },
+    {
+      "id": "claude_code_local",
+      "name": "Claude Code via Ollama",
+      "status": "deferred",
+      "reason": "requires local model with tool support; qwen3.5:4b too heavy on 8GB RAM"
+    },
+    {
+      "id": "n8n_mcp",
+      "name": "n8n MCP",
+      "status": "planned",
+      "reason": "requires n8n setup"
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright",
+      "status": "planned",
+      "reason": "requires Node.js/browser install"
+    },
+    {
+      "id": "scraping",
+      "name": "Research scraping module",
+      "status": "planned",
+      "reason": "needs source policy, QA and logs"
+    }
+  ]
+}

@@ -1314,5 +1314,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_097",
+        "timestamp":  "2026-05-10T08:22:51.3113202Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-097",
+        "permission_level":  3,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Curaduria del ecosistema integrada al repo",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS debe integrar lo mejor de repos externos como arquitectura liviana propia, no instalando todo sin control.",
+        "final_responsible":  "direccion"
     }
 ]

@@ -1,0 +1,64 @@
+﻿{
+  "skills": [
+    {
+      "id": "router",
+      "name": "Autonexus Router",
+      "purpose": "Clasificar pedidos y elegir ruta",
+      "status": "active"
+    },
+    {
+      "id": "documentos",
+      "name": "Produccion Documental",
+      "purpose": "Crear informes, propuestas, manuales y documentos internos",
+      "status": "active"
+    },
+    {
+      "id": "webdev",
+      "name": "WebDev Visual",
+      "purpose": "Crear prototipos HTML, paneles y vistas visuales",
+      "status": "active"
+    },
+    {
+      "id": "qa",
+      "name": "QA Preproduccion",
+      "purpose": "Revisar entregables antes de cerrar",
+      "status": "active"
+    },
+    {
+      "id": "github_dev",
+      "name": "GitHub Dev",
+      "purpose": "Issues, changelog, release notes y rollback",
+      "status": "active"
+    },
+    {
+      "id": "hooks",
+      "name": "Hooks Internos",
+      "purpose": "Validar antes y despues de ejecutar acciones",
+      "status": "planned"
+    },
+    {
+      "id": "n8n_mcp",
+      "name": "n8n MCP",
+      "purpose": "Diseñar y controlar workflows automatizados",
+      "status": "planned"
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright Browser Agent",
+      "purpose": "QA visual, navegacion y pruebas web",
+      "status": "planned"
+    },
+    {
+      "id": "research",
+      "name": "Research Engine",
+      "purpose": "Investigar oportunidades, fuentes y scraping controlado",
+      "status": "planned"
+    },
+    {
+      "id": "skill_creator",
+      "name": "Skill Creator",
+      "purpose": "Crear nuevos skills desde tareas repetidas",
+      "status": "planned"
+    }
+  ]
+}

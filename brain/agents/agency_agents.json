@@ -1,0 +1,76 @@
+﻿{
+  "agents": [
+    {
+      "id": "direccion",
+      "name": "Direccion",
+      "role": "Control final, aprobacion, bloqueo y decision",
+      "permission_level": 5
+    },
+    {
+      "id": "pm",
+      "name": "Agente PM",
+      "role": "Ordenar pedidos, rutas, tareas y seguimiento",
+      "permission_level": 3
+    },
+    {
+      "id": "qa",
+      "name": "Agente QA",
+      "role": "Validar calidad, riesgos y consistencia antes de cerrar",
+      "permission_level": 3
+    },
+    {
+      "id": "webdev",
+      "name": "Agente WebDev",
+      "role": "Crear paneles, prototipos HTML, interfaces y QA visual",
+      "permission_level": 3
+    },
+    {
+      "id": "documentador",
+      "name": "Agente Documentador",
+      "role": "Crear documentos, informes, propuestas y manuales",
+      "permission_level": 2
+    },
+    {
+      "id": "automatizaciones",
+      "name": "Agente Automatizaciones",
+      "role": "Diseñar hooks, n8n, webhooks, flujos y acciones internas",
+      "permission_level": 4
+    },
+    {
+      "id": "research",
+      "name": "Agente Research",
+      "role": "Investigar fuentes, oportunidades, scraping controlado y reportes",
+      "permission_level": 3
+    },
+    {
+      "id": "odoo",
+      "name": "Agente Odoo",
+      "role": "Propuestas, auditorias, implementaciones y soporte Odoo",
+      "permission_level": 3
+    },
+    {
+      "id": "github_dev",
+      "name": "Agente GitHub Dev",
+      "role": "Issues, changelog, release notes, ramas y rollback",
+      "permission_level": 3
+    },
+    {
+      "id": "skill_creator",
+      "name": "Agente Skill Creator",
+      "role": "Proponer nuevos skills cuando detecta tareas repetidas",
+      "permission_level": 4
+    },
+    {
+      "id": "seguridad",
+      "name": "Agente Seguridad",
+      "role": "Control de permisos, secretos, riesgo, produccion y modo YOLO",
+      "permission_level": 5
+    },
+    {
+      "id": "panel_visual",
+      "name": "Agente Panel Visual",
+      "role": "Mostrar agentes, rutas, eventos, tareas y grafo operativo",
+      "permission_level": 3
+    }
+  ]
+}

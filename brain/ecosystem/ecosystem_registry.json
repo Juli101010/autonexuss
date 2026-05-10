@@ -1,0 +1,39 @@
+﻿{
+  "name": "Autonexus OS Ecosystem Registry",
+  "version": "0.2",
+  "principle": "Gratis, liviano, modular, con Direccion en control final.",
+  "stable_now": [
+    "DeepSeek local via Ollama",
+    "Autonexus Master",
+    "PowerShell scripts",
+    "TASKS.md",
+    "graph/events.json",
+    "panel_autonexus.html",
+    "GitHub",
+    "pedir_autonexus.ps1"
+  ],
+  "curated_sources": [
+    "Ruflo / Claude Flow ideas: swarms, memory, agent roles, orchestration",
+    "Claude Code skills/subagents/hooks compatibility",
+    "n8n MCP for workflow tools",
+    "Playwright for browser automation and QA",
+    "Graph visual for agency brain",
+    "Second brain with Markdown and JSON first"
+  ],
+  "deferred_due_to_hardware": [
+    "Claude Code with large local tool-calling models",
+    "qwen3.5:4b",
+    "heavy 3D interface",
+    "always-on multiagent simulation",
+    "large local vector database"
+  ],
+  "next_priorities": [
+    "agent_catalog",
+    "skill_catalog",
+    "hooks_policy",
+    "visual_graph",
+    "panel_upgrade",
+    "playwright_module",
+    "n8n_mcp_module"
+  ]
+}
