@@ -1294,3 +1294,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-067
+
+- ID: TASK-067
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear interfaz visual local de comando para Autonexus OS
+- Tipo: sistema interno + interfaz + orquestador
+- Objeto de trabajo: ui/comando_autonexus.html
+- Agente sugerido: Agente PM + Agente Web/Dev + Agente QA
+- Skill sugerido: Orquestación de Agentes + QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Centro de comando visual local creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS necesita una interfaz visual para que Dirección escriba pedidos y obtenga la ruta/comando de ejecución.
+- Actualización de grafo: Registrar evento asociado a la tarea.

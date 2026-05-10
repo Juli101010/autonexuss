@@ -894,5 +894,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_067",
+        "timestamp":  "2026-05-10T05:54:59.6241032Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-067",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Centro de comando visual local creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS necesita una interfaz visual para que Dirección escriba pedidos y obtenga la ruta/comando de ejecución.",
+        "final_responsible":  "direccion"
     }
 ]

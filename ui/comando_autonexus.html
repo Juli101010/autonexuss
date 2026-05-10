@@ -1,0 +1,252 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autonexus OS · Centro de Comando</title>
+<style>
+:root{
+  --bg:#070b18;
+  --panel:#111a2f;
+  --panel2:#17213b;
+  --text:#edf3ff;
+  --muted:#97a6bd;
+  --line:rgba(255,255,255,.13);
+  --accent:#66e4ff;
+  --ok:#8ef0a5;
+  --warn:#ffd166;
+  --danger:#ff7b7b;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top left,rgba(102,228,255,.18),transparent 32%),
+    radial-gradient(circle at bottom right,rgba(150,110,255,.16),transparent 30%),
+    var(--bg);
+}
+main{max-width:1280px;margin:0 auto;padding:28px}
+header{
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:28px;
+  background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+  margin-bottom:18px;
+}
+h1{font-size:clamp(34px,5vw,62px);line-height:1;margin:0 0 10px;letter-spacing:-.05em}
+p{color:var(--muted);line-height:1.55}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+.card{
+  border:1px solid var(--line);
+  background:rgba(17,26,47,.94);
+  border-radius:24px;
+  padding:20px;
+  box-shadow:0 20px 70px rgba(0,0,0,.22);
+}
+label{display:block;color:var(--accent);font-size:13px;margin:14px 0 7px}
+textarea,input{
+  width:100%;
+  border:1px solid var(--line);
+  background:#060913;
+  color:var(--text);
+  border-radius:16px;
+  padding:14px;
+  font:15px Segoe UI,Arial,sans-serif;
+  outline:none;
+}
+textarea{min-height:150px;resize:vertical}
+button{
+  border:0;
+  border-radius:16px;
+  padding:13px 16px;
+  background:var(--accent);
+  color:#07111f;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:14px;
+}
+button.secondary{background:#263653;color:var(--text);border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.badge{
+  display:inline-block;
+  padding:7px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--accent);
+  background:rgba(102,228,255,.1);
+  font-size:13px;
+}
+.result{
+  background:#060913;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:16px;
+  white-space:pre-wrap;
+  line-height:1.55;
+  color:#d7ecff;
+}
+.metric{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:12px;
+}
+.metric div{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(255,255,255,.04);
+  padding:12px;
+}
+.metric b{display:block;color:var(--ok);font-size:20px}
+.metric span{color:var(--muted);font-size:12px}
+.small{font-size:13px;color:var(--muted)}
+.links a{color:var(--ok);display:block;margin:8px 0;text-decoration:none}
+.links a:hover{text-decoration:underline}
+@media(max-width:950px){
+  main{padding:16px}
+  .grid,.row{grid-template-columns:1fr}
+  .metric{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <span class="badge">Autonexus OS · Centro de Comando Local</span>
+  <h1>Dirección escribe. El sistema enruta.</h1>
+  <p>Esta interfaz clasifica el pedido, estima ruta, agentes, riesgo y genera el comando PowerShell para ejecutar el orquestador maestro.</p>
+</header>
+
+<div class="grid">
+  <section class="card">
+    <h2>Pedido de Dirección</h2>
+
+    <label>Pedido principal</label>
+    <textarea id="pedido">Necesito crear un plan para mejorar el panel visual de Autonexus OS y mostrar mejor los agentes, rutas, eventos y entregables.</textarea>
+
+    <div class="row">
+      <div>
+        <label>Nombre de cliente, solo para ruta Odoo</label>
+        <input id="nombre" placeholder="Ej: Ferretería San Martín">
+      </div>
+      <div>
+        <label>Tipo de empresa, solo para ruta Odoo</label>
+        <input id="tipoEmpresa" placeholder="Ej: Comercio minorista y mayorista">
+      </div>
+    </div>
+
+    <label>Necesidad, solo para ruta Odoo</label>
+    <input id="necesidad" placeholder="Ej: Ordenar clientes, productos, listas de precios y presupuestos">
+
+    <label>Título opcional para documentos, web, investigación o dev</label>
+    <input id="titulo" placeholder="Ej: Mejora del panel visual de Autonexus OS">
+
+    <button onclick="analizar()">Analizar pedido</button>
+    <button class="secondary" onclick="copiarComando()">Copiar comando</button>
+  </section>
+
+  <section class="card">
+    <h2>Ruta estimada</h2>
+    <div id="analisis" class="result">Todavía no analizaste el pedido.</div>
+
+    <div class="metric">
+      <div><b id="ruta">-</b><span>Ruta</span></div>
+      <div><b id="riesgo">-</b><span>Riesgo</span></div>
+      <div><b id="permiso">-</b><span>Permiso</span></div>
+    </div>
+  </section>
+</div>
+
+<section class="card" style="margin-top:16px">
+  <h2>Comando generado</h2>
+  <div id="comando" class="result">Analizá el pedido para generar el comando.</div>
+  <p class="small">El navegador no ejecuta PowerShell directamente. Copiá el comando y pegalo en la consola del proyecto.</p>
+</section>
+
+<section class="card links" style="margin-top:16px">
+  <h2>Accesos rápidos</h2>
+  <a href="./panel_autonexus.html" target="_blank">Abrir Panel Maestro</a>
+  <a href="../output/reportes/master_ultima_ruta.md" target="_blank">Abrir último reporte del orquestador</a>
+  <a href="../output/reportes/estado_autonexus_os.md" target="_blank">Abrir estado general</a>
+  <a href="./conversacion_agentes.html" target="_blank">Abrir conversación de agentes</a>
+</section>
+</main>
+
+<script>
+function esc(s){
+  return String(s || "").replace(/"/g, '\\"');
+}
+
+function detectarRuta(texto){
+  const t = texto.toLowerCase();
+
+  const self = /auto.?mejor|auto mejora|mejorarse|mejorar sistema|cambiar politica|cambiar política|cambiar permisos|restricciones internas|crear agente|crear skill/.test(t);
+  const dev = /github|issue|changelog|release|release notes|rama|branch|commit|rollback|dev|codigo|código|repositorio/.test(t);
+  const research = /investigar|investigacion|investigación|scraping|prospectar|prospeccion|prospección|leads|oportunidades|buscar empresas|buscar clientes|fuentes/.test(t);
+  const auto = /automatizacion|automatización|n8n|webhook|workflow|hook|mcp|integracion|integración|api/.test(t);
+  const web = /web|html|landing|panel|dashboard|interfaz|ui|ux|prototipo visual|pagina|página|grafo|visual/.test(t);
+  const odoo = /odoo|crm|ventas|presupuesto|propuesta comercial|facturacion|facturación|productos|listas de precios|erp/.test(t);
+  const doc = /documento|informe|manual|resumen|checklist|mapa|plan|estrategia|reporte|procedimiento/.test(t);
+
+  if(self) return {ruta:"Auto-mejora", riesgo:"Medio", permiso:"3", agentes:"PM + QA + Automatizaciones"};
+  if(odoo) return {ruta:"Odoo", riesgo:"Medio", permiso:"2", agentes:"PM + Comercial + Odoo + QA"};
+  if(dev) return {ruta:"GitHub/Dev", riesgo:"Medio", permiso:"2", agentes:"PM + Web/Dev + QA"};
+  if(research) return {ruta:"Investigación", riesgo:"Medio", permiso:"3", agentes:"PM + Comercial + Automatizaciones + QA"};
+  if(auto) return {ruta:"Automatizaciones / n8n / hooks", riesgo:"Medio", permiso:"3", agentes:"PM + Automatizaciones + QA"};
+  if(web) return {ruta:"Web/Dev visual", riesgo:"Medio", permiso:"2", agentes:"PM + Web/Dev + QA"};
+  if(doc) return {ruta:"Documentos", riesgo:"Bajo", permiso:"1", agentes:"PM + Documentador + QA"};
+  return {ruta:"Documentos / General", riesgo:"Bajo", permiso:"1", agentes:"PM + Documentador"};
+}
+
+function analizar(){
+  const pedido = document.getElementById("pedido").value.trim();
+  const nombre = document.getElementById("nombre").value.trim();
+  const tipoEmpresa = document.getElementById("tipoEmpresa").value.trim();
+  const necesidad = document.getElementById("necesidad").value.trim();
+  const titulo = document.getElementById("titulo").value.trim();
+
+  const r = detectarRuta(pedido);
+
+  document.getElementById("ruta").textContent = r.ruta;
+  document.getElementById("riesgo").textContent = r.riesgo;
+  document.getElementById("permiso").textContent = r.permiso;
+
+  let notas = "";
+  if(r.ruta === "Odoo" && (!nombre || !tipoEmpresa || !necesidad)){
+    notas = "\n\nAtención: para ejecutar Odoo completo conviene completar Nombre, TipoEmpresa y Necesidad.";
+  }
+
+  document.getElementById("analisis").textContent =
+`Ruta: ${r.ruta}
+Agentes: ${r.agentes}
+Riesgo: ${r.riesgo}
+Nivel de permiso: ${r.permiso}
+Resultado esperado: el orquestador maestro derivará el pedido al pipeline correspondiente.${notas}`;
+
+  let cmd = `powershell -ExecutionPolicy Bypass -File .\\scripts\\autonexus_master.ps1 \`
+  + `\n  -Pedido "${esc(pedido)}"`;
+
+  if(nombre) cmd += ` \`\n  -Nombre "${esc(nombre)}"`;
+  if(tipoEmpresa) cmd += ` \`\n  -TipoEmpresa "${esc(tipoEmpresa)}"`;
+  if(necesidad) cmd += ` \`\n  -Necesidad "${esc(necesidad)}"`;
+  if(titulo) cmd += ` \`\n  -Titulo "${esc(titulo)}"`;
+
+  document.getElementById("comando").textContent = cmd;
+}
+
+async function copiarComando(){
+  const cmd = document.getElementById("comando").textContent;
+  try{
+    await navigator.clipboard.writeText(cmd);
+    alert("Comando copiado.");
+  }catch(e){
+    alert("No se pudo copiar automático. Seleccioná el comando y copialo manualmente.");
+  }
+}
+
+analizar();
+</script>
+</body>
+</html>
