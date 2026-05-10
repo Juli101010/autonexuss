@@ -1300,5 +1300,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "Los cambios técnicos necesitan QA y rollback.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_096",
+        "timestamp":  "2026-05-10T08:19:39.5675857Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-096",
+        "permission_level":  3,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Paquete GitHub/Dev generado: issue, plan, changelog, release notes y QA.",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.",
+        "final_responsible":  "direccion"
     }
 ]

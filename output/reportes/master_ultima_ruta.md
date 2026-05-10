@@ -2,11 +2,11 @@
 
 ## Fecha
 
-2026-05-10 05:12:55
+2026-05-10 05:19:33
 
 ## Pedido
 
-Crear una mejora del panel visual de Autonexus OS para mostrar de forma clara los últimos pedidos, rutas elegidas, tareas, eventos, documentos, prototipos web, reportes QA y estado de GitHub
+Crear un documento maestro y un paquete GitHub Dev para integrar al ecosistema Autonexus OS lo mejor de Ruflo, Claude Flow, Claude Code skills, subagentes, hooks, n8n MCP, Playwright, browser agent, Graphify o grafo visual, segundo cerebro, PDF XLS DOCX, TDD, diagnose, skill creator, agency agents, research scraping y modo YOLO controlado, priorizando lo que funcione gratis y liviano en una PC con 8GB RAM
 
 ## Ruta elegida
 
@@ -18,7 +18,7 @@ Paquete GitHub/Dev generado: issue, plan, changelog, release notes y QA.
 
 ## Archivo principal estimado
 
-output/dev/issue_cambio_dev_crear_una_mejora_del_panel_visual_de_autonexus_os_para_mostrar_de_form.md
+output/dev/issue_cambio_dev_crear_un_documento_maestro_y_un_paquete_github_dev_para_integrar_al_ec.md
 
 ---
 

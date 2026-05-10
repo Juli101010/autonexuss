@@ -1874,3 +1874,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Los cambios técnicos necesitan QA y rollback.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-096
+
+- ID: TASK-096
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Ejecutar orquestador maestro modular: Crear un documento maestro y un paquete GitHub Dev para integrar al ecosistema Autonexus OS lo mejor de Ruflo, Claude Flow, Claude Code skills, subagentes, hooks, n8n MCP, Playwright, browser agent, Graphify o grafo visual, segundo cerebro, PDF XLS DOCX, TDD, diagnose, skill creator, agency agents, research scraping y modo YOLO controlado, priorizando lo que funcione gratis y liviano en una PC con 8GB RAM
+- Tipo: orquestador maestro + GitHub/Dev
+- Objeto de trabajo: output/reportes/master_ultima_ruta.md
+- Agente sugerido: Agente PM + Agente QA + Agente Automatizaciones
+- Skill sugerido: Orquestación de Agentes + QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Paquete GitHub/Dev generado: issue, plan, changelog, release notes y QA.
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.
+- Actualización de grafo: Registrar evento asociado a la tarea.
