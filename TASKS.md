@@ -1914,3 +1914,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Autonexus OS debe integrar lo mejor de repos externos como arquitectura liviana propia, no instalando todo sin control.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-098
+
+- ID: TASK-098
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Materializar curaduria del ecosistema Autonexus OS con agentes, skills, hooks, tools y roadmap
+- Tipo: ecosistema + agentes + skills + hooks + roadmap
+- Objeto de trabajo: brain/ecosystem/ecosystem_registry.json
+- Agente sugerido: Agente PM + Agente QA + Skill Creator
+- Skill sugerido: Orquestacion de Agentes + QA Preproduccion + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Curaduria del ecosistema integrada al repo
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS debe integrar lo mejor de repos externos como arquitectura liviana propia, no instalando todo sin control.
+- Actualización de grafo: Registrar evento asociado a la tarea.
