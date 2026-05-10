@@ -674,3 +674,63 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Los comandos de ejemplo no deben ejecutarse sin reemplazar los valores placeholder.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-036
+
+- ID: TASK-036
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear ficha de cliente para Ferretería San Martín
+- Tipo: cliente + documentación
+- Objeto de trabajo: .\brain\clientes\cliente_ferreteria_san_martin.md
+- Agente sugerido: Agente Comercial + Agente Documentador
+- Skill sugerido: Propuesta Cliente + Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Ficha de cliente creada en Brain
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema ya puede crear clientes desde consola y dejarlos listos para generar propuestas.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-037
+
+- ID: TASK-037
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Generar propuesta Odoo automática para Ferretería San Martín
+- Tipo: comercial + Odoo
+- Objeto de trabajo: .\output\propuestas\propuesta_odoo_ferreteria_san_martin_generada.md
+- Agente sugerido: Agente Comercial + Agente Odoo + Agente QA
+- Skill sugerido: Propuesta Cliente + Auditoría Odoo + QA Preproducción
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Propuesta Odoo generada automáticamente desde archivo de cliente
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema ya puede generar propuestas Odoo a partir de un cliente registrado en Brain.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-038
+
+- ID: TASK-038
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA automático de propuesta Odoo
+- Tipo: QA + comercial + Odoo
+- Objeto de trabajo: .\output\propuestas\propuesta_odoo_ferreteria_san_martin_generada.md
+- Agente sugerido: Agente QA + Agente Comercial + Agente Odoo
+- Skill sugerido: QA Preproducción + Propuesta Cliente + Auditoría Odoo
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Reporte QA automático creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Las propuestas generadas por script deben revisarse antes de cualquier envío real.
+- Actualización de grafo: Registrar evento asociado a la tarea.
