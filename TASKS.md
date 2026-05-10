@@ -113,3 +113,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Toda tarea debe pasar por clasificación, permiso, riesgo, resultado, aprendizaje y grafo.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-005
+
+- ID: TASK-005
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear router inicial para clasificar tareas por descripción
+- Tipo: sistema interno
+- Objeto de trabajo: scripts/router_tarea.ps1
+- Agente sugerido: Agente PM
+- Skill sugerido: Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Router inicial de tareas creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema empieza a clasificar tareas automáticamente según palabras clave.
+- Actualización de grafo: Registrar evento asociado a la tarea.

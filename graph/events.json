@@ -68,5 +68,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "Toda tarea debe pasar por clasificación, permiso, riesgo, resultado, aprendizaje y grafo.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_005",
+        "timestamp":  "2026-05-10T04:53:24.8657150Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-005",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Router inicial de tareas creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "El sistema empieza a clasificar tareas automáticamente según palabras clave.",
+        "final_responsible":  "direccion"
     }
 ]
