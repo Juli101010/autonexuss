@@ -273,3 +273,43 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El sistema ya puede usar una plantilla general para producir una propuesta contextualizada según un perfil de cliente.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-013
+
+- ID: TASK-013
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear script generador de propuestas Odoo desde archivos de cliente
+- Tipo: sistema interno + comercial + Odoo
+- Objeto de trabajo: scripts/generar_propuesta_odoo.ps1
+- Agente sugerido: Agente PM + Agente Comercial + Agente Odoo
+- Skill sugerido: Propuesta Cliente + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Script generador de propuestas Odoo creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema empieza a convertir clientes del Brain en entregables comerciales generados por script.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-014
+
+- ID: TASK-014
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Generar propuesta Odoo automática para Distribuidora Alfa
+- Tipo: comercial + Odoo
+- Objeto de trabajo: .\output\propuestas\propuesta_odoo_distribuidora_alfa_generada.md
+- Agente sugerido: Agente Comercial + Agente Odoo + Agente QA
+- Skill sugerido: Propuesta Cliente + Auditoría Odoo + QA Preproducción
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Propuesta Odoo generada automáticamente desde archivo de cliente
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema ya puede generar propuestas Odoo a partir de un cliente registrado en Brain.
+- Actualización de grafo: Registrar evento asociado a la tarea.

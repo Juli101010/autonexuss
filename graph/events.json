@@ -180,5 +180,33 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "El sistema ya puede usar una plantilla general para producir una propuesta contextualizada según un perfil de cliente.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_013",
+        "timestamp":  "2026-05-10T05:04:23.9799030Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-013",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Script generador de propuestas Odoo creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "El sistema empieza a convertir clientes del Brain en entregables comerciales generados por script.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_014",
+        "timestamp":  "2026-05-10T05:05:29.4182000Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-014",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Propuesta Odoo generada automáticamente desde archivo de cliente",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "El sistema ya puede generar propuestas Odoo a partir de un cliente registrado en Brain.",
+        "final_responsible":  "direccion"
     }
 ]
