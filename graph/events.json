@@ -96,5 +96,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "El router permite clasificar tareas sin completar todos los campos manualmente.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_007",
+        "timestamp":  "2026-05-10T04:55:30.3078182Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-007",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Router mejorado con detección de casos mixtos",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Cuando una tarea contiene intención comercial y técnica, debe asignarse a más de un agente.",
+        "final_responsible":  "direccion"
     }
 ]

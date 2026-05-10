@@ -15,7 +15,40 @@ $NivelPermiso = 1
 $Riesgo = "bajo"
 $Objeto = "Autonexus OS"
 
-if ($desc -match "odoo|afip|factura|facturación|suscripcion|suscripción|nota de credito|nota de crédito|contabilidad|producto|precio") {
+# Detectores base
+$esOdoo = $desc -match "odoo|afip|factura|facturación|suscripcion|suscripción|nota de credito|nota de crédito|contabilidad|producto|precio"
+$esComercial = $desc -match "lead|cliente|propuesta|presupuesto|venta|comercial|seguimiento"
+$esAutomatizacion = $desc -match "n8n|automatizacion|automatización|webhook|workflow|hook|mcp"
+$esWeb = $desc -match "web|pagina|página|html|css|javascript|app|dashboard|panel|github"
+$esDocumentacion = $desc -match "documento|manual|informe|resumen|memoria|brain|aprendizaje"
+$esQA = $desc -match "qa|test|prueba|validar|revisar|error|riesgo"
+
+# Casos mixtos primero
+if ($esComercial -and $esOdoo) {
+    $Tipo = "comercial + Odoo"
+    $Agente = "Agente Comercial + Agente Odoo"
+    $Skill = "Propuesta Cliente + Auditoría Odoo"
+    $NivelPermiso = 2
+    $Riesgo = "medio"
+    $Objeto = "Propuesta comercial Odoo"
+}
+elseif ($esComercial -and $esAutomatizacion) {
+    $Tipo = "comercial + automatización"
+    $Agente = "Agente Comercial + Agente Automatizaciones"
+    $Skill = "Propuesta Cliente + Cierre de Tarea"
+    $NivelPermiso = 2
+    $Riesgo = "medio"
+    $Objeto = "Propuesta de automatización"
+}
+elseif ($esWeb -and $esComercial) {
+    $Tipo = "comercial + web"
+    $Agente = "Agente Comercial + Agente Web/Dev"
+    $Skill = "Propuesta Cliente + QA Preproducción"
+    $NivelPermiso = 2
+    $Riesgo = "medio"
+    $Objeto = "Propuesta web / desarrollo"
+}
+elseif ($esOdoo) {
     $Tipo = "Odoo"
     $Agente = "Agente Odoo"
     $Skill = "Auditoría Odoo"
@@ -23,7 +56,7 @@ if ($desc -match "odoo|afip|factura|facturación|suscripcion|suscripción|nota d
     $Riesgo = "medio"
     $Objeto = "Proyecto Odoo"
 }
-elseif ($desc -match "lead|cliente|propuesta|presupuesto|venta|comercial|seguimiento") {
+elseif ($esComercial) {
     $Tipo = "comercial"
     $Agente = "Agente Comercial"
     $Skill = "Propuesta Cliente"
@@ -31,7 +64,7 @@ elseif ($desc -match "lead|cliente|propuesta|presupuesto|venta|comercial|seguimi
     $Riesgo = "bajo"
     $Objeto = "Proceso comercial"
 }
-elseif ($desc -match "n8n|automatizacion|automatización|webhook|workflow|hook|mcp") {
+elseif ($esAutomatizacion) {
     $Tipo = "automatización"
     $Agente = "Agente Automatizaciones"
     $Skill = "Cierre de Tarea"
@@ -39,7 +72,7 @@ elseif ($desc -match "n8n|automatizacion|automatización|webhook|workflow|hook|m
     $Riesgo = "medio"
     $Objeto = "Workflow / automatización"
 }
-elseif ($desc -match "web|pagina|página|html|css|javascript|app|dashboard|panel|github") {
+elseif ($esWeb) {
     $Tipo = "web / desarrollo"
     $Agente = "Agente Web/Dev"
     $Skill = "QA Preproducción"
@@ -47,7 +80,7 @@ elseif ($desc -match "web|pagina|página|html|css|javascript|app|dashboard|panel
     $Riesgo = "medio"
     $Objeto = "Desarrollo web / repositorio"
 }
-elseif ($desc -match "documento|manual|informe|resumen|memoria|brain|aprendizaje") {
+elseif ($esDocumentacion) {
     $Tipo = "documentación"
     $Agente = "Agente Documentador"
     $Skill = "Cierre de Tarea"
@@ -55,7 +88,7 @@ elseif ($desc -match "documento|manual|informe|resumen|memoria|brain|aprendizaje
     $Riesgo = "bajo"
     $Objeto = "Brain / documentación"
 }
-elseif ($desc -match "qa|test|prueba|validar|revisar|error|riesgo") {
+elseif ($esQA) {
     $Tipo = "QA"
     $Agente = "Agente QA"
     $Skill = "QA Preproducción"
@@ -86,4 +119,4 @@ powershell -ExecutionPolicy Bypass -File .\scripts\registrar_tarea.ps1 `
   -NivelPermiso $NivelPermiso `
   -Riesgo $Riesgo `
   -Resultado "Tarea clasificada y registrada por el router operativo" `
-  -Aprendizaje "El router permite clasificar tareas sin completar todos los campos manualmente."
+  -Aprendizaje "El router clasifica tareas según palabras clave y detecta casos mixtos."

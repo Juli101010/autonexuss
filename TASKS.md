@@ -153,3 +153,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El router permite clasificar tareas sin completar todos los campos manualmente.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-007
+
+- ID: TASK-007
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Mejorar el router para detectar tareas mixtas como comercial más Odoo
+- Tipo: sistema interno
+- Objeto de trabajo: scripts/router_tarea.ps1
+- Agente sugerido: Agente PM
+- Skill sugerido: Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Router mejorado con detección de casos mixtos
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Cuando una tarea contiene intención comercial y técnica, debe asignarse a más de un agente.
+- Actualización de grafo: Registrar evento asociado a la tarea.
