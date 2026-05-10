@@ -1,16 +1,30 @@
-[
-  {
-    "id": "event_001",
-    "timestamp": "2026-05-08T21:41:05.275507Z",
-    "actor": "direccion",
-    "action": "crear_sistema_base",
-    "object": "Autonexus OS v0.1",
-    "permission_level": 0,
-    "risk_level": 1,
-    "status": "registrado",
-    "result": "Estructura inicial creada",
-    "consequence": "El sistema ya tiene reglas, agentes base, skills y grafo inicial",
-    "learning": "Primero gobierno, después memoria, agentes, automatización y visualización",
-    "final_responsible": "direccion"
-  }
+﻿[
+    {
+        "id":  "event_001",
+        "timestamp":  "2026-05-08T21:41:05.275507Z",
+        "actor":  "direccion",
+        "action":  "crear_sistema_base",
+        "object":  "Autonexus OS v0.1",
+        "permission_level":  0,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Estructura inicial creada",
+        "consequence":  "El sistema ya tiene reglas, agentes base, skills y grafo inicial",
+        "learning":  "Primero gobierno, despuÃ©s memoria, agentes, automatizaciÃ³n y visualizaciÃ³n",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_002",
+        "timestamp":  "2026-05-10T04:19:39.1223083Z",
+        "actor":  "direccion",
+        "action":  "subir_repo_github",
+        "object":  "autonexuss",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "completado",
+        "result":  "Repositorio Autonexus OS v0.1 subido a GitHub",
+        "consequence":  "El proyecto ya puede clonarse desde otra computadora",
+        "learning":  "GitHub queda como base de versionado antes de instalar automatizaciones",
+        "final_responsible":  "direccion"
+    }
 ]

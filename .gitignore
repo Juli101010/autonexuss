@@ -1,4 +1,4 @@
-# Secretos y credenciales
+﻿# Secretos y credenciales
 .env
 .env.*
 *.key
