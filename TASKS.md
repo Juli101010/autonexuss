@@ -734,3 +734,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Las propuestas generadas por script deben revisarse antes de cualquier envío real.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-039
+
+- ID: TASK-039
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear reporte de estado general de Autonexus OS
+- Tipo: sistema interno + reporte + control
+- Objeto de trabajo: output/reportes/estado_autonexus_os.md
+- Agente sugerido: Agente PM + Agente Documentador + Agente QA
+- Skill sugerido: Cierre de Tarea + QA Preproducción
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Reporte de estado general creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema necesita reportes de estado para no depender de revisar archivos manualmente.
+- Actualización de grafo: Registrar evento asociado a la tarea.

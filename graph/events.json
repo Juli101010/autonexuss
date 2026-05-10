@@ -502,5 +502,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "Las propuestas generadas por script deben revisarse antes de cualquier envío real.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_039",
+        "timestamp":  "2026-05-10T05:24:36.4490100Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-039",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Reporte de estado general creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "El sistema necesita reportes de estado para no depender de revisar archivos manualmente.",
+        "final_responsible":  "direccion"
     }
 ]
