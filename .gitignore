@@ -1,0 +1,44 @@
+# Secretos y credenciales
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.crt
+*.cer
+secrets/
+credentials/
+tokens/
+api_keys/
+
+# Bases de datos y backups
+*.sqlite
+*.db
+*.bak
+*.dump
+*.backup
+backups/
+
+# Node / Python
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporales
+tmp/
+temp/
+
+# Datos privados
+private/
+clientes_privados/
+datos_reales/
