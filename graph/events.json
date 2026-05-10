@@ -54,5 +54,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "La tarea queda documentada para seguimiento operativo.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_004",
+        "timestamp":  "2026-05-10T04:52:26.7066789Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-004",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Flujo base de nueva tarea creado dentro del Brain",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Toda tarea debe pasar por clasificación, permiso, riesgo, resultado, aprendizaje y grafo.",
+        "final_responsible":  "direccion"
     }
 ]

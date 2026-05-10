@@ -93,3 +93,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: La tarea queda documentada para seguimiento operativo.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-004
+
+- ID: TASK-004
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear el flujo operativo base para registrar y procesar nuevas tareas
+- Tipo: proceso interno
+- Objeto de trabajo: brain/procesos/flujo_nueva_tarea.md
+- Agente sugerido: Agente PM + Agente Documentador
+- Skill sugerido: Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Flujo base de nueva tarea creado dentro del Brain
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Toda tarea debe pasar por clasificación, permiso, riesgo, resultado, aprendizaje y grafo.
+- Actualización de grafo: Registrar evento asociado a la tarea.
