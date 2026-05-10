@@ -213,3 +213,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El sistema ya puede pasar de registrar una tarea a producir un entregable base.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-010
+
+- ID: TASK-010
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA de la propuesta base Odoo y crear checklist de revisión para propuestas comerciales Odoo
+- Tipo: QA + comercial + Odoo
+- Objeto de trabajo: output/propuestas/propuesta_base_odoo.md
+- Agente sugerido: Agente QA + Agente Comercial + Agente Odoo
+- Skill sugerido: QA Preproducción + Propuesta Cliente + Auditoría Odoo
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Reporte QA y checklist de propuesta Odoo creados
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Toda propuesta comercial Odoo debe pasar por QA antes de enviarse a un cliente real.
+- Actualización de grafo: Registrar evento asociado a la tarea.
