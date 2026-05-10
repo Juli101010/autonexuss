@@ -1062,5 +1062,47 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_079",
+        "timestamp":  "2026-05-10T08:02:35.9121138Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-079",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Respuesta local de DeepSeek generada por API Ollama",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS usa DeepSeek local para tareas simples y clasificación sin depender de API paga.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_080",
+        "timestamp":  "2026-05-10T08:02:37.5032354Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-080",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Issue, plan técnico, changelog y release notes generados",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS puede ordenar cambios técnicos con trazabilidad Dev.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_081",
+        "timestamp":  "2026-05-10T08:02:38.1131420Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-081",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "QA técnico GitHub/Dev generado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Los cambios técnicos necesitan QA y rollback.",
+        "final_responsible":  "direccion"
     }
 ]
