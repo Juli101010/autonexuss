@@ -1214,3 +1214,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Los cambios técnicos necesitan QA y rollback.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-063
+
+- ID: TASK-063
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear orquestador maestro modular para enrutar pedidos a Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev
+- Tipo: sistema interno + orquestador + multiagente
+- Objeto de trabajo: scripts/autonexus_master.ps1
+- Agente sugerido: Agente PM + Agente Automatizaciones + Agente QA
+- Skill sugerido: Orquestación de Agentes + QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Orquestador maestro modular creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS necesita una entrada única capaz de elegir el pipeline correcto según el pedido.
+- Actualización de grafo: Registrar evento asociado a la tarea.
