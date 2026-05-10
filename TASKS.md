@@ -774,3 +774,43 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El sistema necesita una vista local para controlar clientes, propuestas, reportes y eventos.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-041
+
+- ID: TASK-041
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear orquestador maestro Autonexus para recibir pedidos generales y elegir ruta de trabajo
+- Tipo: sistema interno + orquestación + multiagente
+- Objeto de trabajo: scripts/autonexus.ps1
+- Agente sugerido: Agente PM + Agente Automatizaciones + Agente QA
+- Skill sugerido: Cierre de Tarea + QA Preproducción
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Orquestador maestro creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS necesita una entrada única para interpretar pedidos y activar rutas disponibles.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-042
+
+- ID: TASK-042
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Necesito ordenar los próximos pasos para convertir Autonexus OS en una orquesta de agentes con panel visual y memoria operativa
+- Tipo: web / desarrollo
+- Objeto de trabajo: Desarrollo web / repositorio
+- Agente sugerido: Agente Web/Dev
+- Skill sugerido: QA Preproducción
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Tarea clasificada y registrada por el router operativo
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El router clasifica tareas según palabras clave y detecta casos mixtos.
+- Actualización de grafo: Registrar evento asociado a la tarea.
