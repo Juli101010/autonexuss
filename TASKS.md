@@ -1334,3 +1334,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Autonexus OS usa Ollama por CLI cuando la API local no responde correctamente.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-069
+
+- ID: TASK-069
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Consultar DeepSeek local para clasificar pedido
+- Tipo: LLM local + DeepSeek + Ollama API
+- Objeto de trabajo: .\output\llm\ollama_clasifica_este_pedido_quiero_mejorar_el_panel_visual_de_autonexus_os_p.md
+- Agente sugerido: Agente PM + Motor Local DeepSeek
+- Skill sugerido: Orquestación de Agentes + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Respuesta local de DeepSeek generada por API Ollama
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS usa DeepSeek local para tareas simples y clasificación sin depender de API paga.
+- Actualización de grafo: Registrar evento asociado a la tarea.

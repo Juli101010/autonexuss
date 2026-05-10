@@ -1,7 +1,9 @@
 ﻿{
   "provider": "ollama",
-  "mode": "cli",
+  "mode": "api_generate",
   "default_model": "deepseek-coder:latest",
   "heavy_model": "gemma4:e2b",
-  "role": "motor local de clasificación rápida para Autonexus OS"
+  "api_url": "http://localhost:11434/api/generate",
+  "role": "motor local rápido para clasificación y tareas simples de Autonexus OS",
+  "strategy": "Usar deepseek-coder para clasificación local. No usar Gemma hasta estabilizar integración."
 }

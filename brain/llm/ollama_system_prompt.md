@@ -4,7 +4,7 @@ Respondé SIEMPRE en español.
 No muestres razonamiento interno.
 Respondé breve y operativo.
 
-Clasificá el pedido con este formato:
+Clasificá el pedido con este formato exacto:
 
 RUTA:
 AGENTES:

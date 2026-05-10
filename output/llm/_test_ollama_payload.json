@@ -1,0 +1,9 @@
+{
+    "options":  {
+                    "num_predict":  30,
+                    "temperature":  0.1
+                },
+    "prompt":  "Respondé solo OK",
+    "model":  "deepseek-coder:latest",
+    "stream":  false
+}
