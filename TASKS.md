@@ -1734,3 +1734,63 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-089
+
+- ID: TASK-089
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Consultar DeepSeek local para clasificar pedido
+- Tipo: LLM local + DeepSeek + Ollama API
+- Objeto de trabajo: .\output\llm\ollama_crear_una_mejora_del_panel_visual_de_autonexus_os_para_mostrar_de_form.md
+- Agente sugerido: Agente PM + Motor Local DeepSeek
+- Skill sugerido: Orquestación de Agentes + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Respuesta local de DeepSeek generada por API Ollama
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS usa DeepSeek local para tareas simples y clasificación sin depender de API paga.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-090
+
+- ID: TASK-090
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear paquete GitHub/Dev: Cambio Dev - Crear una mejora del panel visual de Autonexus OS para mostrar de form
+- Tipo: GitHub + desarrollo + release
+- Objeto de trabajo: .\output\dev\issue_cambio_dev_crear_una_mejora_del_panel_visual_de_autonexus_os_para_mostrar_de_form.md
+- Agente sugerido: Agente Web/Dev + Agente PM
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Issue, plan técnico, changelog y release notes generados
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede ordenar cambios técnicos con trazabilidad Dev.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-091
+
+- ID: TASK-091
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA técnico GitHub/Dev: Cambio Dev - Crear una mejora del panel visual de Autonexus OS para mostrar de form
+- Tipo: QA + GitHub + desarrollo
+- Objeto de trabajo: .\output\reportes\qa_dev_cambio_dev_crear_una_mejora_del_panel_visual_de_autonexus_os_para_mostrar_de_form.md
+- Agente sugerido: Agente QA + Agente Web/Dev
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: QA técnico GitHub/Dev generado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Los cambios técnicos necesitan QA y rollback.
+- Actualización de grafo: Registrar evento asociado a la tarea.
