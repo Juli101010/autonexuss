@@ -250,5 +250,33 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "El sistema ya puede generar propuestas Odoo a partir de un cliente registrado en Brain.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_018",
+        "timestamp":  "2026-05-10T05:09:04.7629305Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-018",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Script QA de propuestas Odoo creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS empieza a revisar entregables generados antes de considerarlos utilizables.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_019",
+        "timestamp":  "2026-05-10T05:09:06.1712857Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-019",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Reporte QA automático creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Las propuestas generadas por script deben revisarse antes de cualquier envío real.",
+        "final_responsible":  "direccion"
     }
 ]

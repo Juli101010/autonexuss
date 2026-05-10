@@ -373,3 +373,43 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El sistema ya puede generar propuestas Odoo a partir de un cliente registrado en Brain.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-018
+
+- ID: TASK-018
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear script de QA automático para propuestas Odoo
+- Tipo: QA + sistema interno
+- Objeto de trabajo: scripts/qa_propuesta_odoo.ps1
+- Agente sugerido: Agente QA + Agente PM
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Script QA de propuestas Odoo creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS empieza a revisar entregables generados antes de considerarlos utilizables.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-019
+
+- ID: TASK-019
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA automático de propuesta Odoo
+- Tipo: QA + comercial + Odoo
+- Objeto de trabajo: .\output\propuestas\propuesta_odoo_empresa_demo_beta_generada.md
+- Agente sugerido: Agente QA + Agente Comercial + Agente Odoo
+- Skill sugerido: QA Preproducción + Propuesta Cliente + Auditoría Odoo
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Reporte QA automático creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Las propuestas generadas por script deben revisarse antes de cualquier envío real.
+- Actualización de grafo: Registrar evento asociado a la tarea.
