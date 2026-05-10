@@ -1154,3 +1154,63 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: PowerShell requiere Add-Member para agregar propiedades nuevas a objetos JSON cargados.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-060
+
+- ID: TASK-060
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear pipeline GitHub/Dev para issues, changelog, release notes y QA técnico
+- Tipo: sistema interno + GitHub + desarrollo
+- Objeto de trabajo: scripts/autonexus_dev.ps1
+- Agente sugerido: Agente PM + Agente Web/Dev + Agente QA
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Pipeline GitHub/Dev creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS necesita un módulo Dev para ordenar cambios técnicos, releases y rollback.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-061
+
+- ID: TASK-061
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear paquete GitHub/Dev: Consolidar arquitectura modular de Autonexus OS
+- Tipo: GitHub + desarrollo + release
+- Objeto de trabajo: .\output\dev\issue_consolidar_arquitectura_modular_de_autonexus_os.md
+- Agente sugerido: Agente Web/Dev + Agente PM
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Issue, plan técnico, changelog y release notes generados
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede ordenar cambios técnicos con trazabilidad Dev.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-062
+
+- ID: TASK-062
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA técnico GitHub/Dev: Consolidar arquitectura modular de Autonexus OS
+- Tipo: QA + GitHub + desarrollo
+- Objeto de trabajo: .\output\reportes\qa_dev_consolidar_arquitectura_modular_de_autonexus_os.md
+- Agente sugerido: Agente QA + Agente Web/Dev
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: QA técnico GitHub/Dev generado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Los cambios técnicos necesitan QA y rollback.
+- Actualización de grafo: Registrar evento asociado a la tarea.

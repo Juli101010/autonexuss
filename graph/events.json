@@ -796,5 +796,47 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "PowerShell requiere Add-Member para agregar propiedades nuevas a objetos JSON cargados.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_060",
+        "timestamp":  "2026-05-10T05:47:16.7078398Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-060",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Pipeline GitHub/Dev creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS necesita un módulo Dev para ordenar cambios técnicos, releases y rollback.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_061",
+        "timestamp":  "2026-05-10T05:47:17.9092557Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-061",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Issue, plan técnico, changelog y release notes generados",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS puede ordenar cambios técnicos con trazabilidad Dev.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_062",
+        "timestamp":  "2026-05-10T05:47:18.3531907Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-062",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "QA técnico GitHub/Dev generado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Los cambios técnicos necesitan QA y rollback.",
+        "final_responsible":  "direccion"
     }
 ]
