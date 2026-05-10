@@ -1374,3 +1374,63 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Los payloads temporales de Ollama no deben quedar versionados en GitHub.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-071
+
+- ID: TASK-071
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Consultar DeepSeek local para clasificar pedido
+- Tipo: LLM local + DeepSeek + Ollama API
+- Objeto de trabajo: .\output\llm\ollama_crear_un_documento_interno_sobre_como_usar_deepseek_local_dentro_de_au.md
+- Agente sugerido: Agente PM + Motor Local DeepSeek
+- Skill sugerido: Orquestación de Agentes + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Respuesta local de DeepSeek generada por API Ollama
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS usa DeepSeek local para tareas simples y clasificación sin depender de API paga.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-072
+
+- ID: TASK-072
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Generar documento: Documento - Crear un documento interno sobre cómo usar DeepSeek local dentro de Au
+- Tipo: documentación + producción interna
+- Objeto de trabajo: .\output\documentos\documento_documento_crear_un_documento_interno_sobre_como_usar_deepseek_local_dentro_de_au.md
+- Agente sugerido: Agente Documentador + Agente PM
+- Skill sugerido: Cierre de Tarea + Orquestación de Agentes
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Documento generado como borrador interno
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede generar documentos internos desde un pedido estructurado.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-073
+
+- ID: TASK-073
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA automático del documento: Documento - Crear un documento interno sobre cómo usar DeepSeek local dentro de Au
+- Tipo: QA + documentación
+- Objeto de trabajo: .\output\reportes\qa_documento_documento_crear_un_documento_interno_sobre_como_usar_deepseek_local_dentro_de_au.md
+- Agente sugerido: Agente QA + Agente Documentador
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: QA automático de documento generado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Los documentos generados también deben tener revisión automática mínima.
+- Actualización de grafo: Registrar evento asociado a la tarea.
