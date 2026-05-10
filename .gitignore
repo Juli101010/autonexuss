@@ -42,3 +42,6 @@ temp/
 private/
 clientes_privados/
 datos_reales/
+
+# Autonexus Ollama temp payloads
+output/llm/_*.json

@@ -1354,3 +1354,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Autonexus OS usa DeepSeek local para tareas simples y clasificación sin depender de API paga.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-070
+
+- ID: TASK-070
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Limpiar archivos temporales de Ollama y evitar que vuelvan a subirse
+- Tipo: sistema interno + limpieza + LLM local
+- Objeto de trabajo: .gitignore
+- Agente sugerido: Agente PM + Agente QA
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Temporales de Ollama excluidos del versionado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Los payloads temporales de Ollama no deben quedar versionados en GitHub.
+- Actualización de grafo: Registrar evento asociado a la tarea.
