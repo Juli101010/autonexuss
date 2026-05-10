@@ -1314,3 +1314,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Autonexus OS necesita una interfaz visual para que Dirección escriba pedidos y obtenga la ruta/comando de ejecución.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-068
+
+- ID: TASK-068
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Consultar Ollama CLI para clasificar pedido
+- Tipo: LLM local + Ollama CLI
+- Objeto de trabajo: .\output\llm\ollama_clasifica_este_pedido_quiero_mejorar_el_panel_visual_de_autonexus_os_p.md
+- Agente sugerido: Agente PM + Motor Local Ollama
+- Skill sugerido: Orquestación de Agentes + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Respuesta local de Ollama CLI generada
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS usa Ollama por CLI cuando la API local no responde correctamente.
+- Actualización de grafo: Registrar evento asociado a la tarea.

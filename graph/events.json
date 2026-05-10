@@ -908,5 +908,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "Autonexus OS necesita una interfaz visual para que Dirección escriba pedidos y obtenga la ruta/comando de ejecución.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_068",
+        "timestamp":  "2026-05-10T06:36:53.8130432Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-068",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Respuesta local de Ollama CLI generada",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS usa Ollama por CLI cuando la API local no responde correctamente.",
+        "final_responsible":  "direccion"
     }
 ]

@@ -1,0 +1,7 @@
+﻿{
+  "provider": "ollama",
+  "mode": "cli",
+  "default_model": "deepseek-coder:latest",
+  "heavy_model": "gemma4:e2b",
+  "role": "motor local de clasificación rápida para Autonexus OS"
+}
