@@ -814,3 +814,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El router clasifica tareas según palabras clave y detecta casos mixtos.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-043
+
+- ID: TASK-043
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Actualizar panel maestro para mostrar conversaciones de agentes, agentes registrados, skills y eventos
+- Tipo: sistema interno + panel + multiagente
+- Objeto de trabajo: ui/panel_autonexus.html
+- Agente sugerido: Agente PM + Agente Web/Dev + Agente Documentador
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Panel maestro actualizado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: La visualización del sistema debe integrar clientes, propuestas, QA, conversaciones, agentes, skills y eventos.
+- Actualización de grafo: Registrar evento asociado a la tarea.
