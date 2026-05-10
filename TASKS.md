@@ -1614,3 +1614,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-083
+
+- ID: TASK-083
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Corregir panel maestro para evitar cambios por timestamp variable
+- Tipo: sistema interno + panel + limpieza Git
+- Objeto de trabajo: scripts/panel_autonexus.ps1
+- Agente sugerido: Agente PM + Agente Web/Dev + Agente QA
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Panel maestro estabilizado para no ensuciar Git por hora de generación
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El panel no debe cambiar si solo cambia el timestamp.
+- Actualización de grafo: Registrar evento asociado a la tarea.

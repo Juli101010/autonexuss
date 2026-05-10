@@ -93,7 +93,7 @@ function Get-RegistryCount {
 
 New-Item -ItemType Directory -Force -Path ".\ui" | Out-Null
 
-$fecha = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+$fecha = "estado actual del sistema"
 
 $clientesCount = Count-Files ".\brain\clientes"
 $proyectosCount = Count-Files ".\brain\proyectos"
@@ -300,3 +300,4 @@ a:hover { text-decoration: underline; }
 Set-Content -Path ".\ui\panel_autonexus.html" -Value $html -Encoding UTF8
 
 Write-Host "Panel maestro creado: .\ui\panel_autonexus.html" -ForegroundColor Green
+
