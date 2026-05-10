@@ -448,45 +448,17 @@
         "final_responsible":  "direccion"
     },
     {
-        "id":  "event_task_032",
-        "timestamp":  "2026-05-10T05:19:50.7705949Z",
+        "id":  "event_task_035",
+        "timestamp":  "2026-05-10T05:21:35.9550929Z",
         "actor":  "dirección",
         "action":  "registrar_tarea",
-        "object":  "TASK-032",
-        "permission_level":  1,
-        "risk_level":  1,
-        "status":  "registrado",
-        "result":  "Ficha de cliente creada en Brain",
-        "consequence":  "La tarea queda disponible para seguimiento operativo",
-        "learning":  "El sistema ya puede crear clientes desde consola y dejarlos listos para generar propuestas.",
-        "final_responsible":  "direccion"
-    },
-    {
-        "id":  "event_task_033",
-        "timestamp":  "2026-05-10T05:19:51.6366765Z",
-        "actor":  "dirección",
-        "action":  "registrar_tarea",
-        "object":  "TASK-033",
+        "object":  "TASK-035",
         "permission_level":  2,
         "risk_level":  1,
         "status":  "registrado",
-        "result":  "Propuesta Odoo generada automáticamente desde archivo de cliente",
+        "result":  "Cliente genérico eliminado y comando único protegido contra valores de ejemplo",
         "consequence":  "La tarea queda disponible para seguimiento operativo",
-        "learning":  "El sistema ya puede generar propuestas Odoo a partir de un cliente registrado en Brain.",
-        "final_responsible":  "direccion"
-    },
-    {
-        "id":  "event_task_034",
-        "timestamp":  "2026-05-10T05:19:52.4863070Z",
-        "actor":  "dirección",
-        "action":  "registrar_tarea",
-        "object":  "TASK-034",
-        "permission_level":  2,
-        "risk_level":  1,
-        "status":  "registrado",
-        "result":  "Reporte QA automático creado",
-        "consequence":  "La tarea queda disponible para seguimiento operativo",
-        "learning":  "Las propuestas generadas por script deben revisarse antes de cualquier envío real.",
+        "learning":  "Los comandos de ejemplo no deben ejecutarse sin reemplazar los valores placeholder.",
         "final_responsible":  "direccion"
     }
 ]

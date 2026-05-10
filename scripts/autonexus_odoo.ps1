@@ -38,6 +38,12 @@ if (-not (Test-Path ".\scripts\pipeline_odoo.ps1")) {
 
 $safeNombre = Convert-ToSafeName $Nombre
 
+$placeholders = @("Nombre del Cliente", "Tipo de empresa", "Necesidad principal")
+if ($placeholders -contains $Nombre -or $placeholders -contains $TipoEmpresa -or $placeholders -contains $Necesidad) {
+    Write-Host "ERROR: Estás usando valores de ejemplo. Reemplazalos por datos reales o demo específicos." -ForegroundColor Red
+    exit
+}
+
 Write-Host ""
 Write-Host "AUTONEXUS ODOO: Ejecutando flujo completo" -ForegroundColor Cyan
 Write-Host "Cliente: $Nombre"
@@ -103,3 +109,4 @@ Write-Host "Cliente: .\brain\clientes\cliente_${safeNombre}.md"
 Write-Host "Propuesta: .\output\propuestas\propuesta_odoo_${safeNombre}_generada.md"
 Write-Host "QA: .\output\reportes\qa_propuesta_odoo_${safeNombre}_generada.md"
 Write-Host ""
+
