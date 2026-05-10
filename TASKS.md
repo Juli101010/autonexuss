@@ -1634,3 +1634,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El panel no debe cambiar si solo cambia el timestamp.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-084
+
+- ID: TASK-084
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear comando simple de pedido para Autonexus OS
+- Tipo: sistema interno + comando simple + DeepSeek local
+- Objeto de trabajo: scripts/pedir_autonexus.ps1
+- Agente sugerido: Agente PM + Motor Local DeepSeek + Autonexus Master
+- Skill sugerido: Orquestación de Agentes + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Comando simple de pedido creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Dirección necesita una entrada corta para pedir acciones sin comandos largos.
+- Actualización de grafo: Registrar evento asociado a la tarea.
