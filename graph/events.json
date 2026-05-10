@@ -572,5 +572,33 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "La visualización del sistema debe integrar clientes, propuestas, QA, conversaciones, agentes, skills y eventos.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_044",
+        "timestamp":  "2026-05-10T05:35:19.0137355Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-044",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Documento generado como borrador interno",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS puede generar documentos internos desde un pedido estructurado.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_045",
+        "timestamp":  "2026-05-10T05:35:19.4587970Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-045",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "QA automático de documento generado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Los documentos generados también deben tener revisión automática mínima.",
+        "final_responsible":  "direccion"
     }
 ]

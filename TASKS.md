@@ -834,3 +834,43 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: La visualización del sistema debe integrar clientes, propuestas, QA, conversaciones, agentes, skills y eventos.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-044
+
+- ID: TASK-044
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Generar documento: Mapa de próximos módulos de Autonexus OS
+- Tipo: documentación + producción interna
+- Objeto de trabajo: .\output\documentos\documento_mapa_de_proximos_modulos_de_autonexus_os.md
+- Agente sugerido: Agente Documentador + Agente PM
+- Skill sugerido: Cierre de Tarea + Orquestación de Agentes
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Documento generado como borrador interno
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede generar documentos internos desde un pedido estructurado.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-045
+
+- ID: TASK-045
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA automático del documento: Mapa de próximos módulos de Autonexus OS
+- Tipo: QA + documentación
+- Objeto de trabajo: .\output\reportes\qa_documento_mapa_de_proximos_modulos_de_autonexus_os.md
+- Agente sugerido: Agente QA + Agente Documentador
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: QA automático de documento generado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Los documentos generados también deben tener revisión automática mínima.
+- Actualización de grafo: Registrar evento asociado a la tarea.
