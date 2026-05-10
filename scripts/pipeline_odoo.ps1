@@ -78,16 +78,34 @@ if ([string]::IsNullOrWhiteSpace($IdCliente)) {
 Write-Host ""
 Write-Host "PASO 1/3: Crear cliente en Brain" -ForegroundColor Cyan
 
-powershell -ExecutionPolicy Bypass -File .\scripts\crear_cliente.ps1 `
-  -Id $IdCliente `
-  -Nombre $Nombre `
-  -Tipo $TipoEmpresa `
-  -Necesidad $Necesidad `
-  -Problemas $Problemas `
-  -Objetivo $Objetivo `
-  -ModulosIniciales $ModulosIniciales `
-  -ModulosFuturos $ModulosFuturos `
-  -Riesgos $Riesgos
+$clienteArgs = @{
+    Id = $IdCliente
+    Nombre = $Nombre
+    Tipo = $TipoEmpresa
+    Necesidad = $Necesidad
+}
+
+if (-not [string]::IsNullOrWhiteSpace($Problemas)) {
+    $clienteArgs["Problemas"] = $Problemas
+}
+
+if (-not [string]::IsNullOrWhiteSpace($Objetivo)) {
+    $clienteArgs["Objetivo"] = $Objetivo
+}
+
+if (-not [string]::IsNullOrWhiteSpace($ModulosIniciales)) {
+    $clienteArgs["ModulosIniciales"] = $ModulosIniciales
+}
+
+if (-not [string]::IsNullOrWhiteSpace($ModulosFuturos)) {
+    $clienteArgs["ModulosFuturos"] = $ModulosFuturos
+}
+
+if (-not [string]::IsNullOrWhiteSpace($Riesgos)) {
+    $clienteArgs["Riesgos"] = $Riesgos
+}
+
+& powershell -ExecutionPolicy Bypass -File ".\scripts\crear_cliente.ps1" @clienteArgs
 
 if ([string]::IsNullOrWhiteSpace($IdPropuesta)) {
     $IdPropuesta = Get-NextTaskId
@@ -96,7 +114,7 @@ if ([string]::IsNullOrWhiteSpace($IdPropuesta)) {
 Write-Host ""
 Write-Host "PASO 2/3: Generar propuesta Odoo" -ForegroundColor Cyan
 
-powershell -ExecutionPolicy Bypass -File .\scripts\generar_propuesta_odoo.ps1 `
+& powershell -ExecutionPolicy Bypass -File ".\scripts\generar_propuesta_odoo.ps1" `
   -Cliente $Nombre `
   -Id $IdPropuesta
 
@@ -116,7 +134,7 @@ if ([string]::IsNullOrWhiteSpace($IdQA)) {
 Write-Host ""
 Write-Host "PASO 3/3: Ejecutar QA automático" -ForegroundColor Cyan
 
-powershell -ExecutionPolicy Bypass -File .\scripts\qa_propuesta_odoo.ps1 `
+& powershell -ExecutionPolicy Bypass -File ".\scripts\qa_propuesta_odoo.ps1" `
   -Propuesta $propuestaPath `
   -Id $IdQA
 

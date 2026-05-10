@@ -493,3 +493,83 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Las propuestas generadas por script deben revisarse antes de cualquier envío real.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-024
+
+- ID: TASK-024
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Corregir pipeline Odoo para aceptar solo Nombre, TipoEmpresa y Necesidad sin romper parámetros opcionales
+- Tipo: sistema interno + Odoo + QA
+- Objeto de trabajo: scripts/pipeline_odoo.ps1
+- Agente sugerido: Agente PM + Agente QA
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Pipeline Odoo corregido para parámetros opcionales seguros
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Los parámetros opcionales vacíos no deben pasarse como argumentos sin valor.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-025
+
+- ID: TASK-025
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear ficha de cliente para Cliente Real X
+- Tipo: cliente + documentación
+- Objeto de trabajo: .\brain\clientes\cliente_cliente_real_x.md
+- Agente sugerido: Agente Comercial + Agente Documentador
+- Skill sugerido: Propuesta Cliente + Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: registrado
+- Resultado esperado: Ficha de cliente creada en Brain
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema ya puede crear clientes desde consola y dejarlos listos para generar propuestas.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-026
+
+- ID: TASK-026
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Generar propuesta Odoo automática para Cliente Real X
+- Tipo: comercial + Odoo
+- Objeto de trabajo: .\output\propuestas\propuesta_odoo_cliente_real_x_generada.md
+- Agente sugerido: Agente Comercial + Agente Odoo + Agente QA
+- Skill sugerido: Propuesta Cliente + Auditoría Odoo + QA Preproducción
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Propuesta Odoo generada automáticamente desde archivo de cliente
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema ya puede generar propuestas Odoo a partir de un cliente registrado en Brain.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-027
+
+- ID: TASK-027
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA automático de propuesta Odoo
+- Tipo: QA + comercial + Odoo
+- Objeto de trabajo: .\output\propuestas\propuesta_odoo_cliente_real_x_generada.md
+- Agente sugerido: Agente QA + Agente Comercial + Agente Odoo
+- Skill sugerido: QA Preproducción + Propuesta Cliente + Auditoría Odoo
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Reporte QA automático creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Las propuestas generadas por script deben revisarse antes de cualquier envío real.
+- Actualización de grafo: Registrar evento asociado a la tarea.
