@@ -82,5 +82,19 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "El sistema empieza a clasificar tareas automáticamente según palabras clave.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_006",
+        "timestamp":  "2026-05-10T04:54:18.1606528Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-006",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Tarea clasificada y registrada por el router operativo",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "El router permite clasificar tareas sin completar todos los campos manualmente.",
+        "final_responsible":  "direccion"
     }
 ]

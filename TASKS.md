@@ -133,3 +133,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El sistema empieza a clasificar tareas automáticamente según palabras clave.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-006
+
+- ID: TASK-006
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Preparar una propuesta comercial para un cliente que quiere implementar Odoo
+- Tipo: Odoo
+- Objeto de trabajo: Proyecto Odoo
+- Agente sugerido: Agente Odoo
+- Skill sugerido: Auditoría Odoo
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Tarea clasificada y registrada por el router operativo
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El router permite clasificar tareas sin completar todos los campos manualmente.
+- Actualización de grafo: Registrar evento asociado a la tarea.
