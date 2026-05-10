@@ -40,5 +40,19 @@
         "consequence":  "El sistema ya tiene un primer proyecto real para organizar la agencia",
         "learning":  "Antes de instalar herramientas externas, conviene definir proyectos, procesos y riesgos internos",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_003",
+        "timestamp":  "2026-05-10T04:49:52.5197480Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-003",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Tarea registrada en Autonexus OS",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "La tarea queda documentada para seguimiento operativo.",
+        "final_responsible":  "direccion"
     }
 ]

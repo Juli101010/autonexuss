@@ -37,6 +37,7 @@ if (-not (Test-Path $eventsPath)) {
     exit
 }
 
+# Registrar tarea en TASKS.md
 $tasksText = Get-Content $tasksPath -Raw
 
 if ($tasksText -match $Id) {
@@ -68,10 +69,13 @@ if ($tasksText -match $Id) {
     Write-Host "Tarea $Id agregada a TASKS.md" -ForegroundColor Green
 }
 
+# Registrar evento en graph/events.json
 $events = Get-Content $eventsPath -Raw | ConvertFrom-Json
 $events = @($events)
 
-$eventId = "event_" + ($Id -replace "TASK-", "")
+$safeTaskId = ($Id.ToLower() -replace "[^a-z0-9]+", "_").Trim("_")
+$eventId = "event_" + $safeTaskId
+
 $exists = $events | Where-Object { $_.id -eq $eventId }
 
 if ($exists) {
