@@ -253,3 +253,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Las propuestas Odoo deben separar diagnóstico, fases, supuestos, exclusiones, riesgos y aprobación de Dirección.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-012
+
+- ID: TASK-012
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear un cliente ficticio de prueba y generar una propuesta Odoo adaptada usando la plantilla comercial completa
+- Tipo: comercial + Odoo
+- Objeto de trabajo: output/propuestas/propuesta_odoo_distribuidora_alfa.md
+- Agente sugerido: Agente Comercial + Agente Odoo + Agente Documentador
+- Skill sugerido: Propuesta Cliente + Auditoría Odoo + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Cliente ficticio y propuesta Odoo adaptada creados
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El sistema ya puede usar una plantilla general para producir una propuesta contextualizada según un perfil de cliente.
+- Actualización de grafo: Registrar evento asociado a la tarea.
