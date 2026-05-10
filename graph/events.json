@@ -26,5 +26,19 @@
         "consequence":  "El proyecto ya puede clonarse desde otra computadora",
         "learning":  "GitHub queda como base de versionado antes de instalar automatizaciones",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_003",
+        "timestamp":  "2026-05-10T04:21:37.7941576Z",
+        "actor":  "direccion",
+        "action":  "crear_proyecto_interno",
+        "object":  "brain/proyectos/autonexus_agencia.md",
+        "permission_level":  1,
+        "risk_level":  1,
+        "status":  "completado",
+        "result":  "Proyecto interno Autonexus Agencia creado dentro del Brain",
+        "consequence":  "El sistema ya tiene un primer proyecto real para organizar la agencia",
+        "learning":  "Antes de instalar herramientas externas, conviene definir proyectos, procesos y riesgos internos",
+        "final_responsible":  "direccion"
     }
 ]

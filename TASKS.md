@@ -53,3 +53,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: no
 - Aprendizaje a guardar: primero se construye gobierno, memoria, agentes y grafo antes de instalar herramientas pesadas.
 - Actualización de grafo: evento inicial de repositorio creado.
+
+---
+
+## TASK-002
+
+- ID: TASK-002
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear el primer proyecto real de la agencia dentro del Brain.
+- Tipo: memoria / organización interna
+- Objeto de trabajo: brain/proyectos/autonexus_agencia.md
+- Agente sugerido: Agente PM + Agente Documentador
+- Skill sugerido: Cierre de Tarea
+- Nivel de permiso: 1
+- Riesgo: bajo
+- Estado: completado
+- Resultado esperado: Autonexus Agencia queda definido como proyecto interno activo.
+- Requiere aprobación de Dirección: no
+- Aprendizaje a guardar: el sistema empieza a registrar proyectos reales dentro del Brain antes de automatizar.
+- Actualización de grafo: registrar proyecto interno Autonexus Agencia.
