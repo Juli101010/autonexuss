@@ -1,0 +1,159 @@
+[
+  {
+    "id": "direccion",
+    "label": "Dirección Autonexus",
+    "type": "direccion",
+    "authority_level": 5,
+    "status": "activo",
+    "description": "Nodo superior de gobierno, observación y decisión final."
+  },
+  {
+    "id": "agente_pm",
+    "label": "Agente PM",
+    "type": "agente_virtual",
+    "permission_level": 2,
+    "status": "activo",
+    "description": "Clasifica tareas, asigna agentes y eleva decisiones sensibles."
+  },
+  {
+    "id": "agente_odoo",
+    "label": "Agente Odoo",
+    "type": "agente_virtual",
+    "permission_level": 2,
+    "status": "diseño",
+    "description": "Especialista en Odoo, AFIP, facturación, migraciones y errores técnicos."
+  },
+  {
+    "id": "agente_comercial",
+    "label": "Agente Comercial",
+    "type": "agente_virtual",
+    "permission_level": 2,
+    "status": "diseño",
+    "description": "Prepara propuestas, mensajes, análisis de leads y seguimiento."
+  },
+  {
+    "id": "agente_qa",
+    "label": "Agente QA",
+    "type": "agente_virtual",
+    "permission_level": 2,
+    "status": "activo",
+    "description": "Revisa calidad, riesgos y evidencia antes de entregar."
+  },
+  {
+    "id": "agente_documentador",
+    "label": "Agente Documentador",
+    "type": "agente_virtual",
+    "permission_level": 2,
+    "status": "activo",
+    "description": "Guarda aprendizajes, decisiones, manuales y memoria reutilizable."
+  },
+  {
+    "id": "autonexus_brain",
+    "label": "Autonexus Brain",
+    "type": "memoria",
+    "permission_level": 1,
+    "status": "activo",
+    "description": "Segundo cerebro de clientes, proyectos, procesos y errores aprendidos."
+  },
+  {
+    "id": "memoria_marron",
+    "label": "Archivos Marrón",
+    "type": "memoria",
+    "permission_level": 1,
+    "status": "diseño",
+    "description": "Memoria documental de largo plazo."
+  },
+  {
+    "id": "claude_code",
+    "label": "Claude Code",
+    "type": "herramienta",
+    "permission_level": 3,
+    "status": "externo",
+    "description": "Motor principal para operar código, archivos y tareas técnicas."
+  },
+  {
+    "id": "chatgpt_codex",
+    "label": "ChatGPT Plus / Codex",
+    "type": "herramienta",
+    "permission_level": 2,
+    "status": "externo",
+    "description": "Refuerzo para revisar, programar, explicar y optimizar."
+  },
+  {
+    "id": "github",
+    "label": "GitHub",
+    "type": "herramienta",
+    "permission_level": 3,
+    "status": "pendiente",
+    "description": "Control de versiones, ramas, PRs y trazabilidad."
+  },
+  {
+    "id": "n8n",
+    "label": "n8n",
+    "type": "automatizacion",
+    "permission_level": 3,
+    "status": "pendiente",
+    "description": "Sistema nervioso de automatizaciones, webhooks e integraciones."
+  },
+  {
+    "id": "skill_propuesta_cliente",
+    "label": "Skill Propuesta Cliente",
+    "type": "skill",
+    "permission_level": 1,
+    "status": "activo",
+    "description": "Procedimiento para crear propuestas comerciales profesionales."
+  },
+  {
+    "id": "skill_auditoria_odoo",
+    "label": "Skill Auditoría Odoo",
+    "type": "skill",
+    "permission_level": 2,
+    "status": "activo",
+    "description": "Procedimiento para diagnosticar errores Odoo de forma segura."
+  },
+  {
+    "id": "skill_qa_preproduccion",
+    "label": "Skill QA Preproducción",
+    "type": "skill",
+    "permission_level": 2,
+    "status": "activo",
+    "description": "Checklist antes de entregar o publicar."
+  },
+  {
+    "id": "permiso_direccion",
+    "label": "Permiso de Dirección",
+    "type": "permiso",
+    "status": "activo",
+    "description": "Aprobación obligatoria para decisiones sensibles."
+  },
+  {
+    "id": "accion_crear_agente",
+    "label": "Crear nuevo agente",
+    "type": "accion",
+    "permission_level": 4,
+    "status": "controlado",
+    "description": "Acción sensible: solo puede proponerse, no ejecutarse sin aprobación."
+  },
+  {
+    "id": "riesgo_yolo",
+    "label": "Riesgo YOLO sin control",
+    "type": "riesgo",
+    "risk_level": 5,
+    "status": "bloqueado",
+    "description": "Cambios automáticos sin permisos, rama, QA o revisión."
+  },
+  {
+    "id": "resultado_entregable",
+    "label": "Entregable validado",
+    "type": "resultado",
+    "status": "objetivo",
+    "description": "Resultado final luego de QA y aprobación."
+  },
+  {
+    "id": "aprendizaje_error",
+    "label": "Aprendizaje por error",
+    "type": "aprendizaje",
+    "status": "activo",
+    "description": "Registro de error, causa, solución y mejora propuesta."
+  }
+]

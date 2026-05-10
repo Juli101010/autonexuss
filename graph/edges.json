@@ -1,0 +1,121 @@
+[
+  {
+    "from": "direccion",
+    "to": "agente_pm",
+    "relation": "supervisa",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "direccion",
+    "to": "permiso_direccion",
+    "relation": "autoriza",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "agente_pm",
+    "to": "agente_odoo",
+    "relation": "asigna",
+    "weight": 4,
+    "status": "diseño"
+  },
+  {
+    "from": "agente_pm",
+    "to": "agente_comercial",
+    "relation": "asigna",
+    "weight": 4,
+    "status": "diseño"
+  },
+  {
+    "from": "agente_pm",
+    "to": "agente_qa",
+    "relation": "solicita_validacion",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "agente_pm",
+    "to": "autonexus_brain",
+    "relation": "consulta",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "agente_odoo",
+    "to": "skill_auditoria_odoo",
+    "relation": "usa",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "agente_comercial",
+    "to": "skill_propuesta_cliente",
+    "relation": "usa",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "agente_qa",
+    "to": "skill_qa_preproduccion",
+    "relation": "usa",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "agente_documentador",
+    "to": "autonexus_brain",
+    "relation": "documenta",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "accion_crear_agente",
+    "to": "permiso_direccion",
+    "relation": "requiere_permiso",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "agente_pm",
+    "to": "accion_crear_agente",
+    "relation": "puede_proponer",
+    "weight": 4,
+    "status": "activo"
+  },
+  {
+    "from": "riesgo_yolo",
+    "to": "permiso_direccion",
+    "relation": "bloquea_sin_autorizacion",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "claude_code",
+    "to": "github",
+    "relation": "modifica_en_rama_segura",
+    "weight": 4,
+    "status": "futuro"
+  },
+  {
+    "from": "n8n",
+    "to": "agente_pm",
+    "relation": "activa_tarea",
+    "weight": 3,
+    "status": "futuro"
+  },
+  {
+    "from": "resultado_entregable",
+    "to": "autonexus_brain",
+    "relation": "alimenta",
+    "weight": 5,
+    "status": "activo"
+  },
+  {
+    "from": "aprendizaje_error",
+    "to": "autonexus_brain",
+    "relation": "documenta",
+    "weight": 5,
+    "status": "activo"
+  }
+]

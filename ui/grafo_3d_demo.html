@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autonexus OS · Grafo Cognitivo Operativo</title>
+  <style>
+    :root {
+      --bg:#070a12; --panel:rgba(15,20,34,.86); --line:rgba(255,255,255,.13);
+      --text:#eef3ff; --muted:#95a3b8; --accent:#65e4ff;
+      --blue:#4f7cff; --violet:#9d7cff; --pink:#ff72c6; --cyan:#65e4ff;
+      --yellow:#ffd166; --green:#82f0a9; --gray:#c9d3e6; --lime:#b6f36a;
+      --red:#ff5f73; --doc:#9be7ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;overflow:hidden;font-family:Inter,system-ui,Segoe UI,sans-serif;color:var(--text);
+      background:radial-gradient(circle at 15% 18%,rgba(79,124,255,.2),transparent 30%),
+      radial-gradient(circle at 80% 10%,rgba(101,228,255,.16),transparent 28%),
+      radial-gradient(circle at 55% 90%,rgba(157,124,255,.14),transparent 30%),var(--bg)}
+    canvas{position:fixed;inset:0;width:100vw;height:100vh;display:block;cursor:grab}
+    .top{position:fixed;top:16px;left:16px;right:16px;display:flex;justify-content:space-between;gap:12px;pointer-events:none}
+    .card{pointer-events:auto;background:var(--panel);border:1px solid var(--line);border-radius:22px;backdrop-filter:blur(18px);box-shadow:0 24px 70px rgba(0,0,0,.35)}
+    .brand{padding:16px 18px;max-width:720px}
+    h1{font-size:18px;margin:0 0 5px;letter-spacing:-.02em}
+    p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+    .side{position:fixed;top:104px;right:16px;width:350px;bottom:16px;padding:16px;overflow:auto}
+    .left{position:fixed;top:104px;left:16px;width:310px;bottom:16px;padding:16px;overflow:auto}
+    .smalltitle{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:16px 0 9px}
+    .legend{display:grid;gap:8px}
+    .row{display:grid;grid-template-columns:14px 1fr auto;gap:8px;align-items:center;padding:9px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.055);font-size:13px}
+    .dot{width:12px;height:12px;border-radius:99px;box-shadow:0 0 18px currentColor}
+    button{width:100%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--text);padding:11px 12px;border-radius:14px;margin-bottom:8px;cursor:pointer}
+    button:hover{background:rgba(255,255,255,.13)}
+    .task{padding:12px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.055);margin-bottom:10px}
+    .task b{display:block;font-size:13px;margin-bottom:5px}
+    .bar{height:7px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-top:8px}
+    .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet))}
+    .log{border-left:3px solid var(--accent);padding:9px 10px;margin-bottom:8px;background:rgba(255,255,255,.055);border-radius:12px}
+    .metric{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .metric div{padding:12px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.055)}
+    .metric b{font-size:22px;display:block}
+    .tip{position:fixed;display:none;max-width:310px;background:rgba(18,24,40,.96);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:12px;box-shadow:0 24px 70px rgba(0,0,0,.35);pointer-events:none}
+    @media(max-width:900px){.side,.left{display:none}.brand{max-width:none}.top{right:16px}}
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div class="top">
+    <div class="card brand">
+      <h1>Autonexus OS · Grafo Cognitivo Operativo</h1>
+      <p>Demo local: Dirección decide, agentes proponen, skills guían, herramientas ejecutan, memoria aprende y el grafo muestra consecuencias.</p>
+    </div>
+  </div>
+  <aside class="card left">
+    <h1>Capas</h1>
+    <p>Colores por tipo de nodo. El tamaño representa autoridad, valor, carga o riesgo.</p>
+    <div class="smalltitle">Tipos de nodo</div>
+    <div class="legend" id="legend"></div>
+    <div class="smalltitle">Controles</div>
+    <button id="taskBtn">Simular nueva tarea</button>
+    <button id="riskBtn">Resaltar permisos y riesgos</button>
+    <button id="resetBtn">Recentrar vista</button>
+  </aside>
+  <aside class="card side">
+    <h1>Agencia trabajando</h1>
+    <p>Lectura operativa de actores, objetos, permisos, resultados y aprendizaje.</p>
+    <div class="smalltitle">Métricas</div>
+    <div class="metric">
+      <div><b id="mNodes">0</b><p>Nodos</p></div>
+      <div><b id="mEdges">0</b><p>Relaciones</p></div>
+      <div><b>5</b><p>Nivel Dirección</p></div>
+      <div><b>0.1</b><p>Versión</p></div>
+    </div>
+    <div class="smalltitle">Tareas simuladas</div>
+    <div id="tasks"></div>
+    <div class="smalltitle">Conversación operativa</div>
+    <div id="logs"></div>
+  </aside>
+  <div class="tip" id="tip"></div>
+<script>
+const canvas=document.getElementById('c'),ctx=canvas.getContext('2d'),tip=document.getElementById('tip');
+let W,H,dpr=1,angX=-.42,angY=.55,zoom=1,targetZoom=1,drag=false,lx=0,ly=0,mouse={x:-999,y:-999},hover=null,focusRisk=false;
+const TYPES={
+ direccion:['Dirección','#4f7cff'], agente:['Agente virtual','#9d7cff'], skill:['Skill','#ff72c6'],
+ herramienta:['Herramienta','#65e4ff'], automatizacion:['Automatización','#ffd166'], memoria:['Memoria','#82f0a9'],
+ cliente:['Cliente/Proyecto','#c9d3e6'], accion:['Acción','#b6f36a'], permiso:['Permiso','#ffd166'],
+ riesgo:['Riesgo','#ff5f73'], resultado:['Resultado','#9be7ff'], aprendizaje:['Aprendizaje','#82f0a9']
+};
+const nodes=[
+ n('direccion','Dirección / Observador','direccion',-250,-80,80,30,'Nodo superior: observa, aprueba, rechaza, delega y decide.'),
+ n('pm','Agente PM','agente',-40,-40,50,21,'Clasifica tareas, asigna agentes y eleva decisiones sensibles.'),
+ n('odoo','Agente Odoo','agente',170,-160,-30,18,'Diagnóstico Odoo, AFIP, facturación, módulos y datos.'),
+ n('comercial','Agente Comercial','agente',90,160,-80,18,'Propuestas, leads, mensajes y seguimiento.'),
+ n('qa','Agente QA','agente',260,80,80,18,'Bloquea entregas sin pruebas, coherencia o permiso.'),
+ n('doc','Agente Documentador','agente',-230,180,-70,16,'Guarda aprendizajes, decisiones y procesos reutilizables.'),
+ n('brain','Autonexus Brain','memoria',-420,-190,-20,24,'Segundo cerebro: clientes, proyectos, errores, procesos y memoria marrón.'),
+ n('marron','Archivos Marrón','memoria',-570,-60,70,18,'Memoria documental de largo plazo.'),
+ n('claude','Claude Code','herramienta',430,-140,30,22,'Motor principal para operar archivos, código y tareas técnicas.'),
+ n('codex','ChatGPT Plus / Codex','herramienta',465,25,-110,17,'Refuerzo para revisión, programación y optimización.'),
+ n('github','GitHub','herramienta',620,-45,55,18,'Versionado, ramas, commits y trazabilidad.'),
+ n('n8n','n8n','automatizacion',-70,-295,15,21,'Sistema nervioso: workflows, webhooks e integraciones.'),
+ n('skillprop','Skill Propuesta Cliente','skill',-15,350,-40,16,'Procedimiento para crear propuestas comerciales.'),
+ n('skillodoo','Skill Auditoría Odoo','skill',300,-330,30,16,'Procedimiento para diagnóstico técnico Odoo.'),
+ n('skillqa','Skill QA','skill',330,270,80,16,'Checklist de salida, calidad, riesgo y evidencia.'),
+ n('permiso','Permiso Dirección','permiso',-250,-330,70,19,'Aprobación obligatoria para acciones sensibles.'),
+ n('crearagente','Acción: crear agente','accion',-385,330,50,16,'Solo se propone. No se ejecuta sin aprobación.'),
+ n('riesgo','Riesgo: YOLO sin control','riesgo',520,-330,-30,18,'Cambios automáticos sin permiso, rama, QA o revisión.'),
+ n('cliente','Cliente / Proyecto','cliente',620,185,-50,16,'Objeto real de trabajo de la agencia.'),
+ n('entrega','Entregable validado','resultado',120,500,50,17,'Salida final luego de QA y aprobación.'),
+ n('aprendizaje','Aprendizaje por error','aprendizaje',-410,500,-80,16,'Error, causa, solución, regla nueva y skill sugerido.')
+];
+const edges=[
+ e('direccion','pm','supervisa',5),e('direccion','permiso','autoriza',5),e('pm','odoo','asigna',4),e('pm','comercial','asigna',4),
+ e('pm','qa','solicita QA',5),e('pm','brain','consulta',5),e('odoo','skillodoo','usa',5),e('comercial','skillprop','usa',5),
+ e('qa','skillqa','usa',5),e('doc','brain','documenta',5),e('crearagente','permiso','requiere',5),e('pm','crearagente','propone',4),
+ e('riesgo','permiso','bloquea sin permiso',5),e('odoo','claude','usa',5),e('claude','github','modifica en rama',5),
+ e('codex','claude','apoya',3),e('n8n','pm','activa tarea',4),e('cliente','pm','solicita',4),
+ e('skillprop','entrega','genera',5),e('skillqa','entrega','valida',5),e('entrega','brain','alimenta',5),e('aprendizaje','brain','guarda',5),
+ e('marron','brain','integra',4),e('qa','permiso','eleva bloqueo',5)
+];
+function n(id,label,type,x,y,z,size,desc){return{id,label,type,x,y,z,bx:x,by:y,bz:z,size,desc,p:Math.random()*6.28,pulse:0}}
+function e(from,to,label,w){return{from,to,label,w,p:Math.random()*6.28}}
+function resize(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;canvas.width=W*dpr;canvas.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+function rot(o){let x=o.x,y=o.y,z=o.z,cx=Math.cos(angX),sx=Math.sin(angX),cy=Math.cos(angY),sy=Math.sin(angY);let y1=y*cx-z*sx,z1=y*sx+z*cx;return{x:x*cy+z1*sy,y:y1,z:-x*sy+z1*cy}}
+function proj(o){let r=rot(o),s=620/(620+r.z);return{x:W/2+r.x*s*zoom,y:H/2+r.y*s*zoom,z:r.z,s:s*zoom}}
+function bg(t){ctx.clearRect(0,0,W,H);ctx.strokeStyle='rgba(255,255,255,.035)';ctx.lineWidth=1;let g=54*zoom;ctx.save();ctx.translate(W/2,H/2);ctx.rotate(angY*.08);for(let x=-W;x<W;x+=g){ctx.beginPath();ctx.moveTo(x,-H);ctx.lineTo(x,H);ctx.stroke()}for(let y=-H;y<H;y+=g){ctx.beginPath();ctx.moveTo(-W,y);ctx.lineTo(W,y);ctx.stroke()}ctx.restore()}
+function drawEdge(ed,t){let a=nodes.find(x=>x.id==ed.from),b=nodes.find(x=>x.id==ed.to),pa=proj(a),pb=proj(b);ctx.save();let gr=ctx.createLinearGradient(pa.x,pa.y,pb.x,pb.y);gr.addColorStop(0,TYPES[a.type][1]+'99');gr.addColorStop(1,TYPES[b.type][1]+'99');ctx.strokeStyle=gr;ctx.globalAlpha=.18+ed.w*.07;ctx.lineWidth=.8+ed.w*.35;ctx.beginPath();ctx.moveTo(pa.x,pa.y);let mx=(pa.x+pb.x)/2+Math.sin(ed.p)*22,my=(pa.y+pb.y)/2+Math.cos(ed.p)*22;ctx.quadraticCurveTo(mx,my,pb.x,pb.y);ctx.stroke();let q=((t*.00016)+ed.p)%1;let x=(1-q)*(1-q)*pa.x+2*(1-q)*q*mx+q*q*pb.x,y=(1-q)*(1-q)*pa.y+2*(1-q)*q*my+q*q*pb.y;ctx.globalAlpha=.9;ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(x,y,2.5,0,6.28);ctx.fill();ctx.restore()}
+function drawNode(o,t){let p=proj(o),col=TYPES[o.type][1],r=Math.max(5,o.size*p.s*(1+o.pulse*.25));ctx.save();ctx.globalAlpha=.15+.1*Math.sin(t*.002+o.p);ctx.fillStyle=col;ctx.beginPath();ctx.arc(p.x,p.y,r*2.2,0,6.28);ctx.fill();ctx.restore();ctx.save();ctx.translate(p.x,p.y);ctx.shadowColor=col;ctx.shadowBlur=24+o.pulse*25;ctx.fillStyle=col;ctx.strokeStyle='rgba(255,255,255,.78)';ctx.lineWidth=1.2;if(o.type=='riesgo'){ctx.beginPath();ctx.moveTo(0,-r*1.2);ctx.lineTo(r*1.15,r);ctx.lineTo(-r*1.15,r);ctx.closePath()}else if(o.type=='direccion'){ctx.beginPath();for(let i=0;i<6;i++){let a=Math.PI/6+i*Math.PI/3;let x=Math.cos(a)*r*1.15,y=Math.sin(a)*r*1.15;i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.closePath()}else if(o.type=='skill'){ctx.roundRect(-r*1.25,-r*.75,r*2.5,r*1.5,r*.25)}else if(o.type=='memoria'){ctx.roundRect(-r,-r*.85,r*2,r*1.7,r*.35)}else{ctx.beginPath();ctx.arc(0,0,r,0,6.28)}ctx.fill();ctx.stroke();ctx.restore();ctx.save();ctx.textAlign='center';ctx.fillStyle='#eef3ff';ctx.font=Math.max(10,11*p.s)+'px system-ui';ctx.shadowColor='#000';ctx.shadowBlur=8;if(p.s>.45||hover==o)ctx.fillText(o.label,p.x,p.y+r+9);ctx.restore();o.screen={x:p.x,y:p.y,r,z:p.z}}
+function animate(t){zoom+=(targetZoom-zoom)*.08;for(let o of nodes){o.x=o.bx+Math.sin(t*.0003+o.p)*6;o.y=o.by+Math.sin(t*.0007+o.p)*8;o.z=o.bz+Math.cos(t*.0003+o.p)*9;o.pulse*=.94;if(focusRisk&&(o.type=='riesgo'||o.type=='permiso'||o.id=='qa'))o.pulse=Math.max(o.pulse,.55)}bg(t);edges.forEach(ed=>drawEdge(ed,t));nodes.slice().sort((a,b)=>proj(a).z-proj(b).z).forEach(o=>drawNode(o,t));detect();requestAnimationFrame(animate)}
+function detect(){hover=null;let bd=9999;for(let o of nodes){let s=o.screen;if(!s)continue;let d=Math.hypot(mouse.x-s.x,mouse.y-s.y);if(d<s.r+12&&d<bd){hover=o;bd=d}}if(hover){tip.style.display='block';tip.style.left=mouse.x+14+'px';tip.style.top=mouse.y+14+'px';tip.innerHTML='<b>'+hover.label+'</b><p style="margin-top:5px;color:#95a3b8">'+TYPES[hover.type][0]+'</p><p style="margin-top:6px">'+hover.desc+'</p>'}else tip.style.display='none'}
+canvas.onmousedown=e=>{drag=true;lx=e.clientX;ly=e.clientY};onmouseup=()=>drag=false;onmousemove=e=>{mouse={x:e.clientX,y:e.clientY};if(drag){angY+=(e.clientX-lx)*.006;angX+=(e.clientY-ly)*.006;lx=e.clientX;ly=e.clientY}};canvas.onwheel=e=>{e.preventDefault();targetZoom*=e.deltaY>0?.92:1.08;targetZoom=Math.max(.45,Math.min(2.2,targetZoom))};
+document.getElementById('taskBtn').onclick=()=>['cliente','pm','comercial','skillprop','qa','entrega','brain'].forEach(id=>nodes.find(n=>n.id==id).pulse=1);
+document.getElementById('riskBtn').onclick=()=>{focusRisk=!focusRisk;['riesgo','permiso','qa','direccion'].forEach(id=>nodes.find(n=>n.id==id).pulse=1)};
+document.getElementById('resetBtn').onclick=()=>{angX=-.42;angY=.55;targetZoom=1;focusRisk=false};
+document.getElementById('mNodes').textContent=nodes.length;document.getElementById('mEdges').textContent=edges.length;
+document.getElementById('legend').innerHTML=Object.entries(TYPES).map(([k,v])=>'<div class="row"><span class="dot" style="color:'+v[1]+';background:'+v[1]+'"></span><span>'+v[0]+'</span><span>'+nodes.filter(n=>n.type==k).length+'</span></div>').join('');
+document.getElementById('tasks').innerHTML=[
+ ['Propuesta Odoo para cliente nuevo','Agente Comercial + Odoo',68],
+ ['Documentar error aprendido','Agente Documentador',42],
+ ['Validar entrega antes de enviar','Agente QA',55]
+].map(t=>'<div class="task"><b>'+t[0]+'</b><p>'+t[1]+'</p><div class="bar"><span style="width:'+t[2]+'%"></span></div></div>').join('');
+document.getElementById('logs').innerHTML=[
+ ['Agente PM','Clasifico la tarea y verifico permisos.'],
+ ['Agente QA','Bloqueo acciones sensibles sin evidencia.'],
+ ['Dirección','Aprueba, rechaza o delega.'],
+ ['Brain','Guardo aprendizaje y actualizo contexto.']
+].map(l=>'<div class="log"><b>'+l[0]+'</b><p>'+l[1]+'</p></div>').join('');
+resize();addEventListener('resize',resize);requestAnimationFrame(animate);
+</script>
+</body>
+</html>

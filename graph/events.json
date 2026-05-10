@@ -1,0 +1,16 @@
+[
+  {
+    "id": "event_001",
+    "timestamp": "2026-05-08T21:41:05.275507Z",
+    "actor": "direccion",
+    "action": "crear_sistema_base",
+    "object": "Autonexus OS v0.1",
+    "permission_level": 0,
+    "risk_level": 1,
+    "status": "registrado",
+    "result": "Estructura inicial creada",
+    "consequence": "El sistema ya tiene reglas, agentes base, skills y grafo inicial",
+    "learning": "Primero gobierno, después memoria, agentes, automatización y visualización",
+    "final_responsible": "direccion"
+  }
+]
