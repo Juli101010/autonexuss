@@ -1274,3 +1274,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Los prototipos HTML generados deben revisarse antes de publicarse.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-066
+
+- ID: TASK-066
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Ejecutar orquestador maestro modular: Necesito un plan interno para conectar todos los módulos de Autonexus OS y avanzar hacia una interfaz visual de control de agentes
+- Tipo: orquestador maestro + Web/Dev
+- Objeto de trabajo: output/reportes/master_ultima_ruta.md
+- Agente sugerido: Agente PM + Agente QA + Agente Automatizaciones
+- Skill sugerido: Orquestación de Agentes + QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Prototipo HTML generado con QA Web/Dev.
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.
+- Actualización de grafo: Registrar evento asociado a la tarea.
