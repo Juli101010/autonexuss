@@ -14,5 +14,9 @@
                            "TASKS.md",
                            "graph/events.json"
                        ],
-    "rollback":  "usar git revert del commit aplicado"
+    "rollback":  "usar git revert del commit aplicado",
+    "approved_at":  "2026-05-10 02:46:11",
+    "applied_at":  "2026-05-10 02:46:11",
+    "approved_by":  "Direccion",
+    "applied_by":  "Direccion"
 }

@@ -1134,3 +1134,23 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Autonexus OS puede aplicar mejoras internas aprobadas y dejar trazabilidad.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-059
+
+- ID: TASK-059
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Corregir módulo de auto-mejora para agregar propiedades JSON nuevas sin errores
+- Tipo: sistema interno + auto-mejora + corrección
+- Objeto de trabajo: scripts/autonexus_self_improve.ps1
+- Agente sugerido: Agente PM + Agente QA + Agente Automatizaciones
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Módulo de auto-mejora corregido
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: PowerShell requiere Add-Member para agregar propiedades nuevas a objetos JSON cargados.
+- Actualización de grafo: Registrar evento asociado a la tarea.

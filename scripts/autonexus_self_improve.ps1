@@ -8,6 +8,24 @@
     [string]$CommitMessage = ""
 )
 
+function Set-JsonProperty {
+    param(
+        [Parameter(Mandatory=$true)]
+        [object]$Object,
+
+        [Parameter(Mandatory=$true)]
+        [string]$Name,
+
+        [Parameter(Mandatory=$true)]
+        [object]$Value
+    )
+
+    if ($Object.PSObject.Properties.Name -contains $Name) {
+        $Object.$Name = $Value
+    } else {
+        $Object | Add-Member -MemberType NoteProperty -Name $Name -Value $Value
+    }
+}
 function Convert-ToSafeName {
     param([string]$Text)
     $safe = $Text.ToLower()
@@ -213,7 +231,7 @@ $mejora = Get-Content $jsonApplyPath -Raw | ConvertFrom-Json
 
 if ($Modo -eq "APPROVE") {
     $mejora.status = "approved_by_direction"
-    $mejora.approved_at = (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+    Set-JsonProperty -Object $mejora -Name "approved_at" -Value (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
     $mejora | ConvertTo-Json -Depth 10 | Set-Content -Path $jsonApplyPath -Encoding UTF8
 
     Register-AutonexusTask `
@@ -259,15 +277,15 @@ if ($Modo -eq "APPLY") {
     $policyPath = ".\brain\governance\policy.json"
     if (Test-Path $policyPath) {
         $policy = Get-Content $policyPath -Raw | ConvertFrom-Json
-        $policy.last_internal_improvement = $MejoraId
-        $policy.last_internal_improvement_at = $fechaApply
-        $policy.internal_self_improvement_enabled = $true
-        $policy.direction_keeps_final_control = $true
+        Set-JsonProperty -Object $policy -Name "last_internal_improvement" -Value $MejoraId
+        Set-JsonProperty -Object $policy -Name "last_internal_improvement_at" -Value $fechaApply
+        Set-JsonProperty -Object $policy -Name "internal_self_improvement_enabled" -Value $true
+        Set-JsonProperty -Object $policy -Name "direction_keeps_final_control" -Value $true
         $policy | ConvertTo-Json -Depth 10 | Set-Content -Path $policyPath -Encoding UTF8
     }
 
     $mejora.status = "applied"
-    $mejora.applied_at = $fechaApply
+    Set-JsonProperty -Object $mejora -Name "applied_at" -Value $fechaApply
     $mejora | ConvertTo-Json -Depth 10 | Set-Content -Path $jsonApplyPath -Encoding UTF8
 
     Register-AutonexusTask `
@@ -300,3 +318,4 @@ if ($Modo -eq "APPLY") {
     Write-Host $MejoraId
     Write-Host ""
 }
+

@@ -31,5 +31,9 @@
     "rollback":  {
                      "obligatorio":  true,
                      "mecanismo":  "Git commit antes y despues de cada cambio relevante."
-                 }
+                 },
+    "last_internal_improvement":  "MEJORA-001",
+    "last_internal_improvement_at":  "2026-05-10 02:46:11",
+    "internal_self_improvement_enabled":  true,
+    "direction_keeps_final_control":  true
 }
