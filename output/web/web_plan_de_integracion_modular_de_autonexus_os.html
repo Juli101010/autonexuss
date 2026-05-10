@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan de integraci&#243;n modular de Autonexus OS</title>
+<style>
+:root {
+  --bg: #080d1c;
+  --panel: #121a2f;
+  --panel2: #17213b;
+  --text: #edf3ff;
+  --muted: #95a3b8;
+  --line: rgba(255,255,255,.14);
+  --accent: #66e4ff;
+  --ok: #8ef0a5;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Segoe UI, Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(102,228,255,.18), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(141,111,255,.16), transparent 30%),
+    var(--bg);
+  color: var(--text);
+}
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 34px;
+}
+.hero {
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.03));
+  border-radius: 28px;
+  padding: 34px;
+  margin-bottom: 20px;
+}
+.badge {
+  display: inline-block;
+  border: 1px solid var(--line);
+  background: rgba(102,228,255,.10);
+  color: var(--accent);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+h1 {
+  font-size: clamp(34px, 5vw, 64px);
+  letter-spacing: -0.05em;
+  margin: 0 0 14px;
+  line-height: 1;
+}
+h2 { margin: 0 0 12px; font-size: 22px; }
+p { color: var(--muted); line-height: 1.6; font-size: 16px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 20px 0;
+}
+.card {
+  border: 1px solid var(--line);
+  background: rgba(18,26,47,.92);
+  border-radius: 22px;
+  padding: 20px;
+}
+.card b {
+  display: block;
+  color: var(--ok);
+  margin-bottom: 8px;
+}
+.command {
+  background: #060913;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  overflow-x: auto;
+  color: #d7ecff;
+}
+.footer {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 24px;
+}
+@media(max-width: 900px) {
+  main { padding: 18px; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="badge">prototipo HTML interno · generado por Autonexus OS</div>
+    <h1>Plan de integraci&#243;n modular de Autonexus OS</h1>
+    <p>crear una pieza web inicial clara, visual y editable</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <b>Pedido recibido</b>
+      <p>Necesito un plan interno para conectar todos los m&#243;dulos de Autonexus OS y avanzar hacia una interfaz visual de control de agentes</p>
+    </div>
+    <div class="card">
+      <b>Audiencia</b>
+      <p>uso interno de Autonexus</p>
+    </div>
+    <div class="card">
+      <b>Estado</b>
+      <p>Borrador visual interno. No publicar sin revisión humana, QA y aprobación de Dirección si corresponde.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Estructura sugerida</h2>
+    <p>Esta pieza puede evolucionar hacia landing, panel, prototipo de interfaz, sección web, dashboard o componente visual.</p>
+    <div class="command">
+      Dirección → Pedido → Agente Web/Dev → Prototipo HTML → QA → GitHub → Panel
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <b>1. Claridad</b>
+      <p>Debe explicar qué se quiere mostrar y para quién.</p>
+    </div>
+    <div class="card">
+      <b>2. Uso</b>
+      <p>Debe servir como base editable, no como versión final automática.</p>
+    </div>
+    <div class="card">
+      <b>3. Control</b>
+      <p>Todo uso externo requiere validación de Dirección.</p>
+    </div>
+  </section>
+
+  <div class="footer">
+    Generado el 2026-05-10 02:53:02 · Archivo: .\output\web\web_plan_de_integracion_modular_de_autonexus_os.html
+  </div>
+</main>
+</body>
+</html>

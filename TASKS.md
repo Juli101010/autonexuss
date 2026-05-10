@@ -1234,3 +1234,43 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Autonexus OS necesita una entrada única capaz de elegir el pipeline correcto según el pedido.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-064
+
+- ID: TASK-064
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Generar prototipo Web/Dev: Plan de integración modular de Autonexus OS
+- Tipo: web + desarrollo + prototipo
+- Objeto de trabajo: .\output\web\web_plan_de_integracion_modular_de_autonexus_os.html
+- Agente sugerido: Agente Web/Dev + Agente PM
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Prototipo HTML generado como borrador interno
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede generar prototipos HTML desde pedidos estructurados.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-065
+
+- ID: TASK-065
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA automático Web/Dev: Plan de integración modular de Autonexus OS
+- Tipo: QA + web + desarrollo
+- Objeto de trabajo: .\output\reportes\qa_web_plan_de_integracion_modular_de_autonexus_os.md
+- Agente sugerido: Agente QA + Agente Web/Dev
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: QA automático Web/Dev generado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Los prototipos HTML generados deben revisarse antes de publicarse.
+- Actualización de grafo: Registrar evento asociado a la tarea.

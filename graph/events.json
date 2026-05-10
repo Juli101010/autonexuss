@@ -852,5 +852,33 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "Autonexus OS necesita una entrada única capaz de elegir el pipeline correcto según el pedido.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_064",
+        "timestamp":  "2026-05-10T05:53:03.5602524Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-064",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Prototipo HTML generado como borrador interno",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS puede generar prototipos HTML desde pedidos estructurados.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_065",
+        "timestamp":  "2026-05-10T05:53:04.0613220Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-065",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "QA automático Web/Dev generado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Los prototipos HTML generados deben revisarse antes de publicarse.",
+        "final_responsible":  "direccion"
     }
 ]
