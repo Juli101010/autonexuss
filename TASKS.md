@@ -874,3 +874,63 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Los documentos generados también deben tener revisión automática mínima.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-046
+
+- ID: TASK-046
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear pipeline Web/Dev para generar prototipos HTML, paneles y piezas visuales
+- Tipo: sistema interno + web + desarrollo + multiagente
+- Objeto de trabajo: scripts/autonexus_web.ps1
+- Agente sugerido: Agente PM + Agente Web/Dev + Agente QA
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Pipeline Web/Dev creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS debe poder crear prototipos visuales además de documentos y propuestas.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-047
+
+- ID: TASK-047
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Generar prototipo Web/Dev: Landing visual Autonexus OS
+- Tipo: web + desarrollo + prototipo
+- Objeto de trabajo: .\output\web\web_landing_visual_autonexus_os.html
+- Agente sugerido: Agente Web/Dev + Agente PM
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Prototipo HTML generado como borrador interno
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede generar prototipos HTML desde pedidos estructurados.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-048
+
+- ID: TASK-048
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA automático Web/Dev: Landing visual Autonexus OS
+- Tipo: QA + web + desarrollo
+- Objeto de trabajo: .\output\reportes\qa_web_landing_visual_autonexus_os.md
+- Agente sugerido: Agente QA + Agente Web/Dev
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: QA automático Web/Dev generado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Los prototipos HTML generados deben revisarse antes de publicarse.
+- Actualización de grafo: Registrar evento asociado a la tarea.

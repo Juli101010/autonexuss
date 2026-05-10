@@ -600,5 +600,47 @@
         "consequence":  "La tarea queda disponible para seguimiento operativo",
         "learning":  "Los documentos generados también deben tener revisión automática mínima.",
         "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_046",
+        "timestamp":  "2026-05-10T05:37:30.2023342Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-046",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Pipeline Web/Dev creado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS debe poder crear prototipos visuales además de documentos y propuestas.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_047",
+        "timestamp":  "2026-05-10T05:37:31.8646863Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-047",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "Prototipo HTML generado como borrador interno",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Autonexus OS puede generar prototipos HTML desde pedidos estructurados.",
+        "final_responsible":  "direccion"
+    },
+    {
+        "id":  "event_task_048",
+        "timestamp":  "2026-05-10T05:37:32.5064364Z",
+        "actor":  "dirección",
+        "action":  "registrar_tarea",
+        "object":  "TASK-048",
+        "permission_level":  2,
+        "risk_level":  1,
+        "status":  "registrado",
+        "result":  "QA automático Web/Dev generado",
+        "consequence":  "La tarea queda disponible para seguimiento operativo",
+        "learning":  "Los prototipos HTML generados deben revisarse antes de publicarse.",
+        "final_responsible":  "direccion"
     }
 ]
