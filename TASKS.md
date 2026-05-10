@@ -1454,3 +1454,63 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: El orquestador maestro decide rutas entre Odoo, documentos, WebDev, automatizaciones, investigación, auto-mejora y Dev.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-075
+
+- ID: TASK-075
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Consultar DeepSeek local para clasificar pedido
+- Tipo: LLM local + DeepSeek + Ollama API
+- Objeto de trabajo: .\output\llm\ollama_crear_un_prototipo_web_interno_para_visualizar_autonexus_os_como_siste.md
+- Agente sugerido: Agente PM + Motor Local DeepSeek
+- Skill sugerido: Orquestación de Agentes + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Respuesta local de DeepSeek generada por API Ollama
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS usa DeepSeek local para tareas simples y clasificación sin depender de API paga.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-076
+
+- ID: TASK-076
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Generar prototipo Web/Dev: Prototipo Web - Crear un prototipo web interno para visualizar Autonexus OS como siste
+- Tipo: web + desarrollo + prototipo
+- Objeto de trabajo: .\output\web\web_prototipo_web_crear_un_prototipo_web_interno_para_visualizar_autonexus_os_como_siste.html
+- Agente sugerido: Agente Web/Dev + Agente PM
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Prototipo HTML generado como borrador interno
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede generar prototipos HTML desde pedidos estructurados.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-077
+
+- ID: TASK-077
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA automático Web/Dev: Prototipo Web - Crear un prototipo web interno para visualizar Autonexus OS como siste
+- Tipo: QA + web + desarrollo
+- Objeto de trabajo: .\output\reportes\qa_web_prototipo_web_crear_un_prototipo_web_interno_para_visualizar_autonexus_os_como_siste.md
+- Agente sugerido: Agente QA + Agente Web/Dev
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: QA automático Web/Dev generado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Los prototipos HTML generados deben revisarse antes de publicarse.
+- Actualización de grafo: Registrar evento asociado a la tarea.
