@@ -1,0 +1,48 @@
+﻿{
+    "name":  "Lead a propuesta Odoo",
+    "status":  "draft_internal_safe",
+    "generated_by":  "Autonexus OS",
+    "created_at":  "2026-05-10 02:39:04",
+    "trigger":  "nuevo lead manual o futuro webhook",
+    "systems":  "Autonexus OS; GitHub; futuro n8n; futuro formulario web",
+    "request":  "Cuando entra un lead interesado en Odoo, clasificarlo, crear ficha de cliente, generar propuesta borrador, ejecutar QA y dejar todo registrado sin enviar nada automáticamente.",
+    "action":  "clasificar lead y preparar entregables internos sin envío externo",
+    "security":  {
+                     "requires_qa":  true,
+                     "requires_direction_approval":  true,
+                     "production_enabled":  false,
+                     "credentials_in_repo":  false
+                 },
+    "nodes":  [
+                  {
+                      "description":  "Recibe el pedido o evento inicial",
+                      "id":  "trigger",
+                      "type":  "manual_or_webhook"
+                  },
+                  {
+                      "description":  "Clasifica tipo, riesgo y agente responsable",
+                      "id":  "classify",
+                      "type":  "autonexus_classifier"
+                  },
+                  {
+                      "description":  "Bloquea acciones sensibles hasta aprobación de Dirección",
+                      "id":  "permission_gate",
+                      "type":  "approval_gate"
+                  },
+                  {
+                      "description":  "Diseña o simula ejecución sin tocar producción",
+                      "id":  "execute_draft",
+                      "type":  "safe_draft_execution"
+                  },
+                  {
+                      "description":  "Registra tarea, evento, resultado y aprendizaje",
+                      "id":  "log",
+                      "type":  "task_event_logger"
+                  },
+                  {
+                      "description":  "Genera o exige QA antes de activación real",
+                      "id":  "qa",
+                      "type":  "qa_review"
+                  }
+              ]
+}

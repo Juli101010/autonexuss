@@ -934,3 +934,63 @@ Cada tarea debe permitir saber:
 - Requiere aprobación de Dirección: según nivel de permiso y riesgo
 - Aprendizaje a guardar: Los prototipos HTML generados deben revisarse antes de publicarse.
 - Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-049
+
+- ID: TASK-049
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Crear pipeline de automatizaciones, n8n y hooks como blueprint seguro
+- Tipo: sistema interno + automatización + n8n + hooks
+- Objeto de trabajo: scripts/autonexus_auto.ps1
+- Agente sugerido: Agente PM + Agente Automatizaciones + Agente QA
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Pipeline de automatizaciones creado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS debe diseñar automatizaciones de forma segura antes de conectar herramientas reales.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-050
+
+- ID: TASK-050
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Diseñar automatización: Lead a propuesta Odoo
+- Tipo: automatización + n8n + hooks
+- Objeto de trabajo: .\output\automatizaciones\automatizacion_lead_a_propuesta_odoo.md
+- Agente sugerido: Agente Automatizaciones + Agente PM
+- Skill sugerido: Cierre de Tarea + QA Preproducción
+- Nivel de permiso: 3
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: Diseño de automatización creado como blueprint seguro
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Autonexus OS puede diseñar automatizaciones sin activar producción ni exponer credenciales.
+- Actualización de grafo: Registrar evento asociado a la tarea.
+
+---
+
+## TASK-051
+
+- ID: TASK-051
+- Fecha: 2026-05-10
+- Solicitante: Dirección
+- Descripción: Realizar QA de automatización: Lead a propuesta Odoo
+- Tipo: QA + automatización
+- Objeto de trabajo: .\output\reportes\qa_automatizacion_lead_a_propuesta_odoo.md
+- Agente sugerido: Agente QA + Agente Automatizaciones
+- Skill sugerido: QA Preproducción + Cierre de Tarea
+- Nivel de permiso: 2
+- Riesgo: medio
+- Estado: registrado
+- Resultado esperado: QA de automatización generado
+- Requiere aprobación de Dirección: según nivel de permiso y riesgo
+- Aprendizaje a guardar: Ninguna automatización debe activarse sin QA y aprobación.
+- Actualización de grafo: Registrar evento asociado a la tarea.
