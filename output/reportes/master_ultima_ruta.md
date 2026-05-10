@@ -2,23 +2,23 @@
 
 ## Fecha
 
-2026-05-10 05:10:35
+2026-05-10 05:12:55
 
 ## Pedido
 
-Crear un informe interno breve sobre el estado estable actual de Autonexus OS y los próximos pasos inmediatos
+Crear una mejora del panel visual de Autonexus OS para mostrar de forma clara los últimos pedidos, rutas elegidas, tareas, eventos, documentos, prototipos web, reportes QA y estado de GitHub
 
 ## Ruta elegida
 
-documentos
+GitHub/Dev
 
 ## Resultado
 
-Documento interno generado desde ruta general.
+Paquete GitHub/Dev generado: issue, plan, changelog, release notes y QA.
 
 ## Archivo principal estimado
 
-output/documentos/documento_documento_crear_un_informe_interno_breve_sobre_el_estado_estable_actual_de_auton.md
+output/dev/issue_cambio_dev_crear_una_mejora_del_panel_visual_de_autonexus_os_para_mostrar_de_form.md
 
 ---
 
