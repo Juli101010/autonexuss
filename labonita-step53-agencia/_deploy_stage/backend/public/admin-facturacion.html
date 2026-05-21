@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Facturacion</title>
+  <link rel="stylesheet" href="/css/app.css" />
+  <style>
+    body { margin: 0; background: #f6f6f6; color: #1f1f1f; font-family: Inter, system-ui, Arial, sans-serif; }
+    .page { max-width: 1140px; margin: 0 auto; padding: 20px; }
+    .panel { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 14px; }
+    .toolbar a {
+      border: 1px solid #d8d8d8; background: #fff; color: #222; border-radius: 10px;
+      padding: 8px 12px; text-decoration: none; display: inline-block; margin-right: 8px;
+    }
+    .links { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+    .links a {
+      display: block; border: 1px solid #e2e2e2; background: #fff; color: #222;
+      border-radius: 10px; padding: 10px 12px; text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="panel">
+      <h1 style="margin-top:0;">Facturacion (admin)</h1>
+      <div class="toolbar">
+        <a href="/admin.html">Volver</a>
+      </div>
+      <ul class="links">
+        <li><a href="/billing/invoices.html">Facturas</a></li>
+        <li><a href="/billing/customers.html">Clientes</a></li>
+        <li><a href="/billing/artists.html">Artistas</a></li>
+        <li><a href="/billing/series.html">Series</a></li>
+        <li><a href="/billing/reminders.html">Impagos</a></li>
+        <li><a href="/billing/emails.html">Emails (outbox)</a></li>
+        <li><a href="/admin-billing-outbox.html">Outbox Core -> Billing</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

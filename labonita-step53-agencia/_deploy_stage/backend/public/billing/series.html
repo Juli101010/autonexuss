@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"/><title>Series</title><link rel="stylesheet" href="/billing/style.css"/></head>
+<body><div class="card"><p><a href="/billing/admin.html">← Volver</a></p><h2>Series</h2>
+<div class="grid"><div>
+<h3>Crear/Actualizar</h3>
+<div class="grid"><div><label>Code</label><input id="code" value="A"/></div><div><label>Año</label><input id="year"/></div></div>
+<div><label>Siguiente número</label><input id="next_number" value="1"/></div>
+<div class="row"><button id="save">Guardar</button><span id="s" class="muted"></span></div>
+<p class="muted">Click en una fila para alternar activa.</p>
+</div><div>
+<h3>Listado</h3><button id="reload">Actualizar</button>
+<table class="table"><thead><tr><th>ID</th><th>Code</th><th>Año</th><th>Next</th><th>Activa</th></tr></thead><tbody id="rows"></tbody></table>
+</div></div></div>
+<script type="module">
+import { api } from "./app.js";
+const s=document.getElementById("s");
+async function load(){const rows=await api("/series");const tb=document.getElementById("rows");tb.innerHTML="";rows.forEach(r=>{const tr=document.createElement("tr");tr.innerHTML=`<td>${r.id}</td><td>${r.code}</td><td>${r.year}</td><td>${r.next_number}</td><td>${r.active?"Sí":"No"}</td>`;tr.onclick=async()=>{if(!confirm("Alternar activa?")) return; await api(`/series/${r.id}`,{method:"PUT",body:{active:r.active?0:1}}); await load();};tb.appendChild(tr);});}
+reload.onclick=()=>load().catch(e=>s.textContent=e.message);
+save.onclick=async()=>{s.textContent="...";try{await api("/series",{method:"POST",body:{code:code.value,year:Number(year.value),next_number:Number(next_number.value)}});s.textContent="Guardado";await load();}catch(e){s.textContent=e.message;}}
+year.value=String(new Date().getFullYear());load().catch(e=>s.textContent=e.message);
+</script></body></html>

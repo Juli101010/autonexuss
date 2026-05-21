@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Bonita | Acceso Administracion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#f6f2df; --card:#fff; --line:#e8dfb8; --ink:#212121; --muted:#6d6d6d; --accent:#ffde59; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; padding:20px; font-family:Inter,system-ui,sans-serif; color:var(--ink); background:linear-gradient(135deg,#fff9df,#f7f7f7); }
+    .card { width:min(480px,100%); background:var(--card); border:1px solid var(--line); border-radius:20px; padding:28px; box-shadow:0 16px 42px rgba(0,0,0,.08); }
+    h1 { margin:0 0 8px 0; font-size:28px; }
+    p { margin:0 0 16px 0; color:var(--muted); }
+    label { display:block; font-size:13px; font-weight:800; margin-bottom:6px; }
+    input { width:100%; border:1px solid #dcdcdc; border-radius:12px; padding:12px; margin-bottom:12px; font:inherit; }
+    input:focus { outline:none; border-color:#e4c537; box-shadow:0 0 0 3px rgba(255,222,89,.28); }
+    button { width:100%; border:0; border-radius:12px; padding:12px; background:linear-gradient(135deg,#ffef7f,#ffde59); font:800 14px Inter,sans-serif; cursor:pointer; }
+    .error { min-height:20px; color:#b3261e; margin-top:10px; font-weight:700; }
+    .links { margin-top:12px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:13px; }
+    .links a { color:#212121; font-weight:700; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Acceso Administracion</h1>
+    <p>Panel unico de gestion interna de La Bonita.</p>
+    <label for="email">Email admin</label>
+    <input id="email" type="email" placeholder="admin@dominio.com" autocomplete="username" required />
+    <label for="password">Contrasena</label>
+    <input id="password" type="password" placeholder="Tu contrasena" autocomplete="current-password" required onkeydown="if(event.key==='Enter') login()" />
+    <button onclick="login()">Entrar al panel</button>
+    <p id="error" class="error" aria-live="polite"></p>
+    <div class="links">
+      <a href="/login.html">Login general</a>
+      <a href="/register.html">Crear usuario</a>
+    </div>
+  </main>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,2123 @@
+{
+  "created_at": "2026-05-19T05:32:22.460Z",
+  "environment": {
+    "login_url": "https://api.sdelsol.com/login/Autenticar",
+    "admin_url": "https://api.sdelsol.com/admin",
+    "ejercicio": "2026",
+    "credentials_present": true
+  },
+  "tables": {
+    "F_CON": [
+      {
+        "name": "CODCON",
+        "type": "bigint",
+        "position": 1
+      },
+      {
+        "name": "TRACON",
+        "type": "bigint",
+        "position": 2
+      },
+      {
+        "name": "CCFCON",
+        "type": "bigint",
+        "position": 3
+      },
+      {
+        "name": "FFOCON",
+        "type": "date",
+        "position": 4
+      },
+      {
+        "name": "FPRCON",
+        "type": "date",
+        "position": 5
+      },
+      {
+        "name": "FINCON",
+        "type": "date",
+        "position": 6
+      },
+      {
+        "name": "FFICON",
+        "type": "date",
+        "position": 7
+      },
+      {
+        "name": "NFOCON",
+        "type": "varchar",
+        "position": 8
+      },
+      {
+        "name": "DISCON",
+        "type": "varchar",
+        "position": 9
+      },
+      {
+        "name": "OCUCON",
+        "type": "varchar",
+        "position": 10
+      },
+      {
+        "name": "OFECON",
+        "type": "varchar",
+        "position": 11
+      },
+      {
+        "name": "PEMCON",
+        "type": "int",
+        "position": 12
+      },
+      {
+        "name": "OLECON",
+        "type": "int",
+        "position": 13
+      },
+      {
+        "name": "TCRCON",
+        "type": "int",
+        "position": 14
+      },
+      {
+        "name": "NOMCON",
+        "type": "varchar",
+        "position": 15
+      },
+      {
+        "name": "AP1CON",
+        "type": "varchar",
+        "position": 16
+      },
+      {
+        "name": "AP2CON",
+        "type": "varchar",
+        "position": 17
+      },
+      {
+        "name": "ETNCON",
+        "type": "varchar",
+        "position": 18
+      },
+      {
+        "name": "ETRCON",
+        "type": "varchar",
+        "position": 19
+      },
+      {
+        "name": "ETPCON",
+        "type": "int",
+        "position": 20
+      },
+      {
+        "name": "ETECON",
+        "type": "bigint",
+        "position": 21
+      },
+      {
+        "name": "TJPCON",
+        "type": "varchar",
+        "position": 22
+      },
+      {
+        "name": "HJPCON",
+        "type": "decimal",
+        "position": 23
+      },
+      {
+        "name": "NHCCON",
+        "type": "int",
+        "position": 24
+      },
+      {
+        "name": "FTECON",
+        "type": "int",
+        "position": 25
+      },
+      {
+        "name": "NHFCON",
+        "type": "decimal",
+        "position": 26
+      },
+      {
+        "name": "CEFCON",
+        "type": "int",
+        "position": 27
+      },
+      {
+        "name": "ETCCON",
+        "type": "varchar",
+        "position": 28
+      },
+      {
+        "name": "PJUCON",
+        "type": "decimal",
+        "position": 29
+      },
+      {
+        "name": "TFDCON",
+        "type": "int",
+        "position": 30
+      },
+      {
+        "name": "PNFCON",
+        "type": "int",
+        "position": 31
+      },
+      {
+        "name": "CBOCON",
+        "type": "int",
+        "position": 32
+      },
+      {
+        "name": "AUTCON",
+        "type": "int",
+        "position": 33
+      },
+      {
+        "name": "LCICON",
+        "type": "int",
+        "position": 34
+      },
+      {
+        "name": "COFCON",
+        "type": "int",
+        "position": 35
+      },
+      {
+        "name": "TEMCON",
+        "type": "int",
+        "position": 36
+      },
+      {
+        "name": "TTRCON",
+        "type": "int",
+        "position": 37
+      },
+      {
+        "name": "IFOCON",
+        "type": "int",
+        "position": 38
+      },
+      {
+        "name": "CLOCON",
+        "type": "int",
+        "position": 39
+      },
+      {
+        "name": "ACTCON",
+        "type": "varchar",
+        "position": 40
+      },
+      {
+        "name": "EJECON",
+        "type": "int",
+        "position": 41
+      },
+      {
+        "name": "INTCON",
+        "type": "varchar",
+        "position": 42
+      },
+      {
+        "name": "TACCON",
+        "type": "varchar",
+        "position": 43
+      },
+      {
+        "name": "PDFCON",
+        "type": "varchar",
+        "position": 44
+      },
+      {
+        "name": "CTACON",
+        "type": "int",
+        "position": 45
+      },
+      {
+        "name": "CBDCON",
+        "type": "int",
+        "position": 46
+      },
+      {
+        "name": "CBECON",
+        "type": "int",
+        "position": 47
+      },
+      {
+        "name": "EIICON",
+        "type": "int",
+        "position": 48
+      },
+      {
+        "name": "EIDCON",
+        "type": "int",
+        "position": 49
+      },
+      {
+        "name": "ESMCON",
+        "type": "int",
+        "position": 50
+      },
+      {
+        "name": "TMBCON",
+        "type": "int",
+        "position": 51
+      },
+      {
+        "name": "CAMCON",
+        "type": "varchar",
+        "position": 52
+      },
+      {
+        "name": "CCOCON",
+        "type": "int",
+        "position": 53
+      },
+      {
+        "name": "ULICON",
+        "type": "varchar",
+        "position": 54
+      },
+      {
+        "name": "CEICON",
+        "type": "varchar",
+        "position": 55
+      },
+      {
+        "name": "CEACON",
+        "type": "int",
+        "position": 56
+      },
+      {
+        "name": "CBFCON",
+        "type": "int",
+        "position": 57
+      },
+      {
+        "name": "CBTCON",
+        "type": "varchar",
+        "position": 58
+      },
+      {
+        "name": "PEGCON",
+        "type": "bigint",
+        "position": 59
+      },
+      {
+        "name": "HCOCON",
+        "type": "int",
+        "position": 60
+      },
+      {
+        "name": "PPDCON",
+        "type": "decimal",
+        "position": 61
+      },
+      {
+        "name": "IFDCON",
+        "type": "decimal",
+        "position": 62
+      },
+      {
+        "name": "HFDCON",
+        "type": "int",
+        "position": 63
+      },
+      {
+        "name": "IFPCON",
+        "type": "decimal",
+        "position": 64
+      },
+      {
+        "name": "HFPCON",
+        "type": "int",
+        "position": 65
+      },
+      {
+        "name": "COTCON",
+        "type": "int",
+        "position": 66
+      },
+      {
+        "name": "CI7CON",
+        "type": "int",
+        "position": 67
+      },
+      {
+        "name": "SUBCON",
+        "type": "int",
+        "position": 68
+      },
+      {
+        "name": "ESTCON",
+        "type": "int",
+        "position": 69
+      },
+      {
+        "name": "TSUCON",
+        "type": "bigint",
+        "position": 70
+      },
+      {
+        "name": "CSUCON",
+        "type": "int",
+        "position": 71
+      },
+      {
+        "name": "ICBCON",
+        "type": "int",
+        "position": 72
+      },
+      {
+        "name": "CORCON",
+        "type": "varchar",
+        "position": 73
+      },
+      {
+        "name": "TJOCON",
+        "type": "int",
+        "position": 74
+      },
+      {
+        "name": "NDSCON",
+        "type": "int",
+        "position": 75
+      },
+      {
+        "name": "FRECON",
+        "type": "date",
+        "position": 76
+      },
+      {
+        "name": "ERECON",
+        "type": "varchar",
+        "position": 77
+      },
+      {
+        "name": "PRECON",
+        "type": "decimal",
+        "position": 78
+      },
+      {
+        "name": "CRECON",
+        "type": "int",
+        "position": 79
+      },
+      {
+        "name": "PFECON",
+        "type": "bigint",
+        "position": 80
+      },
+      {
+        "name": "HJMCON",
+        "type": "decimal",
+        "position": 81
+      },
+      {
+        "name": "CPRCON",
+        "type": "int",
+        "position": 82
+      },
+      {
+        "name": "OJOCON",
+        "type": "varchar",
+        "position": 83
+      },
+      {
+        "name": "HSMCON",
+        "type": "decimal",
+        "position": 84
+      },
+      {
+        "name": "HSHCON",
+        "type": "decimal",
+        "position": 85
+      },
+      {
+        "name": "HSECON",
+        "type": "decimal",
+        "position": 86
+      },
+      {
+        "name": "HPHPCON",
+        "type": "int",
+        "position": 87
+      },
+      {
+        "name": "HIHPCON",
+        "type": "decimal",
+        "position": 88
+      },
+      {
+        "name": "HPHNCON",
+        "type": "int",
+        "position": 89
+      },
+      {
+        "name": "HIHNCON",
+        "type": "decimal",
+        "position": 90
+      },
+      {
+        "name": "AEMCON",
+        "type": "int",
+        "position": 91
+      },
+      {
+        "name": "AECCON",
+        "type": "int",
+        "position": 92
+      },
+      {
+        "name": "EAUCON",
+        "type": "int",
+        "position": 93
+      },
+      {
+        "name": "PCACON",
+        "type": "int",
+        "position": 94
+      },
+      {
+        "name": "CAECON",
+        "type": "int",
+        "position": 95
+      },
+      {
+        "name": "IDICON",
+        "type": "int",
+        "position": 96
+      },
+      {
+        "name": "FILCON",
+        "type": "date",
+        "position": 97
+      },
+      {
+        "name": "FFLCON",
+        "type": "date",
+        "position": 98
+      },
+      {
+        "name": "CLACON",
+        "type": "varchar",
+        "position": 99
+      },
+      {
+        "name": "RLECON",
+        "type": "varchar",
+        "position": 100
+      },
+      {
+        "name": "CRDCON",
+        "type": "int",
+        "position": 101
+      },
+      {
+        "name": "MTRCON",
+        "type": "int",
+        "position": 102
+      },
+      {
+        "name": "TVFCON",
+        "type": "int",
+        "position": 103
+      },
+      {
+        "name": "FDECON",
+        "type": "int",
+        "position": 104
+      },
+      {
+        "name": "GJUCON",
+        "type": "bigint",
+        "position": 105
+      },
+      {
+        "name": "ETCCCON",
+        "type": "varchar",
+        "position": 106
+      },
+      {
+        "name": "MCOCON",
+        "type": "bigint",
+        "position": 107
+      },
+      {
+        "name": "ETACON",
+        "type": "bigint",
+        "position": 108
+      },
+      {
+        "name": "IBOCON",
+        "type": "bigint",
+        "position": 109
+      },
+      {
+        "name": "LLACON",
+        "type": "bigint",
+        "position": 110
+      },
+      {
+        "name": "TPTCON",
+        "type": "bigint",
+        "position": 111
+      },
+      {
+        "name": "ITUCON",
+        "type": "decimal",
+        "position": 112
+      },
+      {
+        "name": "HTUCON",
+        "type": "bigint",
+        "position": 113
+      },
+      {
+        "name": "FCUCON",
+        "type": "int",
+        "position": 114
+      },
+      {
+        "name": "PERCON",
+        "type": "int",
+        "position": 115
+      },
+      {
+        "name": "TCHCON",
+        "type": "bigint",
+        "position": 116
+      },
+      {
+        "name": "TCICON",
+        "type": "decimal",
+        "position": 117
+      },
+      {
+        "name": "TCBCON",
+        "type": "decimal",
+        "position": 118
+      },
+      {
+        "name": "PDFPCON",
+        "type": "varchar",
+        "position": 119
+      },
+      {
+        "name": "PRUCON",
+        "type": "int",
+        "position": 120
+      },
+      {
+        "name": "NCDCON",
+        "type": "int",
+        "position": 121
+      },
+      {
+        "name": "OMICON",
+        "type": "varchar",
+        "position": 122
+      },
+      {
+        "name": "CATCON",
+        "type": "varchar",
+        "position": 123
+      },
+      {
+        "name": "TRLCON",
+        "type": "varchar",
+        "position": 124
+      },
+      {
+        "name": "CASCON",
+        "type": "varchar",
+        "position": 125
+      },
+      {
+        "name": "HCTCON",
+        "type": "decimal",
+        "position": 126
+      },
+      {
+        "name": "HCPCON",
+        "type": "decimal",
+        "position": 127
+      },
+      {
+        "name": "FOACON",
+        "type": "int",
+        "position": 128
+      },
+      {
+        "name": "PPLCON",
+        "type": "int",
+        "position": 129
+      },
+      {
+        "name": "AJUCON",
+        "type": "int",
+        "position": 130
+      },
+      {
+        "name": "PJ2CON",
+        "type": "decimal",
+        "position": 131
+      },
+      {
+        "name": "PJ3CON",
+        "type": "decimal",
+        "position": 132
+      },
+      {
+        "name": "FPDCON",
+        "type": "varchar",
+        "position": 133
+      },
+      {
+        "name": "PJ4CON",
+        "type": "decimal",
+        "position": 134
+      }
+    ],
+    "F_EMP": [
+      {
+        "name": "CODEMP",
+        "type": "varchar",
+        "position": 1
+      },
+      {
+        "name": "NIFEMP",
+        "type": "varchar",
+        "position": 2
+      },
+      {
+        "name": "DENEMP",
+        "type": "varchar",
+        "position": 3
+      },
+      {
+        "name": "NOMEMP",
+        "type": "varchar",
+        "position": 4
+      },
+      {
+        "name": "SIGEMP",
+        "type": "varchar",
+        "position": 5
+      },
+      {
+        "name": "DOMEMP",
+        "type": "varchar",
+        "position": 6
+      },
+      {
+        "name": "NUMEMP",
+        "type": "varchar",
+        "position": 7
+      },
+      {
+        "name": "ESCEMP",
+        "type": "varchar",
+        "position": 8
+      },
+      {
+        "name": "PISEMP",
+        "type": "varchar",
+        "position": 9
+      },
+      {
+        "name": "PRTEMP",
+        "type": "varchar",
+        "position": 10
+      },
+      {
+        "name": "POBEMP",
+        "type": "varchar",
+        "position": 11
+      },
+      {
+        "name": "MUNEMP",
+        "type": "varchar",
+        "position": 12
+      },
+      {
+        "name": "CPOEMP",
+        "type": "varchar",
+        "position": 13
+      },
+      {
+        "name": "PROEMP",
+        "type": "varchar",
+        "position": 14
+      },
+      {
+        "name": "TELEMP",
+        "type": "varchar",
+        "position": 15
+      },
+      {
+        "name": "FAXEMP",
+        "type": "varchar",
+        "position": 16
+      },
+      {
+        "name": "EJEEMP",
+        "type": "varchar",
+        "position": 17
+      },
+      {
+        "name": "CLAEMP",
+        "type": "varchar",
+        "position": 18
+      },
+      {
+        "name": "REGEMP",
+        "type": "varchar",
+        "position": 19
+      },
+      {
+        "name": "TOMEMP",
+        "type": "varchar",
+        "position": 20
+      },
+      {
+        "name": "FOLEMP",
+        "type": "varchar",
+        "position": 21
+      },
+      {
+        "name": "HOJEMP",
+        "type": "varchar",
+        "position": 22
+      },
+      {
+        "name": "INSEMP",
+        "type": "varchar",
+        "position": 23
+      },
+      {
+        "name": "EMAEMP",
+        "type": "varchar",
+        "position": 24
+      },
+      {
+        "name": "WEBEMP",
+        "type": "varchar",
+        "position": 25
+      },
+      {
+        "name": "MOVEMP",
+        "type": "varchar",
+        "position": 26
+      },
+      {
+        "name": "ECOEMP",
+        "type": "varchar",
+        "position": 27
+      },
+      {
+        "name": "EADEMP",
+        "type": "varchar",
+        "position": 28
+      },
+      {
+        "name": "ECBEMP",
+        "type": "varchar",
+        "position": 29
+      },
+      {
+        "name": "AGESEMP",
+        "type": "int",
+        "position": 30
+      },
+      {
+        "name": "AGETEMP",
+        "type": "int",
+        "position": 31
+      },
+      {
+        "name": "ACONEMP",
+        "type": "int",
+        "position": 32
+      },
+      {
+        "name": "ACOTEMP",
+        "type": "int",
+        "position": 33
+      },
+      {
+        "name": "ALABEMP",
+        "type": "int",
+        "position": 34
+      },
+      {
+        "name": "ATPVEMP",
+        "type": "int",
+        "position": 35
+      },
+      {
+        "name": "AC1EMP",
+        "type": "int",
+        "position": 36
+      },
+      {
+        "name": "AC2EMP",
+        "type": "int",
+        "position": 37
+      },
+      {
+        "name": "AC3EMP",
+        "type": "int",
+        "position": 38
+      },
+      {
+        "name": "FJUEMP",
+        "type": "int",
+        "position": 39
+      },
+      {
+        "name": "PCOEMP",
+        "type": "varchar",
+        "position": 40
+      },
+      {
+        "name": "EJEGEMP",
+        "type": "varchar",
+        "position": 41
+      },
+      {
+        "name": "EJECEMP",
+        "type": "varchar",
+        "position": 42
+      },
+      {
+        "name": "EJELEMP",
+        "type": "varchar",
+        "position": 43
+      },
+      {
+        "name": "EJETEMP",
+        "type": "varchar",
+        "position": 44
+      },
+      {
+        "name": "UVDEMP",
+        "type": "int",
+        "position": 45
+      },
+      {
+        "name": "EBAEMP",
+        "type": "int",
+        "position": 46
+      },
+      {
+        "name": "TRAEMP",
+        "type": "bigint",
+        "position": 47
+      },
+      {
+        "name": "TVEEMP",
+        "type": "varchar",
+        "position": 48
+      },
+      {
+        "name": "TVCEMP",
+        "type": "varchar",
+        "position": 49
+      },
+      {
+        "name": "ACCEMP",
+        "type": "int",
+        "position": 50
+      }
+    ],
+    "F_NOM": [
+      {
+        "name": "CODNOM",
+        "type": "bigint",
+        "position": 1
+      },
+      {
+        "name": "FECNOM",
+        "type": "date",
+        "position": 2
+      },
+      {
+        "name": "TRANOM",
+        "type": "bigint",
+        "position": 3
+      },
+      {
+        "name": "TIPNOM",
+        "type": "bigint",
+        "position": 4
+      },
+      {
+        "name": "MESNOM",
+        "type": "int",
+        "position": 5
+      },
+      {
+        "name": "LDENOM",
+        "type": "date",
+        "position": 6
+      },
+      {
+        "name": "LHANOM",
+        "type": "date",
+        "position": 7
+      },
+      {
+        "name": "LDVNOM",
+        "type": "bigint",
+        "position": 8
+      },
+      {
+        "name": "TDENOM",
+        "type": "decimal",
+        "position": 9
+      },
+      {
+        "name": "TDDNOM",
+        "type": "decimal",
+        "position": 10
+      },
+      {
+        "name": "TOTNOM",
+        "type": "decimal",
+        "position": 11
+      },
+      {
+        "name": "EMBNOM",
+        "type": "decimal",
+        "position": 12
+      },
+      {
+        "name": "COPNOM",
+        "type": "int",
+        "position": 13
+      },
+      {
+        "name": "TRSNOM",
+        "type": "int",
+        "position": 14
+      },
+      {
+        "name": "FCANOM",
+        "type": "date",
+        "position": 15
+      },
+      {
+        "name": "TFANOM",
+        "type": "date",
+        "position": 16
+      },
+      {
+        "name": "TCNNOM",
+        "type": "bigint",
+        "position": 17
+      },
+      {
+        "name": "TCANOM",
+        "type": "int",
+        "position": 18
+      },
+      {
+        "name": "TCENOM",
+        "type": "bigint",
+        "position": 19
+      },
+      {
+        "name": "TGCNOM",
+        "type": "int",
+        "position": 20
+      },
+      {
+        "name": "TCONOM",
+        "type": "varchar",
+        "position": 21
+      },
+      {
+        "name": "ANANOM",
+        "type": "varchar",
+        "position": 22
+      },
+      {
+        "name": "PJRNOM",
+        "type": "decimal",
+        "position": 23
+      },
+      {
+        "name": "NHONOM",
+        "type": "varchar",
+        "position": 24
+      },
+      {
+        "name": "NHCNOM",
+        "type": "varchar",
+        "position": 25
+      },
+      {
+        "name": "BFPNOM",
+        "type": "decimal",
+        "position": 26
+      },
+      {
+        "name": "ITRNOM",
+        "type": "int",
+        "position": 27
+      },
+      {
+        "name": "ANJRNOM",
+        "type": "varchar",
+        "position": 28
+      },
+      {
+        "name": "EMANOM",
+        "type": "int",
+        "position": 29
+      }
+    ],
+    "F_TRA": [
+      {
+        "name": "CODTRA",
+        "type": "bigint",
+        "position": 1
+      },
+      {
+        "name": "DNITRA",
+        "type": "varchar",
+        "position": 2
+      },
+      {
+        "name": "NSSTRA",
+        "type": "varchar",
+        "position": 3
+      },
+      {
+        "name": "NOCTRA",
+        "type": "varchar",
+        "position": 4
+      },
+      {
+        "name": "NOMTRA",
+        "type": "varchar",
+        "position": 5
+      },
+      {
+        "name": "AP1TRA",
+        "type": "varchar",
+        "position": 6
+      },
+      {
+        "name": "AP2TRA",
+        "type": "varchar",
+        "position": 7
+      },
+      {
+        "name": "TC2TRA",
+        "type": "varchar",
+        "position": 8
+      },
+      {
+        "name": "SIGTRA",
+        "type": "varchar",
+        "position": 9
+      },
+      {
+        "name": "DOMTRA",
+        "type": "varchar",
+        "position": 10
+      },
+      {
+        "name": "NUMTRA",
+        "type": "varchar",
+        "position": 11
+      },
+      {
+        "name": "BLQTRA",
+        "type": "varchar",
+        "position": 12
+      },
+      {
+        "name": "ESCTRA",
+        "type": "varchar",
+        "position": 13
+      },
+      {
+        "name": "PISTRA",
+        "type": "varchar",
+        "position": 14
+      },
+      {
+        "name": "PRTTRA",
+        "type": "varchar",
+        "position": 15
+      },
+      {
+        "name": "CPOTRA",
+        "type": "varchar",
+        "position": 16
+      },
+      {
+        "name": "MUNTRA",
+        "type": "varchar",
+        "position": 17
+      },
+      {
+        "name": "PROTRA",
+        "type": "varchar",
+        "position": 18
+      },
+      {
+        "name": "CAUTRA",
+        "type": "varchar",
+        "position": 19
+      },
+      {
+        "name": "PAITRA",
+        "type": "varchar",
+        "position": 20
+      },
+      {
+        "name": "PTETRA",
+        "type": "varchar",
+        "position": 21
+      },
+      {
+        "name": "TELTRA",
+        "type": "varchar",
+        "position": 22
+      },
+      {
+        "name": "MOVTRA",
+        "type": "varchar",
+        "position": 23
+      },
+      {
+        "name": "OTFTRA",
+        "type": "varchar",
+        "position": 24
+      },
+      {
+        "name": "EMATRA",
+        "type": "varchar",
+        "position": 25
+      },
+      {
+        "name": "FNATRA",
+        "type": "date",
+        "position": 26
+      },
+      {
+        "name": "NPATRA",
+        "type": "varchar",
+        "position": 27
+      },
+      {
+        "name": "NMATRA",
+        "type": "varchar",
+        "position": 28
+      },
+      {
+        "name": "SEXTRA",
+        "type": "int",
+        "position": 29
+      },
+      {
+        "name": "ECITRA",
+        "type": "int",
+        "position": 30
+      },
+      {
+        "name": "FOTTRA",
+        "type": "varchar",
+        "position": 31
+      },
+      {
+        "name": "OBSTRA",
+        "type": "varchar",
+        "position": 32
+      },
+      {
+        "name": "DTATRA",
+        "type": "varchar",
+        "position": 33
+      },
+      {
+        "name": "CENTRA",
+        "type": "bigint",
+        "position": 34
+      },
+      {
+        "name": "FALTRA",
+        "type": "date",
+        "position": 35
+      },
+      {
+        "name": "FBATRA",
+        "type": "date",
+        "position": 36
+      },
+      {
+        "name": "FANTRA",
+        "type": "date",
+        "position": 37
+      },
+      {
+        "name": "COLTRA",
+        "type": "int",
+        "position": 38
+      },
+      {
+        "name": "CNVTRA",
+        "type": "bigint",
+        "position": 39
+      },
+      {
+        "name": "CATTRA",
+        "type": "int",
+        "position": 40
+      },
+      {
+        "name": "GCOTRA",
+        "type": "int",
+        "position": 41
+      },
+      {
+        "name": "COCTRA",
+        "type": "varchar",
+        "position": 42
+      },
+      {
+        "name": "COPTRA",
+        "type": "bigint",
+        "position": 43
+      },
+      {
+        "name": "FCOTRA",
+        "type": "int",
+        "position": 44
+      },
+      {
+        "name": "CHDTRA",
+        "type": "int",
+        "position": 45
+      },
+      {
+        "name": "CHITRA",
+        "type": "int",
+        "position": 46
+      },
+      {
+        "name": "CH1TRA",
+        "type": "decimal",
+        "position": 47
+      },
+      {
+        "name": "CH2TRA",
+        "type": "decimal",
+        "position": 48
+      },
+      {
+        "name": "CH3TRA",
+        "type": "decimal",
+        "position": 49
+      },
+      {
+        "name": "CH4TRA",
+        "type": "decimal",
+        "position": 50
+      },
+      {
+        "name": "CH5TRA",
+        "type": "decimal",
+        "position": 51
+      },
+      {
+        "name": "CH6TRA",
+        "type": "decimal",
+        "position": 52
+      },
+      {
+        "name": "CH7TRA",
+        "type": "decimal",
+        "position": 53
+      },
+      {
+        "name": "CD1TRA",
+        "type": "int",
+        "position": 54
+      },
+      {
+        "name": "CD2TRA",
+        "type": "int",
+        "position": 55
+      },
+      {
+        "name": "CD3TRA",
+        "type": "int",
+        "position": 56
+      },
+      {
+        "name": "CD4TRA",
+        "type": "int",
+        "position": 57
+      },
+      {
+        "name": "CD5TRA",
+        "type": "int",
+        "position": 58
+      },
+      {
+        "name": "CD6TRA",
+        "type": "int",
+        "position": 59
+      },
+      {
+        "name": "CD7TRA",
+        "type": "int",
+        "position": 60
+      },
+      {
+        "name": "FP1TRA",
+        "type": "int",
+        "position": 61
+      },
+      {
+        "name": "FB1TRA",
+        "type": "int",
+        "position": 62
+      },
+      {
+        "name": "BA1TRA",
+        "type": "varchar",
+        "position": 63
+      },
+      {
+        "name": "EN1TRA",
+        "type": "varchar",
+        "position": 64
+      },
+      {
+        "name": "OF1TRA",
+        "type": "varchar",
+        "position": 65
+      },
+      {
+        "name": "DC1TRA",
+        "type": "varchar",
+        "position": 66
+      },
+      {
+        "name": "NC1TRA",
+        "type": "varchar",
+        "position": 67
+      },
+      {
+        "name": "U2FTRA",
+        "type": "decimal",
+        "position": 68
+      },
+      {
+        "name": "FP2TRA",
+        "type": "int",
+        "position": 69
+      },
+      {
+        "name": "FB2TRA",
+        "type": "int",
+        "position": 70
+      },
+      {
+        "name": "BA2TRA",
+        "type": "varchar",
+        "position": 71
+      },
+      {
+        "name": "EN2TRA",
+        "type": "varchar",
+        "position": 72
+      },
+      {
+        "name": "OF2TRA",
+        "type": "varchar",
+        "position": 73
+      },
+      {
+        "name": "DC2TRA",
+        "type": "varchar",
+        "position": 74
+      },
+      {
+        "name": "NC2TRA",
+        "type": "varchar",
+        "position": 75
+      },
+      {
+        "name": "RSFATRA",
+        "type": "int",
+        "position": 76
+      },
+      {
+        "name": "RNCOTRA",
+        "type": "varchar",
+        "position": 77
+      },
+      {
+        "name": "RSLATRA",
+        "type": "int",
+        "position": 78
+      },
+      {
+        "name": "RTCOTRA",
+        "type": "int",
+        "position": 79
+      },
+      {
+        "name": "RMINTRA",
+        "type": "int",
+        "position": 80
+      },
+      {
+        "name": "RAMRTRA",
+        "type": "int",
+        "position": 81
+      },
+      {
+        "name": "RRCMTRA",
+        "type": "int",
+        "position": 82
+      },
+      {
+        "name": "RMGETRA",
+        "type": "int",
+        "position": 83
+      },
+      {
+        "name": "RPACTRA",
+        "type": "int",
+        "position": 84
+      },
+      {
+        "name": "RPPVTRA",
+        "type": "int",
+        "position": 85
+      },
+      {
+        "name": "RTOTTRA",
+        "type": "decimal",
+        "position": 86
+      },
+      {
+        "name": "RIRRTRA",
+        "type": "decimal",
+        "position": 87
+      },
+      {
+        "name": "RGDETRA",
+        "type": "decimal",
+        "position": 88
+      },
+      {
+        "name": "RPCOTRA",
+        "type": "decimal",
+        "position": 89
+      },
+      {
+        "name": "RRNETRA",
+        "type": "decimal",
+        "position": 90
+      },
+      {
+        "name": "RRCGTRA",
+        "type": "decimal",
+        "position": 91
+      },
+      {
+        "name": "RRPATRA",
+        "type": "decimal",
+        "position": 92
+      },
+      {
+        "name": "RRMGTRA",
+        "type": "decimal",
+        "position": 93
+      },
+      {
+        "name": "RRDITRA",
+        "type": "decimal",
+        "position": 94
+      },
+      {
+        "name": "RRNRTRA",
+        "type": "decimal",
+        "position": 95
+      },
+      {
+        "name": "RSMRTRA",
+        "type": "decimal",
+        "position": 96
+      },
+      {
+        "name": "RMPETRA",
+        "type": "decimal",
+        "position": 97
+      },
+      {
+        "name": "RMDETRA",
+        "type": "decimal",
+        "position": 98
+      },
+      {
+        "name": "RMASTRA",
+        "type": "decimal",
+        "position": 99
+      },
+      {
+        "name": "RMDITRA",
+        "type": "decimal",
+        "position": 100
+      },
+      {
+        "name": "RTBATRA",
+        "type": "decimal",
+        "position": 101
+      },
+      {
+        "name": "RTAHTRA",
+        "type": "decimal",
+        "position": 102
+      },
+      {
+        "name": "RTIATRA",
+        "type": "decimal",
+        "position": 103
+      },
+      {
+        "name": "RTTRTRA",
+        "type": "decimal",
+        "position": 104
+      },
+      {
+        "name": "ESTTRA",
+        "type": "int",
+        "position": 105
+      },
+      {
+        "name": "PJOTRA",
+        "type": "decimal",
+        "position": 106
+      },
+      {
+        "name": "HJOTRA",
+        "type": "decimal",
+        "position": 107
+      },
+      {
+        "name": "SBOTRA",
+        "type": "int",
+        "position": 108
+      },
+      {
+        "name": "FIBTRA",
+        "type": "date",
+        "position": 109
+      },
+      {
+        "name": "RMFITRA",
+        "type": "date",
+        "position": 110
+      },
+      {
+        "name": "RMFFTRA",
+        "type": "date",
+        "position": 111
+      },
+      {
+        "name": "ITETRA",
+        "type": "decimal",
+        "position": 112
+      },
+      {
+        "name": "IEMTRA",
+        "type": "decimal",
+        "position": 113
+      },
+      {
+        "name": "IBRMTRA",
+        "type": "decimal",
+        "position": 114
+      },
+      {
+        "name": "TRJTRA",
+        "type": "int",
+        "position": 115
+      },
+      {
+        "name": "MPPVTRA",
+        "type": "decimal",
+        "position": 116
+      },
+      {
+        "name": "RMTOTRA",
+        "type": "decimal",
+        "position": 117
+      },
+      {
+        "name": "IRCATRA",
+        "type": "int",
+        "position": 118
+      },
+      {
+        "name": "IRRATRA",
+        "type": "int",
+        "position": 119
+      },
+      {
+        "name": "IRRUTRA",
+        "type": "int",
+        "position": 120
+      },
+      {
+        "name": "CBATRA",
+        "type": "int",
+        "position": 121
+      },
+      {
+        "name": "RGLTRA",
+        "type": "int",
+        "position": 122
+      },
+      {
+        "name": "CINTRA",
+        "type": "varchar",
+        "position": 123
+      },
+      {
+        "name": "ICDTRA",
+        "type": "decimal",
+        "position": 124
+      },
+      {
+        "name": "DIATRA",
+        "type": "bigint",
+        "position": 125
+      },
+      {
+        "name": "MMITRA",
+        "type": "bigint",
+        "position": 126
+      },
+      {
+        "name": "TINTRA",
+        "type": "decimal",
+        "position": 127
+      },
+      {
+        "name": "VFATRA",
+        "type": "int",
+        "position": 128
+      },
+      {
+        "name": "GMITRA",
+        "type": "decimal",
+        "position": 129
+      },
+      {
+        "name": "CDETRA",
+        "type": "int",
+        "position": 130
+      },
+      {
+        "name": "BDINTRA",
+        "type": "date",
+        "position": 131
+      },
+      {
+        "name": "BDPITRA",
+        "type": "decimal",
+        "position": 132
+      },
+      {
+        "name": "BDPPTRA",
+        "type": "decimal",
+        "position": 133
+      },
+      {
+        "name": "FCVTRA",
+        "type": "date",
+        "position": 134
+      },
+      {
+        "name": "IEPTRA",
+        "type": "int",
+        "position": 135
+      },
+      {
+        "name": "CIETRA",
+        "type": "varchar",
+        "position": 136
+      },
+      {
+        "name": "MNOTRA",
+        "type": "bigint",
+        "position": 137
+      },
+      {
+        "name": "DEPTRA",
+        "type": "bigint",
+        "position": 138
+      },
+      {
+        "name": "RIRRBTRA",
+        "type": "decimal",
+        "position": 139
+      },
+      {
+        "name": "NPVTRA",
+        "type": "int",
+        "position": 140
+      },
+      {
+        "name": "IDITRA",
+        "type": "int",
+        "position": 141
+      },
+      {
+        "name": "NDVTRA",
+        "type": "decimal",
+        "position": 142
+      },
+      {
+        "name": "ESMTRA",
+        "type": "decimal",
+        "position": 143
+      },
+      {
+        "name": "ANJRTRA",
+        "type": "varchar",
+        "position": 144
+      },
+      {
+        "name": "ANCDTRA",
+        "type": "int",
+        "position": 145
+      },
+      {
+        "name": "CECTRA",
+        "type": "int",
+        "position": 146
+      },
+      {
+        "name": "CRGLTRA",
+        "type": "varchar",
+        "position": 147
+      },
+      {
+        "name": "INATRA",
+        "type": "varchar",
+        "position": 148
+      },
+      {
+        "name": "ESUTRA",
+        "type": "int",
+        "position": 149
+      },
+      {
+        "name": "IITETRA",
+        "type": "int",
+        "position": 150
+      },
+      {
+        "name": "EMAFTRA",
+        "type": "int",
+        "position": 151
+      },
+      {
+        "name": "EMESTRA",
+        "type": "int",
+        "position": 152
+      },
+      {
+        "name": "CHHTRA",
+        "type": "decimal",
+        "position": 153
+      },
+      {
+        "name": "N190TRA",
+        "type": "int",
+        "position": 154
+      },
+      {
+        "name": "TDVTRA",
+        "type": "int",
+        "position": 155
+      },
+      {
+        "name": "HBOTRA",
+        "type": "int",
+        "position": 156
+      },
+      {
+        "name": "RDRETRA",
+        "type": "varchar",
+        "position": 157
+      },
+      {
+        "name": "RRPVTRA",
+        "type": "int",
+        "position": 158
+      },
+      {
+        "name": "BCMTRA",
+        "type": "int",
+        "position": 159
+      },
+      {
+        "name": "RRCETRA",
+        "type": "int",
+        "position": 160
+      },
+      {
+        "name": "RTRNTRA",
+        "type": "decimal",
+        "position": 161
+      },
+      {
+        "name": "ACUITRA",
+        "type": "int",
+        "position": 162
+      },
+      {
+        "name": "CALTRA",
+        "type": "varchar",
+        "position": 163
+      },
+      {
+        "name": "CDOTRA",
+        "type": "varchar",
+        "position": 164
+      },
+      {
+        "name": "CUETRA",
+        "type": "varchar",
+        "position": 165
+      },
+      {
+        "name": "IB1TRA",
+        "type": "varchar",
+        "position": 166
+      },
+      {
+        "name": "BI1TRA",
+        "type": "varchar",
+        "position": 167
+      },
+      {
+        "name": "IB2TRA",
+        "type": "varchar",
+        "position": 168
+      },
+      {
+        "name": "BI2TRA",
+        "type": "varchar",
+        "position": 169
+      },
+      {
+        "name": "BFITRA",
+        "type": "date",
+        "position": 170
+      },
+      {
+        "name": "BFFTRA",
+        "type": "date",
+        "position": 171
+      },
+      {
+        "name": "BDHTRA",
+        "type": "decimal",
+        "position": 172
+      },
+      {
+        "name": "DSPTRA",
+        "type": "int",
+        "position": 173
+      },
+      {
+        "name": "FSPTRA",
+        "type": "date",
+        "position": 174
+      },
+      {
+        "name": "REGTRA",
+        "type": "int",
+        "position": 175
+      },
+      {
+        "name": "AUCTRA",
+        "type": "int",
+        "position": 176
+      },
+      {
+        "name": "JPBTRA",
+        "type": "decimal",
+        "position": 177
+      },
+      {
+        "name": "IPVTRA",
+        "type": "decimal",
+        "position": 178
+      },
+      {
+        "name": "CBMTRA",
+        "type": "bigint",
+        "position": 179
+      },
+      {
+        "name": "VRMTRA",
+        "type": "date",
+        "position": 180
+      },
+      {
+        "name": "FPTTRA",
+        "type": "date",
+        "position": 181
+      },
+      {
+        "name": "VNITRA",
+        "type": "date",
+        "position": 182
+      },
+      {
+        "name": "CLATRA",
+        "type": "varchar",
+        "position": 183
+      },
+      {
+        "name": "SCLTRA",
+        "type": "int",
+        "position": 184
+      },
+      {
+        "name": "IMETRA",
+        "type": "decimal",
+        "position": 185
+      },
+      {
+        "name": "CIIETRA",
+        "type": "varchar",
+        "position": 186
+      },
+      {
+        "name": "PIMTRA",
+        "type": "decimal",
+        "position": 187
+      },
+      {
+        "name": "PTDTRA",
+        "type": "bigint",
+        "position": 188
+      },
+      {
+        "name": "PTCTRA",
+        "type": "varchar",
+        "position": 189
+      },
+      {
+        "name": "TTETRA",
+        "type": "int",
+        "position": 190
+      },
+      {
+        "name": "PIITRA",
+        "type": "int",
+        "position": 191
+      },
+      {
+        "name": "FUMTRA",
+        "type": "datetime",
+        "position": 192
+      },
+      {
+        "name": "ANCTRA",
+        "type": "int",
+        "position": 193
+      },
+      {
+        "name": "CSTTRA",
+        "type": "int",
+        "position": 194
+      },
+      {
+        "name": "MEITRA",
+        "type": "int",
+        "position": 195
+      },
+      {
+        "name": "EXTTRA",
+        "type": "varchar",
+        "position": 196
+      }
+    ]
+  },
+  "counts": {
+    "F_EMP": 1,
+    "F_TRA": 1448,
+    "F_CON": 16774,
+    "F_NOM": 260
+  },
+  "relations": [
+    {
+      "from": "F_CON.CODCON",
+      "to": "F_CON.CODCON",
+      "confidence": "pk"
+    },
+    {
+      "from": "F_CON.TRACON",
+      "to": "F_TRA.CODTRA",
+      "confidence": "alta"
+    },
+    {
+      "from": "F_NOM.CODNOM",
+      "to": "F_NOM.CODNOM",
+      "confidence": "media"
+    },
+    {
+      "from": "F_NOM.TRANOM",
+      "to": "F_TRA.CODTRA",
+      "confidence": "alta"
+    }
+  ],
+  "field_hints": {
+    "F_TRA.CODTRA": "codigo trabajador",
+    "F_TRA.DNITRA": "NIF/DNI trabajador",
+    "F_TRA.NSSTRA": "numero Seguridad Social",
+    "F_TRA.NOMTRA": "nombre",
+    "F_TRA.AP1TRA": "primer apellido",
+    "F_TRA.AP2TRA": "segundo apellido",
+    "F_TRA.DOMTRA": "domicilio",
+    "F_TRA.CPOTRA": "codigo postal",
+    "F_TRA.MUNTRA": "municipio",
+    "F_TRA.PROTRA": "provincia",
+    "F_TRA.PAITRA": "pais",
+    "F_TRA.FNATRA": "fecha nacimiento probable",
+    "F_TRA.FALTRA": "fecha alta probable",
+    "F_TRA.FBJTRA": "fecha baja probable",
+    "F_TRA.EMATRA": "email probable",
+    "F_CON.CODCON": "codigo contrato",
+    "F_CON.TRACON": "trabajador asociado",
+    "F_CON.FINCON": "fecha inicio contrato probable",
+    "F_CON.FFICON": "fecha fin contrato probable",
+    "F_CON.NOMCON": "nombre",
+    "F_CON.AP1CON": "primer apellido",
+    "F_CON.AP2CON": "segundo apellido",
+    "F_NOM.CODNOM": "codigo nomina",
+    "F_NOM.TRANOM": "trabajador asociado probable",
+    "F_NOM.FECNOM": "fecha nomina probable",
+    "F_EMP.CODEMP": "codigo empresa",
+    "F_EMP.NIFEMP": "NIF empresa",
+    "F_EMP.DENEMP": "denominacion empresa"
+  },
+  "decision": "NS006 confirma tablas laborales/Nominasol: F_TRA trabajadores, F_CON contratos y F_NOM nominas. Aun no se recomienda escribir hasta validar campos obligatorios con documentacion oficial o una prueba controlada de alta sobre registro reservado."
+}

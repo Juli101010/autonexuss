@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bonita - Plataforma de Gestión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B5FBF;
+            --primary-dark: #6A4A9C;
+            --primary-light: #9D7BC6;
+            --secondary: #FF6B8B;
+            --success: #2ECC71;
+            --warning: #F39C12;
+            --danger: #E74C3C;
+            --info: #3498DB;
+            --light: #F8F9FA;
+            --dark: #343A40;
+            --gray: #6C757D;
+            --gray-light: #E9ECEF;
+            --border-radius: 10px;
+            --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            min-height: 90vh;
+        }
+
+        /* Header */
+        .app-header {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+        }
+
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Login Container */
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .login-box {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-box h2 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login-box p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .role-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .role-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid var(--gray-light);
+            background-color: white;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .role-btn.active {
+            border-color: var(--primary);
+            background-color: rgba(139, 95, 191, 0.1);
+            color: var(--primary);
+        }
+
+        .role-btn i {
+            margin-right: 8px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .login-form button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Dashboard */
+        .dashboard {
+            display: none;
+            padding: 20px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .dashboard-title {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        .logout-btn {
+            background-color: var(--danger);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            border-top: 4px solid var(--primary);
+        }
+
+        .stat-card.warning {
+            border-top-color: var(--warning);
+        }
+
+        .stat-card.success {
+            border-top-color: var(--success);
+        }
+
+        .stat-card.danger {
+            border-top-color: var(--danger);
+        }
+
+        .stat-card h3 {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .stat-card .change {
+            font-size: 0.85rem;
+            color: var(--success);
+        }
+
+        .change.negative {
+            color: var(--danger);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--gray-light);
+            margin-bottom: 25px;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 12px 20px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-weight: 500;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .tab-btn i {
+            margin-right: 8px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Tables */
+        .table-container {
+            overflow-x: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        tbody tr {
+            transition: var(--transition);
+        }
+
+        tbody tr:hover {
+            background-color: rgba(139, 95, 191, 0.05);
+        }
+
+        .badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .badge.success {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: var(--success);
+        }
+
+        .badge.warning {
+            background-color: rgba(243, 156, 18, 0.2);
+            color: var(--warning);
+        }
+
+        .badge.danger {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: var(--danger);
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary);
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+
+        /* Forms */
+        .form-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: var(--gray-light);
+            color: var(--dark);
+        }
+
+        .btn-success {
+            background-color: var(--success);
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: var(--danger);
+            color: white;
+        }
+
+        /* Artist Dashboard */
+        .artist-welcome {
+            background: linear-gradient(90deg, var(--primary-light) 0%, var(--primary) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+        }
+
+        .artist-welcome h2 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .app-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .stats-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+
+            .form-group {
+                min-width: 100%;
+            }
+        }
+
+        /* Demo Info */
+        .demo-info {
+            background-color: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid var(--info);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .demo-info h4 {
+            color: var(--info);
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fas fa-palette"></i>
+                <h1>La <span>Bonita</span></h1>
+            </div>
+            <div class="user-info" id="userInfo">
+                <!-- Se llena dinámicamente -->
+            </div>
+        </header>
+
+        <!-- Login Screen -->
+        <div class="login-container" id="loginContainer">
+            <div class="login-box">
+                <h2>Bienvenido a La Bonita</h2>
+                <p>Sistema de gestión para administradores y artistas</p>
+                
+                <div class="demo-info">
+                    <h4>⚠️ DEMO PARA CLIENTE</h4>
+                    <p>Esta es una versión funcional con almacenamiento local. Los datos se guardan en tu navegador (similar a Excel).</p>
+                    <p><strong>Usa cualquier contraseña para entrar</strong></p>
+                </div>
+                
+                <div class="role-selector">
+                    <button class="role-btn active" id="adminRole">
+                        <i class="fas fa-user-shield"></i> Administrador
+                    </button>
+                    <button class="role-btn" id="artistRole">
+                        <i class="fas fa-paint-brush"></i> Artista
+                    </button>
+                </div>
+                
+                <form class="login-form" id="loginForm">
+                    <input type="text" id="username" placeholder="Usuario" required>
+                    <input type="password" id="password" placeholder="Contraseña (cualquier valor)" required>
+                    <button type="submit">Ingresar al Sistema</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div class="dashboard" id="adminDashboard">
+            <div class="dashboard-header">
+                <h2 class="dashboard-title">Dashboard de Administración</h2>
+                <button class="logout-btn" id="adminLogout">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </button>
+            </div>
+            
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <h3>Artistas Registrados</h3>
+                    <div class="value" id="artistsCount">0</div>
+                    <div class="change">+2 este mes</div>
+                </div>
+                <div class="stat-card warning">
+                    <h3>Pendientes de Revisión</h3>
+                    <div class="value" id="pendingCount">0</div>
+                    <div class="change negative">+1 esta semana</div>
+                </div>
+                <div class="stat-card success">
+                    <h3>Trabajos Completados</h3>
+                    <div class="value" id="completedCount">0</div>
+                    <div class="change">+5 este mes</div>
+                </div>
+                <div class="stat-card danger">
+                    <h3>Documentos Vencidos</h3>
+                    <div class="value" id="expiredCount">0</div>
+                    <div class="change negative">Urgente</div>
+                </div>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="artists">
+                    <i class="fas fa-users"></i> Artistas
+                </button>
+                <button class="tab-btn" data-tab="requests">
+                    <i class="fas fa-file-alt"></i> Solicitudes
+                </button>
+                <button class="tab-btn" data-tab="messages">
+                    <i class="fas fa-envelope"></i> Mensajes
+                </button>
+                <button class="tab-btn" data-tab="documents">
+                    <i class="fas fa-folder"></i> Documentos
+                </button>
+                <button class="tab-btn" data-tab="addArtist">
+                    <i class="fas fa-user-plus"></i> Nuevo Artista
+                </button>
+            </div>
+            
+            <!-- Artists Tab -->
+            <div class="tab-content active" id="artistsTab">
+                <div class="table-container">
+                    <table id="artistsTable">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Especialidad</th>
+                                <th>Estado</th>
+                                <th>Último Trabajo</th>
+                                <th>Contacto</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="artistsTableBody">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Requests Tab -->
+            <div class="tab-content" id="requestsTab">
+                <div class="table-container">
+                    <table id="requestsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Artista</th>
+                                <th>Tipo</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="requestsTableBody">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Messages Tab -->
+            <div class="tab-content" id="messagesTab">
+                <div class="form-container">
+                    <h3>Enviar Mensaje a Artistas</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="messageType">Tipo de Mensaje</label>
+                            <select class="form-control" id="messageType">
+                                <option value="individual">Individual</option>
+                                <option value="group">Grupo (Todos los artistas)</option>
+                                <option value="specialty">Por Especialidad</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="artistSelectGroup">
+                            <label for="artistSelect">Seleccionar Artista</label>
+                            <select class="form-control" id="artistSelect">
+                                <!-- Se llena dinámicamente -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageSubject">Asunto</label>
+                        <input type="text" class="form-control" id="messageSubject" placeholder="Asunto del mensaje">
+                    </div>
+                    <div class="form-group">
+                        <label for="messageContent">Contenido del Mensaje</label>
+                        <textarea class="form-control" id="messageContent" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button class="btn btn-primary" id="sendMessageBtn">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                        <button class="btn btn-secondary" id="saveDraftBtn">
+                            <i class="fas fa-save"></i> Guardar Borrador
+                        </button>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Mensajes Enviados</h3>
+                <div class="table-container">
+                    <table id="messagesTable">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Destinatario</th>
+                                <th>Asunto</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="messagesTableBody">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Documents Tab -->
+            <div class="tab-content" id="documentsTab">
+                <div class="table-container">
+                    <table id="documentsTable">
+                        <thead>
+                            <tr>
+                                <th>Artista</th>
+                                <th>Documento</th>
+                                <th>Tipo</th>
+                                <th>Vencimiento</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="documentsTableBody">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Add Artist Tab -->
+            <div class="tab-content" id="addArtistTab">
+                <div class="form-container">
+                    <h3>Registrar Nuevo Artista</h3>
+                    <div class="demo-info">
+                        <p>Esta información se guardará en la "base de datos local" (almacenamiento del navegador).</p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="artistName">Nombre Completo *</label>
+                            <input type="text" class="form-control" id="artistName" placeholder="Nombre del artista" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="artistEmail">Correo Electrónico *</label>
+                            <input type="email" class="form-control" id="artistEmail" placeholder="correo@ejemplo.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="artistPhone">Teléfono</label>
+                            <input type="tel" class="form-control" id="artistPhone" placeholder="+52 123 456 7890">
+                        </div>
+                        <div class="form-group">
+                            <label for="artistSpecialty">Especialidad *</label>
+                            <select class="form-control" id="artistSpecialty" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="Pintura">Pintura</option>
+                                <option value="Escultura">Escultura</option>
+                                <option value="Fotografía">Fotografía</option>
+                                <option value="Dibujo">Dibujo</option>
+                                <option value="Digital">Arte Digital</option>
+                                <option value="Mixta">Técnica Mixta</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="artistExperience">Años de Experiencia</label>
+                            <input type="number" class="form-control" id="artistExperience" min="0" max="50" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="artistStatus">Estado</label>
+                            <select class="form-control" id="artistStatus">
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                                <option value="Pendiente">Pendiente de revisión</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button class="btn btn-success" id="saveArtistBtn">
+                            <i class="fas fa-save"></i> Guardar Artista
+                        </button>
+                        <button class="btn btn-secondary" id="resetFormBtn">
+                            <i class="fas fa-redo"></i> Limpiar Formulario
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Artist Dashboard -->
+        <div class="dashboard" id="artistDashboard">
+            <div class="dashboard-header">
+                <h2 class="dashboard-title">Portal del Artista</h2>
+                <button class="logout-btn" id="artistLogout">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </button>
+            </div>
+            
+            <div class="artist-welcome">
+                <h2 id="welcomeArtist">Bienvenido, Artista</h2>
+                <p>Gestiona tus trabajos, documentos y comunicación con La Bonita</p>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="artistProfile">
+                    <i class="fas fa-user"></i> Mi Perfil
+                </button>
+                <button class="tab-btn" data-tab="artistWork">
+                    <i class="fas fa-briefcase"></i> Mis Trabajos
+                </button>
+                <button class="tab-btn" data-tab="artistDocuments">
+                    <i class="fas fa-file-upload"></i> Subir Documentos
+                </button>
+                <button class="tab-btn" data-tab="artistMessages">
+                    <i class="fas fa-comments"></i> Mensajes
+                </button>
+                <button class="tab-btn" data-tab="artistForm">
+                    <i class="fas fa-file-signature"></i> Formulario Alta+Factura
+                </button>
+            </div>
+            
+            <!-- Artist Profile Tab -->
+            <div class="tab-content active" id="artistProfileTab">
+                <div class="form-container">
+                    <h3>Mi Información Personal</h3>
+                    <div class="demo-info">
+                        <p>Los cambios se guardarán automáticamente en la base de datos local.</p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="myName">Nombre Completo</label>
+                            <input type="text" class="form-control" id="myName" value="Ana García López">
+                        </div>
+                        <div class="form-group">
+                            <label for="myEmail">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="myEmail" value="ana.garcia@ejemplo.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="myPhone">Teléfono</label>
+                            <input type="tel" class="form-control" id="myPhone" value="+52 555 123 4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="mySpecialty">Especialidad</label>
+                            <select class="form-control" id="mySpecialty">
+                                <option value="Pintura">Pintura</option>
+                                <option value="Escultura">Escultura</option>
+                                <option value="Fotografía" selected>Fotografía</option>
+                                <option value="Dibujo">Dibujo</option>
+                                <option value="Digital">Arte Digital</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="myExperience">Años de Experiencia</label>
+                            <input type="number" class="form-control" id="myExperience" value="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="myBank">Cuenta Bancaria</label>
+                            <input type="text" class="form-control" id="myBank" placeholder="CLABE o número de cuenta">
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button class="btn btn-primary" id="saveProfileBtn">
+                            <i class="fas fa-save"></i> Guardar Cambios
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Artist Work Tab -->
+            <div class="tab-content" id="artistWorkTab">
+                <h3>Mis Trabajos Recientes</h3>
+                <div class="table-container">
+                    <table id="myWorkTable">
+                        <thead>
+                            <tr>
+                                <th>Proyecto</th>
+                                <th>Cliente</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Fin</th>
+                                <th>Estado</th>
+                                <th>Pago</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myWorkTableBody">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="form-container" style="margin-top: 30px;">
+                    <h3>Reportar Nuevo Trabajo Completado</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="workTitle">Título del Trabajo</label>
+                            <input type="text" class="form-control" id="workTitle" placeholder="Ej: Retrato familiar">
+                        </div>
+                        <div class="form-group">
+                            <label for="workClient">Cliente</label>
+                            <input type="text" class="form-control" id="workClient" placeholder="Nombre del cliente">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="workAmount">Monto ($)</label>
+                            <input type="number" class="form-control" id="workAmount" placeholder="0.00" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="workDate">Fecha de Entrega</label>
+                            <input type="date" class="form-control" id="workDate">
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button class="btn btn-success" id="saveWorkBtn">
+                            <i class="fas fa-check-circle"></i> Reportar Trabajo Completado
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Artist Documents Tab -->
+            <div class="tab-content" id="artistDocumentsTab">
+                <div class="form-container">
+                    <h3>Subir Documentos</h3>
+                    <p>Sube tus documentos para mantener tu perfil actualizado.</p>
+                    
+                    <div class="form-group">
+                        <label for="docType">Tipo de Documento</label>
+                        <select class="form-control" id="docType">
+                            <option value="Identificación">Identificación Oficial</option>
+                            <option value="RFC">RFC</option>
+                            <option value="Comprobante Domicilio">Comprobante de Domicilio</option>
+                            <option value="Portafolio">Portafolio</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="docFile">Seleccionar Archivo (simulado)</label>
+                        <div style="border: 2px dashed #ccc; padding: 30px; text-align: center; border-radius: var(--border-radius);">
+                            <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: var(--primary); margin-bottom: 15px;"></i>
+                            <p>Arrastra y suelta tu archivo aquí o haz clic para seleccionar</p>
+                            <input type="file" id="docFile" style="display: none;">
+                            <button type="button" class="btn btn-secondary" id="fakeUploadBtn" style="margin-top: 15px;">
+                                <i class="fas fa-folder-open"></i> Seleccionar Archivo
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button class="btn btn-primary" id="uploadDocBtn">
+                            <i class="fas fa-upload"></i> Subir Documento
+                        </button>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Mis Documentos</h3>
+                <div class="table-container">
+                    <table id="myDocumentsTable">
+                        <thead>
+                            <tr>
+                                <th>Documento</th>
+                                <th>Tipo</th>
+                                <th>Fecha Subida</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myDocumentsTableBody">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Artist Messages Tab -->
+            <div class="tab-content" id="artistMessagesTab">
+                <h3>Mensajes Recibidos</h3>
+                <div class="table-container">
+                    <table id="receivedMessagesTable">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Remitente</th>
+                                <th>Asunto</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="receivedMessagesTableBody">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="form-container" style="margin-top: 30px;">
+                    <h3>Enviar Mensaje a Administración</h3>
+                    <div class="form-group">
+                        <label for="artistMessageSubject">Asunto</label>
+                        <input type="text" class="form-control" id="artistMessageSubject" placeholder="Asunto de tu mensaje">
+                    </div>
+                    <div class="form-group">
+                        <label for="artistMessageContent">Mensaje</label>
+                        <textarea class="form-control" id="artistMessageContent" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button class="btn btn-primary" id="sendToAdminBtn">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Artist Form Tab -->
+            <div class="tab-content" id="artistFormTab">
+                <div class="form-container">
+                    <h3>Formulario Alta + Factura</h3>
+                    <p>Completa este formulario para registrar un nuevo trabajo y generar factura.</p>
+                    
+                    <div class="demo-info">
+                        <p>Este formulario combina el alta de trabajo y la generación de factura en un solo paso.</p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="formProject">Nombre del Proyecto *</label>
+                            <input type="text" class="form-control" id="formProject" placeholder="Ej: Mural restaurante" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formClient">Cliente *</label>
+                            <input type="text" class="form-control" id="formClient" placeholder="Nombre o razón social" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="formClientRFC">RFC del Cliente</label>
+                            <input type="text" class="form-control" id="formClientRFC" placeholder="RFC para facturación">
+                        </div>
+                        <div class="form-group">
+                            <label for="formClientAddress">Dirección Fiscal</label>
+                            <input type="text" class="form-control" id="formClientAddress" placeholder="Para factura">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="formAmount">Monto Total *</label>
+                            <input type="number" class="form-control" id="formAmount" placeholder="0.00" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formIVA">IVA (%)</label>
+                            <select class="form-control" id="formIVA">
+                                <option value="16">16%</option>
+                                <option value="0">0% (Exento)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="formStartDate">Fecha Inicio</label>
+                            <input type="date" class="form-control" id="formStartDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="formEndDate">Fecha Entrega *</label>
+                            <input type="date" class="form-control" id="formEndDate" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="formDescription">Descripción del Trabajo</label>
+                        <textarea class="form-control" id="formDescription" rows="3" placeholder="Describe los detalles del trabajo..."></textarea>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button class="btn btn-success" id="submitFormBtn">
+                            <i class="fas fa-file-invoice-dollar"></i> Enviar Formulario y Generar Factura
+                        </button>
+                        <button class="btn btn-secondary" id="previewFormBtn">
+                            <i class="fas fa-eye"></i> Vista Previa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="messageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Mensaje Enviado</h3>
+                <button class="close-modal" id="closeMessageModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage">Tu mensaje ha sido enviado correctamente.</p>
+                <div class="form-buttons" style="justify-content: flex-end; margin-top: 20px;">
+                    <button class="btn btn-primary" id="confirmMessageModal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="artistModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="artistModalTitle">Detalles del Artista</h3>
+                <button class="close-modal" id="closeArtistModal">&times;</button>
+            </div>
+            <div class="modal-body" id="artistModalBody">
+                <!-- Se llena dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==================== BASE DE DATOS LOCAL ====================
+        // Simulamos una base de datos usando localStorage
+        
+        class Database {
+            constructor() {
+                this.initDatabase();
+            }
+            
+            initDatabase() {
+                // Inicializar datos si no existen
+                if (!localStorage.getItem('labonita_artists')) {
+                    const defaultArtists = [
+                        {
+                            id: 1,
+                            name: "Ana García López",
+                            email: "ana.garcia@ejemplo.com",
+                            phone: "+52 555 123 4567",
+                            specialty: "Fotografía",
+                            experience: 5,
+                            status: "Activo",
+                            joinDate: "2023-01-15",
+                            lastWork: "2023-10-20",
+                            documents: ["Identificación", "RFC"],
+                            bankAccount: ""
+                        },
+                        {
+                            id: 2,
+                            name: "Carlos Méndez Ruiz",
+                            email: "carlos.mendez@ejemplo.com",
+                            phone: "+52 555 987 6543",
+                            specialty: "Pintura",
+                            experience: 8,
+                            status: "Activo",
+                            joinDate: "2022-08-10",
+                            lastWork: "2023-10-15",
+                            documents: ["Identificación", "RFC", "Comprobante Domicilio"],
+                            bankAccount: "012345678901234567"
+                        },
+                        {
+                            id: 3,
+                            name: "María Fernández Solís",
+                            email: "maria.fernandez@ejemplo.com",
+                            phone: "+52 555 456 7890",
+                            specialty: "Escultura",
+                            experience: 12,
+                            status: "Activo",
+                            joinDate: "2021-03-22",
+                            lastWork: "2023-09-30",
+                            documents: ["Identificación", "RFC"],
+                            bankAccount: "987654321098765432"
+                        },
+                        {
+                            id: 4,
+                            name: "Roberto Jiménez Torres",
+                            email: "roberto.jimenez@ejemplo.com",
+                            phone: "+52 555 111 2233",
+                            specialty: "Arte Digital",
+                            experience: 3,
+                            status: "Pendiente",
+                            joinDate: "2023-09-05",
+                            lastWork: "2023-08-15",
+                            documents: ["Identificación"],
+                            bankAccount: ""
+                        }
+                    ];
+                    localStorage.setItem('labonita_artists', JSON.stringify(defaultArtists));
+                }
+                
+                if (!localStorage.getItem('labonita_requests')) {
+                    const defaultRequests = [
+                        {
+                            id: 1001,
+                            artistId: 1,
+                            artistName: "Ana García López",
+                            type: "Alta+Factura",
+                            date: "2023-10-25",
+                            status: "Pendiente",
+                            amount: 12500.00
+                        },
+                        {
+                            id: 1002,
+                            artistId: 2,
+                            artistName: "Carlos Méndez Ruiz",
+                            type: "Documentación",
+                            date: "2023-10-24",
+                            status: "En revisión",
+                            amount: 0
+                        },
+                        {
+                            id: 1003,
+                            artistId: 3,
+                            artistName: "María Fernández Solís",
+                            type: "Alta+Factura",
+                            date: "2023-10-20",
+                            status: "Completado",
+                            amount: 8500.00
+                        }
+                    ];
+                    localStorage.setItem('labonita_requests', JSON.stringify(defaultRequests));
+                }
+                
+                if (!localStorage.getItem('labonita_messages')) {
+                    const defaultMessages = [
+                        {
+                            id: 2001,
+                            date: "2023-10-25",
+                            recipient: "Ana García López",
+                            subject: "Recordatorio documentación",
+                            status: "Enviado",
+                            type: "individual"
+                        },
+                        {
+                            id: 2002,
+                            date: "2023-10-24",
+                            recipient: "Todos los artistas",
+                            subject: "Nuevos lineamientos",
+                            status: "Enviado",
+                            type: "group"
+                        },
+                        {
+                            id: 2003,
+                            date: "2023-10-20",
+                            recipient: "Carlos Méndez Ruiz",
+                            subject: "Confirmación de pago",
+                            status: "Leído",
+                            type: "individual"
+                        }
+                    ];
+                    localStorage.setItem('labonita_messages', JSON.stringify(defaultMessages));
+                }
+                
+                if (!localStorage.getItem('labonita_documents')) {
+                    const defaultDocuments = [
+                        {
+                            id: 3001,
+                            artistId: 1,
+                            artistName: "Ana García López",
+                            document: "INE.pdf",
+                            type: "Identificación",
+                            expiry: "2028-05-15",
+                            status: "Vigente"
+                        },
+                        {
+                            id: 3002,
+                            artistId: 2,
+                            artistName: "Carlos Méndez Ruiz",
+                            document: "RFC.pdf",
+                            type: "RFC",
+                            expiry: "N/A",
+                            status: "Vigente"
+                        },
+                        {
+                            id: 3003,
+                            artistId: 3,
+                            artistName: "María Fernández Solís",
+                            document: "Comprobante.pdf",
+                            type: "Comprobante Domicilio",
+                            expiry: "2023-12-01",
+                            status: "Por vencer"
+                        },
+                        {
+                            id: 3004,
+                            artistId: 4,
+                            artistName: "Roberto Jiménez Torres",
+                            document: "INE.pdf",
+                            type: "Identificación",
+                            expiry: "2024-02-28",
+                            status: "Vigente"
+                        }
+                    ];
+                    localStorage.setItem('labonita_documents', JSON.stringify(defaultDocuments));
+                }
+                
+                if (!localStorage.getItem('labonita_artist_works')) {
+                    const defaultWorks = [
+                        {
+                            id: 4001,
+                            artistId: 1,
+                            project: "Sesión fotográfica boda",
+                            client: "Laura y Miguel",
+                            startDate: "2023-10-10",
+                            endDate: "2023-10-20",
+                            status: "Completado",
+                            payment: "Pagado",
+                            amount: 12500.00
+                        },
+                        {
+                            id: 4002,
+                            artistId: 1,
+                            project: "Retrato familiar",
+                            client: "Familia Rodríguez",
+                            startDate: "2023-09-15",
+                            endDate: "2023-09-25",
+                            status: "Completado",
+                            payment: "Pagado",
+                            amount: 8500.00
+                        },
+                        {
+                            id: 4003,
+                            artistId: 2,
+                            project: "Mural restaurante",
+                            client: "La Parrilla Mexicana",
+                            startDate: "2023-10-05",
+                            endDate: "2023-10-15",
+                            status: "Completado",
+                            payment: "Pagado",
+                            amount: 22000.00
+                        }
+                    ];
+                    localStorage.setItem('labonita_artist_works', JSON.stringify(defaultWorks));
+                }
+            }
+            
+            // Métodos para artistas
+            getArtists() {
+                return JSON.parse(localStorage.getItem('labonita_artists')) || [];
+            }
+            
+            saveArtists(artists) {
+                localStorage.setItem('labonita_artists', JSON.stringify(artists));
+            }
+            
+            addArtist(artist) {
+                const artists = this.getArtists();
+                // Generar ID único
+                const newId = artists.length > 0 ? Math.max(...artists.map(a => a.id)) + 1 : 1;
+                artist.id = newId;
+                artist.joinDate = new Date().toISOString().split('T')[0];
+                artist.lastWork = "N/A";
+                artist.documents = [];
+                artists.push(artist);
+                this.saveArtists(artists);
+                return artist;
+            }
+            
+            updateArtist(id, updatedData) {
+                const artists = this.getArtists();
+                const index = artists.findIndex(a => a.id === id);
+                if (index !== -1) {
+                    artists[index] = { ...artists[index], ...updatedData };
+                    this.saveArtists(artists);
+                    return true;
+                }
+                return false;
+            }
+            
+            // Métodos para solicitudes
+            getRequests() {
+                return JSON.parse(localStorage.getItem('labonita_requests')) || [];
+            }
+            
+            addRequest(request) {
+                const requests = this.getRequests();
+                const newId = requests.length > 0 ? Math.max(...requests.map(r => r.id)) + 1 : 1001;
+                request.id = newId;
+                request.date = new Date().toISOString().split('T')[0];
+                request.status = "Pendiente";
+                requests.push(request);
+                localStorage.setItem('labonita_requests', JSON.stringify(requests));
+                return request;
+            }
+            
+            // Métodos para mensajes
+            getMessages() {
+                return JSON.parse(localStorage.getItem('labonita_messages')) || [];
+            }
+            
+            addMessage(message) {
+                const messages = this.getMessages();
+                const newId = messages.length > 0 ? Math.max(...messages.map(m => m.id)) + 1 : 2001;
+                message.id = newId;
+                message.date = new Date().toISOString().split('T')[0];
+                message.status = "Enviado";
+                messages.push(message);
+                localStorage.setItem('labonita_messages', JSON.stringify(messages));
+                return message;
+            }
+            
+            // Métodos para documentos
+            getDocuments() {
+                return JSON.parse(localStorage.getItem('labonita_documents')) || [];
+            }
+            
+            addDocument(document) {
+                const documents = this.getDocuments();
+                const newId = documents.length > 0 ? Math.max(...documents.map(d => d.id)) + 1 : 3001;
+                document.id = newId;
+                documents.push(document);
+                localStorage.setItem('labonita_documents', JSON.stringify(documents));
+                return document;
+            }
+            
+            // Métodos para trabajos de artistas
+            getArtistWorks(artistId = null) {
+                const works = JSON.parse(localStorage.getItem('labonita_artist_works')) || [];
+                if (artistId) {
+                    return works.filter(w => w.artistId === artistId);
+                }
+                return works;
+            }
+            
+            addArtistWork(work) {
+                const works = this.getArtistWorks();
+                const newId = works.length > 0 ? Math.max(...works.map(w => w.id)) + 1 : 4001;
+                work.id = newId;
+                work.status = "Completado";
+                work.payment = "Pendiente";
+                works.push(work);
+                localStorage.setItem('labonita_artist_works', JSON.stringify(works));
+                return work;
+            }
+            
+            // Métodos para estadísticas
+            getStats() {
+                const artists = this.getArtists();
+                const requests = this.getRequests();
+                const documents = this.getDocuments();
+                
+                const activeArtists = artists.filter(a => a.status === "Activo").length;
+                const pendingRequests = requests.filter(r => r.status === "Pendiente").length;
+                const completedRequests = requests.filter(r => r.status === "Completado").length;
+                const expiredDocuments = documents.filter(d => d.status === "Por vencer").length;
+                
+                return {
+                    artistsCount: artists.length,
+                    activeArtists,
+                    pendingRequests,
+                    completedRequests,
+                    expiredDocuments
+                };
+            }
+        }
+        
+        // ==================== APLICACIÓN PRINCIPAL ====================
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar base de datos
+            const db = new Database();
+            
+            // Elementos del DOM
+            const loginContainer = document.getElementById('loginContainer');
+            const adminDashboard = document.getElementById('adminDashboard');
+            const artistDashboard = document.getElementById('artistDashboard');
+            const adminRoleBtn = document.getElementById('adminRole');
+            const artistRoleBtn = document.getElementById('artistRole');
+            const loginForm = document.getElementById('loginForm');
+            const adminLogoutBtn = document.getElementById('adminLogout');
+            const artistLogoutBtn = document.getElementById('artistLogout');
+            const userInfo = document.getElementById('userInfo');
+            const messageModal = document.getElementById('messageModal');
+            const closeMessageModal = document.getElementById('closeMessageModal');
+            const confirmMessageModal = document.getElementById('confirmMessageModal');
+            const modalMessage = document.getElementById('modalMessage');
+            const artistModal = document.getElementById('artistModal');
+            const closeArtistModal = document.getElementById('closeArtistModal');
+            
+            // Estado de la aplicación
+            let currentUser = null;
+            let currentRole = 'admin';
+            
+            // ==================== FUNCIONES DE UI ====================
+            
+            // Cambiar rol en login
+            adminRoleBtn.addEventListener('click', function() {
+                adminRoleBtn.classList.add('active');
+                artistRoleBtn.classList.remove('active');
+                currentRole = 'admin';
+            });
+            
+            artistRoleBtn.addEventListener('click', function() {
+                artistRoleBtn.classList.add('active');
+                adminRoleBtn.classList.remove('active');
+                currentRole = 'artist';
+            });
+            
+            // Login
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                if (!username.trim()) {
+                    showModal('Por favor ingresa un nombre de usuario');
+                    return;
+                }
+                
+                // En esta demo, cualquier password funciona
+                login(username, currentRole);
+            });
+            
+            function login(username, role) {
+                currentUser = {
+                    name: username,
+                    role: role
+                };
+                
+                // Actualizar información de usuario en header
+                userInfo.innerHTML = `
+                    <div class="avatar">${username.charAt(0).toUpperCase()}</div>
+                    <div>
+                        <div style="font-weight: 500;">${username}</div>
+                        <div style="font-size: 0.8rem; opacity: 0.8;">${role === 'admin' ? 'Administrador' : 'Artista'}</div>
+                    </div>
+                `;
+                
+                // Mostrar dashboard correspondiente
+                loginContainer.style.display = 'none';
+                
+                if (role === 'admin') {
+                    adminDashboard.style.display = 'block';
+                    artistDashboard.style.display = 'none';
+                    loadAdminDashboard();
+                } else {
+                    adminDashboard.style.display = 'none';
+                    artistDashboard.style.display = 'block';
+                    loadArtistDashboard(username);
+                }
+            }
+            
+            // Logout
+            adminLogoutBtn.addEventListener('click', logout);
+            artistLogoutBtn.addEventListener('click', logout);
+            
+            function logout() {
+                currentUser = null;
+                loginContainer.style.display = 'flex';
+                adminDashboard.style.display = 'none';
+                artistDashboard.style.display = 'none';
+                userInfo.innerHTML = '';
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+            }
+            
+            // Funciones del modal
+            function showModal(message) {
+                modalMessage.textContent = message;
+                messageModal.style.display = 'flex';
+            }
+            
+            closeMessageModal.addEventListener('click', function() {
+                messageModal.style.display = 'none';
+            });
+            
+            confirmMessageModal.addEventListener('click', function() {
+                messageModal.style.display = 'none';
+            });
+            
+            closeArtistModal.addEventListener('click', function() {
+                artistModal.style.display = 'none';
+            });
+            
+            // Tabs
+            function initTabs(containerId) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+                
+                const tabBtns = container.querySelectorAll('.tab-btn');
+                const tabContents = container.querySelectorAll('.tab-content');
+                
+                tabBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const tabId = this.getAttribute('data-tab');
+                        
+                        // Remover clase active de todos los botones y contenidos
+                        tabBtns.forEach(b => b.classList.remove('active'));
+                        tabContents.forEach(c => c.classList.remove('active'));
+                        
+                        // Agregar clase active al botón clickeado y su contenido
+                        this.classList.add('active');
+                        document.getElementById(`${tabId}Tab`).classList.add('active');
+                    });
+                });
+            }
+            
+            // ==================== DASHBOARD ADMIN ====================
+            
+            function loadAdminDashboard() {
+                initTabs('adminDashboard');
+                
+                // Cargar estadísticas
+                const stats = db.getStats();
+                document.getElementById('artistsCount').textContent = stats.artistsCount;
+                document.getElementById('pendingCount').textContent = stats.pendingRequests;
+                document.getElementById('completedCount').textContent = stats.completedRequests;
+                document.getElementById('expiredCount').textContent = stats.expiredDocuments;
+                
+                // Cargar artistas
+                loadArtistsTable();
+                
+                // Cargar solicitudes
+                loadRequestsTable();
+                
+                // Cargar mensajes
+                loadMessagesTable();
+                
+                // Cargar documentos
+                loadDocumentsTable();
+                
+                // Cargar selector de artistas para mensajes
+                loadArtistSelect();
+                
+                // Configurar formulario de nuevo artista
+                setupArtistForm();
+                
+                // Configurar envío de mensajes
+                setupMessageSending();
+                
+                // Configurar cambios en tipo de mensaje
+                document.getElementById('messageType').addEventListener('change', function() {
+                    const type = this.value;
+                    const artistSelectGroup = document.getElementById('artistSelectGroup');
+                    
+                    if (type === 'individual') {
+                        artistSelectGroup.style.display = 'block';
+                    } else {
+                        artistSelectGroup.style.display = 'none';
+                    }
+                });
+            }
+            
+            function loadArtistsTable() {
+                const artists = db.getArtists();
+                const tbody = document.getElementById('artistsTableBody');
+                tbody.innerHTML = '';
+                
+                artists.forEach(artist => {
+                    const statusClass = artist.status === 'Activo' ? 'success' : 
+                                       artist.status === 'Pendiente' ? 'warning' : 'danger';
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${artist.name}</td>
+                        <td>${artist.specialty}</td>
+                        <td><span class="badge ${statusClass}">${artist.status}</span></td>
+                        <td>${artist.lastWork}</td>
+                        <td>${artist.email}<br><small>${artist.phone}</small></td>
+                        <td>
+                            <button class="action-btn view-artist" data-id="${artist.id}" title="Ver detalles">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn edit-artist" data-id="${artist.id}" title="Editar">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-btn message-artist" data-id="${artist.id}" title="Enviar mensaje">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+                
+                // Agregar event listeners a los botones
+                document.querySelectorAll('.view-artist').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const artistId = parseInt(this.getAttribute('data-id'));
+                        viewArtistDetails(artistId);
+                    });
+                });
+                
+                document.querySelectorAll('.message-artist').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const artistId = parseInt(this.getAttribute('data-id'));
+                        const artists = db.getArtists();
+                        const artist = artists.find(a => a.id === artistId);
+                        if (artist) {
+                            // Cambiar a pestaña de mensajes
+                            document.querySelector('[data-tab="messages"]').click();
+                            document.getElementById('messageType').value = 'individual';
+                            document.getElementById('artistSelect').value = artistId;
+                            document.getElementById('artistSelectGroup').style.display = 'block';
+                            document.getElementById('messageSubject').focus();
+                        }
+                    });
+                });
+            }
+            
+            function viewArtistDetails(artistId) {
+                const artists = db.getArtists();
+                const artist = artists.find(a => a.id === artistId);
+                
+                if (!artist) return;
+                
+                const works = db.getArtistWorks(artistId);
+                const documents = db.getDocuments().filter(d => d.artistId === artistId);
+                
+                document.getElementById('artistModalTitle').textContent = `Detalles: ${artist.name}`;
+                
+                let html = `
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h4>Información Personal</h4>
+                            <p><strong>Email:</strong> ${artist.email}</p>
+                            <p><strong>Teléfono:</strong> ${artist.phone}</p>
+                            <p><strong>Especialidad:</strong> ${artist.specialty}</p>
+                            <p><strong>Experiencia:</strong> ${artist.experience} años</p>
+                            <p><strong>Estado:</strong> ${artist.status}</p>
+                            <p><strong>Fecha de ingreso:</strong> ${artist.joinDate}</p>
+                            <p><strong>Último trabajo:</strong> ${artist.lastWork}</p>
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <h4>Documentos</h4>
+                `;
+                
+                if (documents.length > 0) {
+                    html += `<ul>`;
+                    documents.forEach(doc => {
+                        html += `<li>${doc.type} - ${doc.status}</li>`;
+                    });
+                    html += `</ul>`;
+                } else {
+                    html += `<p>No hay documentos registrados</p>`;
+                }
+                
+                html += `
+                        </div>
+                    </div>
+                    <h4>Trabajos Recientes</h4>
+                `;
+                
+                if (works.length > 0) {
+                    html += `<div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 8px; border-bottom: 1px solid #eee;">Proyecto</th>
+                                    <th style="padding: 8px; border-bottom: 1px solid #eee;">Cliente</th>
+                                    <th style="padding: 8px; border-bottom: 1px solid #eee;">Fecha</th>
+                                    <th style="padding: 8px; border-bottom: 1px solid #eee;">Monto</th>
+                                </tr>
+                            </thead>
+                            <tbody>`;
+                    
+                    works.forEach(work => {
+                        html += `
+                            <tr>
+                                <td style="padding: 8px; border-bottom: 1px solid #eee;">${work.project}</td>
+                                <td style="padding: 8px; border-bottom: 1px solid #eee;">${work.client}</td>
+                                <td style="padding: 8px; border-bottom: 1px solid #eee;">${work.endDate}</td>
+                                <td style="padding: 8px; border-bottom: 1px solid #eee;">$${work.amount.toLocaleString('es-MX', {minimumFractionDigits: 2})}</td>
+                            </tr>
+                        `;
+                    });
+                    
+                    html += `</tbody></table></div>`;
+                } else {
+                    html += `<p>No hay trabajos registrados</p>`;
+                }
+                
+                document.getElementById('artistModalBody').innerHTML = html;
+                artistModal.style.display = 'flex';
+            }
+            
+            function loadRequestsTable() {
+                const requests = db.getRequests();
+                const tbody = document.getElementById('requestsTableBody');
+                tbody.innerHTML = '';
+                
+                requests.forEach(request => {
+                    const statusClass = request.status === 'Completado' ? 'success' : 
+                                      request.status === 'En revisión' ? 'warning' : 'danger';
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>#${request.id}</td>
+                        <td>${request.artistName}</td>
+                        <td>${request.type}</td>
+                        <td>${request.date}</td>
+                        <td><span class="badge ${statusClass}">${request.status}</span></td>
+                        <td>
+                            <button class="action-btn" title="Ver">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" title="Aprobar">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <button class="action-btn" title="Rechazar">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+            
+            function loadMessagesTable() {
+                const messages = db.getMessages();
+                const tbody = document.getElementById('messagesTableBody');
+                tbody.innerHTML = '';
+                
+                messages.forEach(message => {
+                    const statusClass = message.status === 'Enviado' ? 'warning' : 
+                                      message.status === 'Leído' ? 'success' : 'danger';
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${message.date}</td>
+                        <td>${message.recipient}</td>
+                        <td>${message.subject}</td>
+                        <td><span class="badge ${statusClass}">${message.status}</span></td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+            
+            function loadDocumentsTable() {
+                const documents = db.getDocuments();
+                const tbody = document.getElementById('documentsTableBody');
+                tbody.innerHTML = '';
+                
+                documents.forEach(doc => {
+                    const statusClass = doc.status === 'Vigente' ? 'success' : 
+                                      doc.status === 'Por vencer' ? 'warning' : 'danger';
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${doc.artistName}</td>
+                        <td>${doc.document}</td>
+                        <td>${doc.type}</td>
+                        <td>${doc.expiry}</td>
+                        <td><span class="badge ${statusClass}">${doc.status}</span></td>
+                        <td>
+                            <button class="action-btn" title="Ver">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" title="Descargar">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+            
+            function loadArtistSelect() {
+                const artists = db.getArtists();
+                const select = document.getElementById('artistSelect');
+                select.innerHTML = '<option value="">Seleccionar artista...</option>';
+                
+                artists.forEach(artist => {
+                    const option = document.createElement('option');
+                    option.value = artist.id;
+                    option.textContent = `${artist.name} (${artist.specialty})`;
+                    select.appendChild(option);
+                });
+            }
+            
+            function setupArtistForm() {
+                document.getElementById('saveArtistBtn').addEventListener('click', function() {
+                    const name = document.getElementById('artistName').value.trim();
+                    const email = document.getElementById('artistEmail').value.trim();
+                    const phone = document.getElementById('artistPhone').value.trim();
+                    const specialty = document.getElementById('artistSpecialty').value;
+                    const experience = parseInt(document.getElementById('artistExperience').value) || 0;
+                    const status = document.getElementById('artistStatus').value;
+                    
+                    if (!name || !email || !specialty) {
+                        showModal('Por favor completa los campos obligatorios (*)');
+                        return;
+                    }
+                    
+                    const newArtist = {
+                        name,
+                        email,
+                        phone,
+                        specialty,
+                        experience,
+                        status
+                    };
+                    
+                    db.addArtist(newArtist);
+                    showModal(`Artista "${name}" registrado exitosamente`);
+                    
+                    // Resetear formulario
+                    document.getElementById('artistName').value = '';
+                    document.getElementById('artistEmail').value = '';
+                    document.getElementById('artistPhone').value = '';
+                    document.getElementById('artistSpecialty').value = '';
+                    document.getElementById('artistExperience').value = '';
+                    document.getElementById('artistStatus').value = 'Activo';
+                    
+                    // Recargar tablas
+                    loadArtistsTable();
+                    loadArtistSelect();
+                    
+                    // Actualizar estadísticas
+                    const stats = db.getStats();
+                    document.getElementById('artistsCount').textContent = stats.artistsCount;
+                });
+                
+                document.getElementById('resetFormBtn').addEventListener('click', function() {
+                    document.getElementById('artistName').value = '';
+                    document.getElementById('artistEmail').value = '';
+                    document.getElementById('artistPhone').value = '';
+                    document.getElementById('artistSpecialty').value = '';
+                    document.getElementById('artistExperience').value = '';
+                    document.getElementById('artistStatus').value = 'Activo';
+                });
+            }
+            
+            function setupMessageSending() {
+                document.getElementById('sendMessageBtn').addEventListener('click', function() {
+                    const type = document.getElementById('messageType').value;
+                    const subject = document.getElementById('messageSubject').value.trim();
+                    const content = document.getElementById('messageContent').value.trim();
+                    
+                    if (!subject || !content) {
+                        showModal('Por favor completa el asunto y el contenido del mensaje');
+                        return;
+                    }
+                    
+                    let recipient = '';
+                    const artists = db.getArtists();
+                    
+                    if (type === 'individual') {
+                        const artistId = parseInt(document.getElementById('artistSelect').value);
+                        const artist = artists.find(a => a.id === artistId);
+                        if (!artist) {
+                            showModal('Por favor selecciona un artista');
+                            return;
+                        }
+                        recipient = artist.name;
+                    } else if (type === 'group') {
+                        recipient = 'Todos los artistas';
+                    } else {
+                        recipient = 'Artistas por especialidad';
+                    }
+                    
+                    const newMessage = {
+                        recipient,
+                        subject,
+                        content,
+                        type
+                    };
+                    
+                    db.addMessage(newMessage);
+                    showModal(`Mensaje enviado exitosamente a ${recipient}`);
+                    
+                    // Limpiar formulario
+                    document.getElementById('messageSubject').value = '';
+                    document.getElementById('messageContent').value = '';
+                    
+                    // Recargar tabla de mensajes
+                    loadMessagesTable();
+                });
+                
+                document.getElementById('saveDraftBtn').addEventListener('click', function() {
+                    showModal('Borrador guardado (simulación)');
+                });
+            }
+            
+            // ==================== DASHBOARD ARTISTA ====================
+            
+            function loadArtistDashboard(artistName) {
+                initTabs('artistDashboard');
+                
+                // Mostrar nombre en bienvenida
+                document.getElementById('welcomeArtist').textContent = `Bienvenido, ${artistName}`;
+                
+                // Cargar perfil
+                loadArtistProfile();
+                
+                // Cargar trabajos
+                loadArtistWorks();
+                
+                // Cargar documentos
+                loadArtistDocuments();
+                
+                // Cargar mensajes recibidos
+                loadReceivedMessages();
+                
+                // Configurar formulario de documento
+                setupDocumentUpload();
+                
+                // Configurar formulario de trabajo
+                setupWorkForm();
+                
+                // Configurar formulario Alta+Factura
+                setupAltaFacturaForm();
+                
+                // Configurar envío de mensajes a admin
+                setupMessageToAdmin();
+            }
+            
+            function loadArtistProfile() {
+                // En una app real, esto cargaría los datos del artista actual
+                // Por ahora usamos datos de ejemplo
+                document.getElementById('myName').value = "Ana García López";
+                document.getElementById('myEmail').value = "ana.garcia@ejemplo.com";
+                document.getElementById('myPhone').value = "+52 555 123 4567";
+                document.getElementById('mySpecialty').value = "Fotografía";
+                document.getElementById('myExperience').value = "5";
+                document.getElementById('myBank').value = "";
+                
+                // Guardar cambios en perfil
+                document.getElementById('saveProfileBtn').addEventListener('click', function() {
+                    showModal('Perfil actualizado correctamente (simulación)');
+                });
+            }
+            
+            function loadArtistWorks() {
+                const works = db.getArtistWorks(1); // Suponiendo que el artista actual tiene ID 1
+                const tbody = document.getElementById('myWorkTableBody');
+                tbody.innerHTML = '';
+                
+                works.forEach(work => {
+                    const statusClass = work.status === 'Completado' ? 'success' : 
+                                      work.status === 'En progreso' ? 'warning' : 'danger';
+                    
+                    const paymentClass = work.payment === 'Pagado' ? 'success' : 
+                                       work.payment === 'Pendiente' ? 'warning' : 'danger';
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${work.project}</td>
+                        <td>${work.client}</td>
+                        <td>${work.startDate}</td>
+                        <td>${work.endDate}</td>
+                        <td><span class="badge ${statusClass}">${work.status}</span></td>
+                        <td><span class="badge ${paymentClass}">${work.payment}</span></td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+            
+            function setupWorkForm() {
+                document.getElementById('saveWorkBtn').addEventListener('click', function() {
+                    const title = document.getElementById('workTitle').value.trim();
+                    const client = document.getElementById('workClient').value.trim();
+                    const amount = parseFloat(document.getElementById('workAmount').value) || 0;
+                    const date = document.getElementById('workDate').value;
+                    
+                    if (!title || !client || !date) {
+                        showModal('Por favor completa los campos obligatorios');
+                        return;
+                    }
+                    
+                    const newWork = {
+                        artistId: 1, // ID del artista actual
+                        project: title,
+                        client,
+                        amount,
+                        startDate: new Date().toISOString().split('T')[0],
+                        endDate: date
+                    };
+                    
+                    db.addArtistWork(newWork);
+                    showModal(`Trabajo "${title}" reportado exitosamente`);
+                    
+                    // Limpiar formulario
+                    document.getElementById('workTitle').value = '';
+                    document.getElementById('workClient').value = '';
+                    document.getElementById('workAmount').value = '';
+                    document.getElementById('workDate').value = '';
+                    
+                    // Recargar tabla de trabajos
+                    loadArtistWorks();
+                });
+            }
+            
+            function loadArtistDocuments() {
+                const documents = db.getDocuments().filter(d => d.artistId === 1); // ID del artista actual
+                const tbody = document.getElementById('myDocumentsTableBody');
+                tbody.innerHTML = '';
+                
+                documents.forEach(doc => {
+                    const statusClass = doc.status === 'Vigente' ? 'success' : 
+                                      doc.status === 'Por vencer' ? 'warning' : 'danger';
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${doc.document}</td>
+                        <td>${doc.type}</td>
+                        <td>${doc.expiry}</td>
+                        <td><span class="badge ${statusClass}">${doc.status}</span></td>
+                        <td>
+                            <button class="action-btn" title="Ver">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" title="Descargar">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+            
+            function setupDocumentUpload() {
+                document.getElementById('fakeUploadBtn').addEventListener('click', function() {
+                    // Simular selección de archivo
+                    const docType = document.getElementById('docType').value;
+                    showModal(`Documento de tipo "${docType}" seleccionado (simulación)`);
+                });
+                
+                document.getElementById('uploadDocBtn').addEventListener('click', function() {
+                    const docType = document.getElementById('docType').value;
+                    
+                    const newDocument = {
+                        artistId: 1,
+                        artistName: "Ana García López",
+                        document: `${docType}_${new Date().getTime()}.pdf`,
+                        type: docType,
+                        expiry: "2024-12-31",
+                        status: "Vigente"
+                    };
+                    
+                    db.addDocument(newDocument);
+                    showModal(`Documento "${docType}" subido exitosamente (simulación)`);
+                    
+                    // Recargar tabla de documentos
+                    loadArtistDocuments();
+                });
+            }
+            
+            function loadReceivedMessages() {
+                const messages = db.getMessages().filter(m => 
+                    m.recipient === "Ana García López" || m.recipient === "Todos los artistas"
+                );
+                
+                const tbody = document.getElementById('receivedMessagesTableBody');
+                tbody.innerHTML = '';
+                
+                messages.forEach(message => {
+                    const statusClass = message.status === 'Leído' ? 'success' : 'warning';
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${message.date}</td>
+                        <td>Administración La Bonita</td>
+                        <td>${message.subject}</td>
+                        <td><span class="badge ${statusClass}">${message.status}</span></td>
+                        <td>
+                            <button class="action-btn" title="Ver">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" title="Responder">
+                                <i class="fas fa-reply"></i>
+                            </button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+            
+            function setupMessageToAdmin() {
+                document.getElementById('sendToAdminBtn').addEventListener('click', function() {
+                    const subject = document.getElementById('artistMessageSubject').value.trim();
+                    const content = document.getElementById('artistMessageContent').value.trim();
+                    
+                    if (!subject || !content) {
+                        showModal('Por favor completa el asunto y el contenido del mensaje');
+                        return;
+                    }
+                    
+                    showModal('Mensaje enviado a administración (simulación)');
+                    
+                    // Limpiar formulario
+                    document.getElementById('artistMessageSubject').value = '';
+                    document.getElementById('artistMessageContent').value = '';
+                });
+            }
+            
+            function setupAltaFacturaForm() {
+                document.getElementById('submitFormBtn').addEventListener('click', function() {
+                    const project = document.getElementById('formProject').value.trim();
+                    const client = document.getElementById('formClient').value.trim();
+                    const amount = parseFloat(document.getElementById('formAmount').value) || 0;
+                    
+                    if (!project || !client || amount <= 0) {
+                        showModal('Por favor completa los campos obligatorios con valores válidos');
+                        return;
+                    }
+                    
+                    const newRequest = {
+                        artistId: 1,
+                        artistName: "Ana García López",
+                        type: "Alta+Factura",
+                        amount
+                    };
+                    
+                    db.addRequest(newRequest);
+                    showModal(`Formulario enviado exitosamente. Se generará la factura para "${project}"`);
+                    
+                    // Limpiar formulario
+                    document.getElementById('formProject').value = '';
+                    document.getElementById('formClient').value = '';
+                    document.getElementById('formClientRFC').value = '';
+                    document.getElementById('formClientAddress').value = '';
+                    document.getElementById('formAmount').value = '';
+                    document.getElementById('formIVA').value = '16';
+                    document.getElementById('formStartDate').value = '';
+                    document.getElementById('formEndDate').value = '';
+                    document.getElementById('formDescription').value = '';
+                });
+                
+                document.getElementById('previewFormBtn').addEventListener('click', function() {
+                    showModal('Vista previa del formulario (simulación)');
+                });
+            }
+            
+            // Inicializar aplicación con datos de ejemplo
+            loadAdminDashboard();
+        });
+    </script>
+</body>
+</html>

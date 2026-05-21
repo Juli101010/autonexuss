@@ -1,0 +1,26 @@
+{
+  "name": "labonita-ui-core",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "bootstrap-admin": "node scripts/bootstrap-admin.js",
+    "bootstrap-demo": "node scripts/bootstrap-demo.js",
+    "require-check": "node scripts/require-check.js",
+    "prestart": "node scripts/bootstrap-demo.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.7",
+    "cookie-parser": "^1.4.6",
+    "multer": "^2.0.0",
+    "xlsx": "^0.18.5",
+    "json2csv": "^6.0.0-alpha.2",
+    "node-cron": "^3.0.3",
+    "pdfkit": "^0.15.0"
+  },
+  "type": "commonjs"
+}

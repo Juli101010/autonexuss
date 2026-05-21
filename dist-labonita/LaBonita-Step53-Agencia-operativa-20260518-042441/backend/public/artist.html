@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Área artista</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+  <div style="max-width:1100px; margin:0 auto; padding:18px;">
+    <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+      <div>
+        <h2 style="margin:0;">Área artista</h2>
+        <div class="small" id="artistWho">—</div>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <a class="btn" href="/artist-mensajes.html" target="_blank">Abrir Mensajes (clásico)</a>
+        <a class="btn" href="/logout">Logout</a>
+      </div>
+    </div>
+
+    <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;" id="artistTabs">
+      <button class="btn" data-atab="peticiones" type="button">Peticiones</button>
+      <button class="btn" data-atab="inbox" type="button">Inbox</button>
+      <button class="btn" data-atab="mensajes" type="button">Mensajes</button>
+    </div>
+
+    <div style="margin-top:12px;">
+      <div id="panelArtistPeticiones" style="display:none;">
+        <div class="small">Listado de tus peticiones (legacy, seguro).</div>
+        <iframe src="/artist-peticiones.html" style="width:100%; height:70vh; border:0; border-radius:16px; background:rgba(255,255,255,.7);"></iframe>
+      </div>
+
+      <div id="panelArtistInbox" style="display:none;">
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+          <div class="small">Inbox: Notificaciones y Avisos (separados).</div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <select id="aNotifUnread" class="btn"><option value="all">Todas</option><option value="unread">No leídas</option></select>
+            <button id="btnAInboxRefresh" class="btn" type="button">Refrescar</button>
+            <button id="btnAMarkAllRead" class="btn" type="button">Marcar todo leído</button>
+          </div>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+  <button class="btn" data-ainboxtab="notifs" type="button">Notificaciones</button>
+  <button class="btn" data-ainboxtab="avisos" type="button">Avisos</button>
+</div>
+<div style="margin-top:12px; display:grid; grid-template-columns: 1fr 1fr; gap:12px;" class="grid-2">
+          <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7); padding:12px; max-height:70vh;">
+            <div id="aInboxList">—</div>
+          </div>
+          <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7); padding:12px; max-height:70vh;">
+            <div id="aInboxDetail" class="small">Seleccioná un item.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="panelArtistMessages" style="display:none;">
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+          <div class="small">Threads por petición. Enviar mensajes al admin.</div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button id="btnAThreadsRefresh" class="btn" type="button">Refrescar</button>
+          </div>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+  <button class="btn" data-ainboxtab="notifs" type="button">Notificaciones</button>
+  <button class="btn" data-ainboxtab="avisos" type="button">Avisos</button>
+</div>
+<div style="margin-top:12px; display:grid; grid-template-columns: 1fr 1fr; gap:12px;" class="grid-2">
+          <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7); padding:12px; max-height:70vh;">
+            <div id="aThreads">—</div>
+          </div>
+          <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7); padding:12px; max-height:70vh;">
+            <div id="aThreadDetail" class="small">Seleccioná una petición.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/artist-inbox.js"></script>
+<div class="footer">
+  <div class="brand-bar"><img class="brand-logo" src="/img/labonita-logo.png" alt="LaBonita" /><div><strong>LaBonita</strong><br/><small>© 2026 LaBonita. Todos los derechos reservados.</small></div></div>
+  <small>Sistema desarrollado por <strong>JLJO Studio</strong> (Julián Orellano).</small>
+</div>
+</body>
+</html>

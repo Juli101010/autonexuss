@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Controles</title>
+</head>
+<body>
+  <h1>Controles (Exports)</h1>
+  <p><a href="/admin.html">← Volver</a></p>
+
+  <h2>Descargas</h2>
+  <p>Formato:
+    <select id="formatSel">
+      <option value="csv">CSV</option>
+      <option value="xlsx">XLSX</option>
+    </select>
+  </p>
+
+  <ul>
+    <li><button data-endpoint="/api/admin/controls/monthly-payroll">Control mensual altas/nóminas</button></li>
+    <li><button data-endpoint="/api/admin/controls/ss-diario">SS diario (altas/bajas por día)</button></li>
+    <li><button data-endpoint="/api/admin/controls/gastos">Control gastos</button></li>
+    <li><button data-endpoint="/api/admin/controls/puntuales">Control puntuales</button></li>
+    <li><button data-endpoint="/api/admin/controls/control-total">Control total (en cero)</button></li>
+    <li><button data-endpoint="/api/admin/controls/commissions">Comisiones mensuales</button></li>
+    <li><button data-endpoint="/api/admin/controls/ledger">Ledger movimientos (cobros/pagos/ajustes)</button></li>
+  </ul>
+
+  <h2>Agregar comisión (manual)</h2>
+  <form id="commissionForm">
+    <label>Petition ID <input name="petition_id" required /></label><br/>
+    <label>Mes (YYYY-MM) <input name="month" required placeholder="2026-02" /></label><br/>
+    <label>Concepto <input name="label" required /></label><br/>
+    <label>Importe (€) <input name="amount_eur" required type="number" step="0.01" /></label><br/>
+    <button type="submit">Guardar comisión</button>
+  </form>
+  <pre id="result"></pre>
+
+  <script src="/js/admin-controles.js"></script>
+</body>
+</html>

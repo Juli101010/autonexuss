@@ -1,0 +1,143 @@
+:root {
+  --bg: #f6f4eb;
+  --panel: #ffffff;
+  --text: #222222;
+  --muted: #666666;
+  --line: #e6dec0;
+  --accent: #ffe25f;
+  --accent-strong: #ffd43f;
+  --ok: #188a4b;
+  --warn: #9c6b00;
+  --danger: #b92f24;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #fffef8 0%, var(--bg) 100%);
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 1120px;
+  background: var(--panel);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 11px;
+  margin-top: 4px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font: inherit;
+  background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 0 3px rgba(255, 212, 63, 0.22);
+}
+
+button {
+  padding: 9px 13px;
+  margin-right: 8px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  border-color: #d2b835;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #efefef;
+  padding: 9px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.badge {
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 3px 8px;
+  background: #f2f2f2;
+}
+
+.badge.ok {
+  background: #e8f9ef;
+  color: var(--ok);
+}
+
+.badge.warn {
+  background: #fff3da;
+  color: var(--warn);
+}
+
+.badge.bad {
+  background: #ffe9e6;
+  color: var(--danger);
+}
+
+.row {
+  margin-top: 10px;
+}
+
+@media (max-width: 860px) {
+  body {
+    padding: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 12px;
+  }
+}

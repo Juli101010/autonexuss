@@ -1,0 +1,17 @@
+INDICE_ARCHIVOS.txt
+README.md
+app_integration/delsol-invoice-service.example.cjs
+config/.env.delsol.example
+docs/CONTRATO_Y_ALCANCE.md
+docs/ESTADO_FACTURA_208_PRUEBA.md
+docs/INFORME_API_DELSOL_LA_BONITA.md
+docs/MAPEO_FACTURACION_DELSOL.md
+docs/PLAN_PRUEBAS_PARA_TERMINAR.md
+docs/REGLAS_TOKEN_Y_SEGURIDAD.md
+logs_sanitizados/RESUMEN_EVIDENCIAS.md
+postman/labonita-delsol-step56.postman_collection.json
+scripts/borrar-factura-208-smart.cjs
+scripts/crear-factura-prueba-confirmada.cjs
+scripts/delsol-client.cjs
+scripts/resumir-factura207.cjs
+scripts/verificar-factura-208.cjs

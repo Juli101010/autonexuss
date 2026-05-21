@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LaBonita | Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css" />
+  <link rel="stylesheet" href="/css/tutorial-mode.css" />
+</head>
+<body>
+  <div class="app">
+    <div id="sidebarOverlay" class="sidebar-overlay hidden"></div>
+<aside class="sidebar">
+      <div class="brand"><button class="btn" id="btnCloseSidebar" type="button" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+        <div class="logo">LB</div>
+        <div class="title">
+          <strong>LA BONITA</strong>
+          <span>Plataforma integral</span>
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="globalSearch" placeholder="Buscar por #petición / referencia…" />
+      </div>
+
+      <nav class="nav nav-primary" id="nav" aria-label="Navegacion principal">
+        <a href="#/dashboard" data-route="dashboard" class="active">
+          <span class="left">🏠 <span>Dashboard</span></span>
+          <span class="nav-meta"></span>
+        </a>
+        <a href="#/mapa" data-route="mapa">
+          <span class="left">🗺️ <span>Mapa de Peticiones</span></span>
+          <span class="badge violet" id="badgeValidation">0</span>
+        </a>
+        <a href="#/peticiones" data-route="peticiones">
+          <span class="left">📄 <span>Peticiones</span></span>
+          <span class="badge" id="badgePeticiones">0</span>
+        </a>
+        <a href="#/controles" data-route="controles">
+          <span class="left">📊 <span>Controles</span></span>
+          <span class="nav-meta"></span>
+        </a>
+        <a href="#/avisos" data-route="avisos">
+          <span class="left">🔔 <span>Avisos</span></span>
+          <span class="badge red" id="badgeAvisos">0</span>
+        </a>
+        <a href="#/delsol" data-route="delsol">
+          <span class="left">🔌 <span>DelSol Sync</span></span>
+          <span class="badge" id="badgeDelSol">Cargando</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="small" id="whoami">—</div>
+        <button class="btn" id="btnLogout">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar"><div class="brand-bar" style="min-width:180px;">
+<img class="brand-logo" src="/img/labonita-logo.png" alt="LaBonita" />
+<div class="brand-name">LaBonita</div>
+</div>
+        <button class="btn" id="btnBurger" type="button" aria-label="Menu" style="display:none;"><i class="fa-solid fa-bars"></i></button>
+        <div class="crumbs">
+          <h1 id="pageTitle">Dashboard</h1>
+          <p id="pageSubtitle">Vista general (estilo demo aprobado)</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="card" id="panelDashboard">
+          <div class="kpis">
+            <div class="kpi app-kpi-link" data-goto="peticiones">
+              <div class="icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <div class="label">Peticiones activas</div>
+              <div class="value" id="kpiActive">—</div>
+              <div class="hint">En progreso</div>
+            </div>
+            <div class="kpi app-kpi-link" data-goto="peticiones">
+              <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+              <div class="label">Validación pendiente</div>
+              <div class="value" id="kpiValidation">—</div>
+              <div class="hint">PENDIENTE_VALIDACION</div>
+            </div>
+            <div class="kpi app-kpi-link" data-goto="avisos">
+              <div class="icon"><i class="fa-solid fa-bell"></i></div>
+              <div class="label">Avisos</div>
+              <div class="value" id="kpiAlerts">—</div>
+              <div class="hint">Notificaciones internas</div>
+            </div>
+            <div class="kpi app-kpi-link" data-goto="controles">
+              <div class="icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+              <div class="label">Payouts pendientes</div>
+              <div class="value" id="kpiProposals">—</div>
+              <div class="hint">Batch viernes (PENDING)</div>
+            </div>
+            <div class="kpi app-kpi-link" data-goto="delsol">
+              <div class="icon"><i class="fa-solid fa-plug-circle-check"></i></div>
+              <div class="label">DelSol</div>
+              <div class="value">Cargando</div>
+              <div class="hint">estado real</div>
+            </div>
+          </div>
+          <div style="padding:0 14px 14px;">
+            <div class="kpi" style="display:flex; flex-direction:column; gap:8px;">
+              <div class="label">Enviar aviso (Admin)</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <input id="annTitle" class="btn" placeholder="Título" style="flex:1; min-width:220px;" />
+                <select id="annScope" class="btn">
+                  <option value="ALL">Todos</option>
+                  <option value="ARTISTS">Artistas</option>
+                  <option value="USER">Usuario (ID)</option>
+                  <option value="PETITION_TYPE">Tipo de petición</option>
+                  <option value="GROUP">Grupo (ID)</option>
+                </select>
+                <input id="annScopeValue" class="btn" placeholder="scope_value (opcional)" style="max-width:220px;" />
+              </div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <input id="annBody" class="btn" placeholder="Mensaje" style="flex:1; min-width:340px;" />
+                <button id="btnSendAnn" class="btn" type="button">Enviar</button>
+              </div>
+              <div class="small" id="annResult"></div>
+            </div>
+          </div>
+          <iframe class="iframe hidden" id="frame"></iframe>
+        </div>
+
+        
+        <div class="card hidden" id="panelPeticiones" style="padding:14px; height:100%;">
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+            <div>
+              <div class="small">Peticiones (nativo - fase 3): lista + detalle (read-only) y acciones rápidas.</div>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+              <input id="petSearch" class="btn" placeholder="Buscar # o referencia…" />
+              <button id="btnPetRefresh" class="btn" type="button">Refrescar</button>
+              <button id="btnPetOpenFull" class="btn" type="button">Abrir modo completo</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px; display:grid; grid-template-columns: 1.2fr 1fr; gap:12px; height:calc(100% - 60px);">
+            <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7);">
+              <table border="0" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse;">
+                <thead style="position:sticky; top:0; background:rgba(0,0,0,.04);">
+                  <tr>
+                    <th align="left">#</th><th align="left">Tipo</th><th align="left">Estado</th><th align="left">Referencia</th><th align="left">Faltantes</th>
+                  </tr>
+                </thead>
+                <tbody id="petTable"></tbody>
+              </table>
+            </div>
+
+            <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7); padding:12px;">
+              <div id="petDetailEmpty" class="small">Selecciona una petición para ver detalle.</div>
+              <div id="petDetail" class="hidden"></div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card hidden" id="panelFacturacion">
+  <div class="card-header">
+    <div>
+      <h3 class="card-title">Facturación</h3>
+      <div class="card-subtitle">Editar datos fiscales y conciliar DelSol (nativo)</div>
+    </div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <button class="btn" id="btnFactSave" type="button">Guardar</button>
+      <button class="btn btn-primary" id="btnFactEmitFactura" type="button">Emitir PDF Factura</button>
+    </div>
+  </div>
+  <div id="factBody" class="small" style="margin-top:12px;">Seleccioná una petición desde Peticiones/Mapa.</div>
+</div>
+
+
+<div class="card hidden" id="panelAdminWizard">
+  <div class="card-header">
+    <div>
+      <h3 class="card-title">Edición (Wizard Admin)</h3>
+      <div class="card-subtitle">Solo lectura + edición de Servicio/Fechas/Facturación. No modifica workflow.</div>
+    </div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <button class="btn" id="btnWizBack" type="button">Volver</button>
+      <button class="btn" id="btnWizSave" type="button">Guardar</button>
+    </div>
+  </div>
+  <div id="adminWizBody" class="small" style="margin-top:12px;">—</div>
+</div>
+
+        <div class="card hidden" id="panelControlesNative" style="padding:14px; height:100%;">
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+            <div>
+              <div class="small">Controles (nativo - fase 3): ledger, propuestas, exports. (Modo completo sigue disponible)</div>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+              <input id="ctrlPetitionId" class="btn" placeholder="petition_id (opcional)" style="max-width:200px;" />
+              <button id="btnCtrlRefresh" class="btn" type="button">Refrescar</button>
+              <button id="btnCtrlOpenFull" class="btn" type="button">Abrir modo completo</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px; display:grid; grid-template-columns: 1fr 1fr; gap:12px; height:calc(100% - 60px);">
+            <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7); padding:12px;">
+              <h3 style="margin:0 0 8px 0;">Propuestas Payouts (PENDING)</h3>
+              <table border="0" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse;">
+                <thead style="background:rgba(0,0,0,.04); position:sticky; top:0;">
+                  <tr><th align="left">ID</th><th align="left">Petición</th><th align="left">Fecha</th><th align="left">EUR</th><th></th><th></th></tr>
+                </thead>
+                <tbody id="ctrlProposals"></tbody>
+              </table>
+
+              <h3 style="margin:14px 0 8px 0;">Exports</h3>
+              <div id="ctrlExports" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+            </div>
+
+            <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7); padding:12px;">
+              <h3 style="margin:0 0 8px 0;">Ledger</h3>
+              <div class="small" style="margin-bottom:8px;">Filtra por petition_id si querés. Acciones de creación/borrado quedan para modo completo.</div>
+              <table border="0" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse;">
+                <thead style="background:rgba(0,0,0,.04); position:sticky; top:0;">
+                  <tr><th align="left">#</th><th align="left">Petición</th><th align="left">Dir</th><th align="left">Cat</th><th align="left">EUR</th><th align="left">Fecha</th></tr>
+                </thead>
+                <tbody id="ctrlLedger"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="card hidden" id="panelFrame">
+          <iframe class="iframe" id="frame2"></iframe>
+        </div>
+
+        
+<div class="card hidden" id="panelMap" style="padding:14px;">
+  <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+    <div>
+      <div class="small">Mapa interactivo (fase 2): selecciona una petición, mira progreso y filtra por paso.</div>
+      <div class="small" id="mapHint" style="margin-top:4px; opacity:.85;"></div>
+    </div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+      <select id="mapPetitionSelect" class="btn"></select>
+      <button id="btnMapRefresh" class="btn" type="button">Refrescar</button>
+    </div>
+  </div>
+
+  <div id="mapActions" style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;"></div>
+
+  <div id="mapSteps" style="margin-top:12px; display:grid; grid-template-columns: repeat(7, minmax(0,1fr)); gap:10px;"></div>
+
+  <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+    <span class="small">Filtro por paso:</span>
+    <button class="btn" data-stepfilter="all" type="button">Todos</button>
+    <button class="btn" data-stepfilter="petition" type="button">Petición</button>
+    <button class="btn" data-stepfilter="validation" type="button">Validación</button>
+    <button class="btn" data-stepfilter="altas_bajas" type="button">Altas/Bajas</button>
+    <button class="btn" data-stepfilter="contratos" type="button">Contratos</button>
+    <button class="btn" data-stepfilter="facturacion" type="button">Facturación</button>
+    <button class="btn" data-stepfilter="calculos" type="button">Cálculos</button>
+    <button class="btn" data-stepfilter="cierre" type="button">Cierre</button>
+  </div>
+
+  <div style="margin-top:12px; overflow:auto;">
+    <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse; background:rgba(255,255,255,.7); border-radius:14px; overflow:hidden;">
+      <thead style="background:rgba(0,0,0,.04);">
+        <tr>
+          <th>#</th><th>Tipo</th><th>Estado</th><th>Referencia</th><th>Checklist</th><th>Docs</th><th>Ledger IN</th><th>Ledger OUT</th><th>Balance</th>
+        </tr>
+      </thead>
+      <tbody id="mapTable"></tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="card hidden" id="panelAvisos" style="padding:14px; height:100%;">
+  <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+    <div>
+      <div class="small">Inbox (premium): Notificaciones / Avisos / Mensajes por petición.</div>
+    </div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+      <button id="btnInboxRefresh" class="btn" type="button">Refrescar</button>
+      <button id="btnMarkAllRead" class="btn" type="button">Marcar todo leído</button>
+    </div>
+  </div>
+
+  <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+    <select id="notifFilterUnread" class="btn"><option value="all">Todas</option><option value="unread">No leídas</option></select>
+    <select id="notifFilterType" class="btn"><option value="all">Tipo: todas</option></select>
+    <select id="notifFilterSeverity" class="btn"><option value="all">Severidad: todas</option></select>
+
+    <button class="btn" data-inboxtab="notifs" type="button">Notificaciones</button>
+    <button class="btn" data-inboxtab="ann" type="button">Avisos</button>
+    <button class="btn" data-inboxtab="threads" type="button">Mensajes por petición</button>
+    <button class="btn" data-inboxtab="groups" type="button">Grupos</button>
+  </div>
+
+  <div style="margin-top:12px; display:grid; grid-template-columns: 1.1fr 1fr; gap:12px; height:calc(100% - 90px);">
+    <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7); padding:12px;">
+      <div id="inboxList">—</div>
+    </div>
+    <div style="overflow:auto; border-radius:16px; border:1px solid rgba(0,0,0,.06); background:rgba(255,255,255,.7); padding:12px;">
+      <div id="inboxDetail" class="small">Seleccioná un item.</div>
+    </div>
+  </div>
+</div>
+
+<div class="card hidden" id="panelDelSol"
+ style="padding:14px;">
+          <h2 style="margin:0 0 8px 0;">DelSol Sync</h2>
+          <p class="small" style="margin-top:0;">
+            Integración preparada (campos <code>delsol_*</code> + stubs). Cuando se active, solo se implementa el cliente.
+          </p>
+          <div class="kpi">
+            <div class="label">Estado</div>
+            <div class="value">Cargando</div>
+            <div class="hint">Sin llamadas externas</div>
+          </div>
+        </div>
+
+        <div class="card hidden" id="panelCitas" style="padding:14px;">
+          <h2 style="margin:0 0 8px 0;">Citas online</h2>
+          <p class="small" style="margin-top:0;">Espacio preparado para conectar una agenda externa o agenda propia de LaBonita.</p>
+          <div class="kpi">
+            <div class="label">Estado</div>
+            <div class="value">Cargando</div>
+            <div class="hint">Pendiente de integración calendario</div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/js/app.js"></script>
+  <script src="/js/tutorial-mode.js"></script>
+<div class="footer">
+  <div class="brand-bar"><img class="brand-logo" src="/img/labonita-logo.png" alt="LaBonita" /><div><strong>LaBonita</strong><br/><small>© 2026 LaBonita. Todos los derechos reservados.</small></div></div>
+  <small>Sistema desarrollado por <strong>JLJO Studio</strong> (Julián Orellano).</small>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Artista - Mensajes</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .layout { display:grid; grid-template-columns: 360px 1fr; gap: 16px; }
+    .panel { border: 1px solid #ddd; border-radius: 6px; padding: 12px; }
+    .item { border: 1px solid #eee; border-radius: 6px; padding: 10px; margin-bottom: 8px; cursor:pointer; }
+    .item:hover { background:#fafafa; }
+    .muted { color:#666; }
+    textarea { width:100%; min-height: 90px; }
+    .msg { border-bottom: 1px solid #eee; padding: 8px 0; }
+    .msg .who { font-weight:bold; }
+  </style>
+</head>
+<body>
+  <h1>Artista — Mensajes por petición</h1>
+  <p>
+    <a href="/artist.html">← Volver</a> |
+    <button id="logoutBtn">Salir</button>
+  </p>
+
+  <div class="layout">
+    <div class="panel">
+      <h3>Mis peticiones</h3>
+      <button id="reloadBtn">Actualizar</button>
+      <div id="petitions">Cargando...</div>
+    </div>
+
+    <div class="panel">
+      <h3>Thread</h3>
+      <div id="thread" class="muted">Seleccioná una petición.</div>
+
+      <div id="composer" style="display:none; margin-top:12px;">
+        <textarea id="body" placeholder="Escribí un mensaje a administración..."></textarea>
+        <button id="sendBtn">Enviar</button>
+        <span id="status" class="muted"></span>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/artist-mensajes.js"></script>
+<div class="footer">
+  <div class="brand-bar"><img class="brand-logo" src="/img/labonita-logo.png" alt="LaBonita" /><div><strong>LaBonita</strong><br/><small>© 2026 LaBonita. Todos los derechos reservados.</small></div></div>
+  <small>Sistema desarrollado por <strong>JLJO Studio</strong> (Julián Orellano).</small>
+</div>
+</body>
+</html>

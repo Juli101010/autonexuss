@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Bonita · Acceso</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --amarillo-claro:#FFEDB8;--amarillo-medio:#FCEC5A;--amarillo-intenso:#FFDE59;--amarillo-neon:#FDFA00;
+      --gris:#C5C5C5;--gris-oscuro:#333333;--gris-claro:#F5F5F5;--blanco:#FFFFFF;--negro:#000000;
+      --sombra-suave:0 16px 48px rgba(0,0,0,.10);--sombra-media:0 24px 70px rgba(0,0,0,.14);--radio:24px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;font-family:Inter,system-ui,Arial,sans-serif;color:var(--gris-oscuro);background:
+      radial-gradient(circle at top left, rgba(253,250,0,.32), transparent 32%),
+      linear-gradient(135deg,#fffdf0 0%,#f5f5f5 52%,#ffffff 100%);display:grid;place-items:center;padding:28px;overflow-x:hidden}
+    .shell{width:min(1080px,100%);display:grid;grid-template-columns:1.05fr .95fr;background:rgba(255,255,255,.82);border:1px solid rgba(197,197,197,.45);border-radius:32px;box-shadow:var(--sombra-media);overflow:hidden;backdrop-filter:blur(12px)}
+    .hero{padding:42px;background:linear-gradient(145deg,#fff8cf,#ffffff);position:relative;min-height:620px;display:flex;flex-direction:column;justify-content:space-between}
+    .hero:after{content:"";position:absolute;right:-90px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:linear-gradient(135deg,var(--amarillo-neon),var(--amarillo-intenso));opacity:.38}
+    .brand{position:relative;z-index:2;display:flex;gap:16px;align-items:center}.brand-mark{width:76px;height:76px;border-radius:22px;background:#fff;box-shadow:var(--sombra-suave);display:grid;place-items:center;overflow:hidden;border:1px solid var(--amarillo-claro)}
+    .brand-mark img{max-width:66px;max-height:56px;width:auto;height:auto;object-fit:contain;display:block}.brand h1{font-family:'Space Grotesk',sans-serif;margin:0;font-size:34px;letter-spacing:-.03em}.brand p{margin:4px 0 0;color:#6b6b6b;font-weight:600}
+    .hero-copy{position:relative;z-index:2;margin:46px 0}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--amarillo-claro);border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.hero-copy h2{font-family:'Space Grotesk',sans-serif;font-size:46px;line-height:1.02;margin:20px 0 16px;letter-spacing:-.04em}.hero-copy p{font-size:16px;line-height:1.7;color:#666;max-width:520px;margin:0}
+    .flow{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.flow div{background:#fff;border:1px solid var(--amarillo-claro);border-radius:18px;padding:14px;box-shadow:0 8px 22px rgba(0,0,0,.06)}.flow b{display:block;font-size:13px}.flow span{font-size:12px;color:#777}
+    .login{padding:48px;display:flex;flex-direction:column;justify-content:center}.panel{background:#fff;border:1px solid #eee;border-radius:26px;padding:30px;box-shadow:var(--sombra-suave)}.panel h2{font-family:'Space Grotesk',sans-serif;font-size:30px;margin:0 0 8px}.panel .sub{margin:0 0 24px;color:#777;line-height:1.5}.field{margin-bottom:16px}.field label{display:block;font-size:13px;font-weight:800;margin-bottom:8px}.field input{width:100%;border:1px solid #ddd;border-radius:14px;padding:14px 15px;font:inherit;background:#fafafa;transition:.2s}.field input:focus{outline:none;background:#fff;border-color:var(--amarillo-intenso);box-shadow:0 0 0 4px rgba(255,222,89,.24)}
+    .btn{width:100%;border:0;border-radius:16px;padding:14px 18px;font:inherit;font-weight:900;background:linear-gradient(135deg,var(--amarillo-neon),var(--amarillo-intenso));color:#222;cursor:pointer;box-shadow:0 12px 26px rgba(255,222,89,.34);transition:.2s}.btn:hover{transform:translateY(-1px);box-shadow:0 16px 36px rgba(255,222,89,.42)}
+    .help{margin-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#777}.help a{color:#333;font-weight:800;text-decoration:none}.error{min-height:20px;color:#b91c1c;font-weight:700;margin-top:14px}.credit{margin-top:18px;color:#888;font-size:12px;line-height:1.5;text-align:center}.access{margin-top:18px;background:#fff8cf;border:1px solid var(--amarillo-claro);border-radius:16px;padding:12px;font-size:12px;color:#555;line-height:1.45}
+    @media(max-width:900px){body{padding:14px}.shell{grid-template-columns:1fr}.hero{min-height:auto;padding:28px}.hero-copy h2{font-size:34px}.flow{grid-template-columns:1fr}.login{padding:22px}.panel{padding:24px}.brand h1{font-size:28px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="brand">
+        <div class="brand-mark"><img src="/img/labonita-logo.png" alt="La Bonita" /></div>
+        <div><h1>LA BONITA</h1><p>Plataforma integral de gestión artística</p></div>
+      </div>
+      <div class="hero-copy">
+        <span class="eyebrow">🎭 Mapa de Peticiones</span>
+        <h2>Gestión clara desde la petición hasta el cierre en cero.</h2>
+        <p>Alta, factura, contrato, gastos, liquidación y sincronización DELSOL preparados en un mismo circuito de trabajo.</p>
+      </div>
+      <div class="flow">
+        <div><b>1. Petición</b><span>Planillas reales y datos obligatorios.</span></div>
+        <div><b>2. Control</b><span>Validación, facturación y laboral.</span></div>
+        <div><b>3. Cierre</b><span>Proyecto/bolo con balance controlado.</span></div>
+      </div>
+    </section>
+    <section class="login">
+      <div class="panel">
+        <h2>Acceso al sistema</h2>
+        <p class="sub">Entrá para gestionar peticiones, personas, facturación interna y controles.</p>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="tu@email.com" autocomplete="username" /></div>
+        <div class="field"><label for="password">Contraseña</label><input id="password" type="password" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter') login()" /></div>
+        <button class="btn" onclick="login()">Entrar a La Bonita</button>
+        <p id="error" class="error"></p>
+        <div class="help"><a href="/register.html">Crear cuenta artística</a><span>Panel operativo 2026</span></div>
+        <div class="access"><strong>Acceso seguro:</strong><br>Usá tu cuenta registrada. Los permisos de administración se asignan solo desde gestión interna.</div>
+        <div class="credit">Sistema desarrollado por <strong>JLJO Studio</strong> / AutoNexus Digital.</div>
+      </div>
+    </section>
+  </main>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

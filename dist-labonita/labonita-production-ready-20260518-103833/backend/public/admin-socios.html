@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Socios</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 16px; }
+    #status { margin: 12px 0; padding: 10px; border-radius: 8px; }
+    #status.ok { background: #e9f7ef; }
+    #status.err { background: #fdecea; }
+    button { padding: 8px 10px; cursor: pointer; }
+    button[disabled] { opacity: .6; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+
+  <h1>Socios</h1>
+  <div id="status" aria-live="polite"></div>
+  <div id="socios"></div>
+
+  <hr />
+
+  <h1>No socios</h1>
+  <div id="nosocios"></div>
+
+  <script type="module" src="/js/admin-socios.js"></script>
+</body>
+</html>

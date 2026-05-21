@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Facturas</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <div class="card">
+    <p><a href="/admin.html">← Volver</a></p>
+    <h2>Facturas</h2>
+
+    <div class="grid">
+      <div>
+        <h3>Crear borrador</h3>
+        <div><label>Cliente</label><select id="customer_id"></select></div>
+        <div class="grid">
+          <div><label>Fecha emisión</label><input id="issue_date" placeholder="YYYY-MM-DD"/></div>
+          <div><label>Vencimiento</label><input id="due_date" placeholder="YYYY-MM-DD"/></div>
+        </div>
+        <div class="grid">
+          <div><label>Comisión LaBonita (%)</label><input id="commission_rate" value="0"/></div>
+          <div><label>Gastos a artista</label><select id="expenses_to_artist"><option value="1">Sí</option><option value="0">No</option></select></div>
+        </div>
+
+        <h4>1 línea (podés editar luego)</h4>
+        <div class="grid">
+          <div><label>Tipo</label>
+            <select id="kind"><option value="SERVICE">Servicio</option><option value="EXPENSE">Gasto</option><option value="OTHER">Otro</option></select>
+          </div>
+          <div><label>IVA % (vacío = regla)</label><input id="vat_rate" placeholder=""/></div>
+        </div>
+        <div><label>Descripción</label><input id="desc" placeholder="Servicio artístico..."/></div>
+        <div class="grid">
+          <div><label>Cantidad</label><input id="qty" value="1"/></div>
+          <div><label>Precio unit</label><input id="unit" value="0"/></div>
+        </div>
+        <div><label>Notas</label><textarea id="notes"></textarea></div>
+
+        <div class="row">
+          <button id="create">Crear</button>
+          <span id="s" class="muted"></span>
+        </div>
+      </div>
+
+      <div>
+        <h3>Listado</h3>
+        <button id="reload">Actualizar</button>
+        <table class="table" style="margin-top:10px;">
+          <thead><tr><th>ID</th><th>Estado</th><th>Número</th><th>Cliente</th><th>Venc.</th><th>Rec.</th><th></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+
+        <div id="detail" class="muted" style="margin-top:12px;">Seleccioná una factura.</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { api } from "./app.js";
+    const s = document.getElementById("s");
+    const rowsEl = document.getElementById("rows");
+    const detail = document.getElementById("detail");
+
+    let customers = [];
+    let artists = [];
+
+    const esc = (x) => String(x||"").replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+
+    async function loadCustomers() {
+      customers = await api("/customers");
+      const sel = document.getElementById("customer_id");
+      sel.innerHTML = "";
+      customers.forEach(c => {
+        const o = document.createElement("option");
+        o.value = c.id;
+        o.textContent = `${c.id} — ${c.name} (${c.country_code})`;
+        sel.appendChild(o);
+      });
+    }
+
+    async function loadArtists() {
+      artists = await api("/artists");
+    }
+
+    function artistOptions() {
+      return artists.map(a => `<option value="${a.id}">${esc(a.stage_name || a.name)} (#${a.id})</option>`).join("");
+    }
+
+    async function loadInvoices() {
+      const invs = await api("/invoices");
+      rowsEl.innerHTML = "";
+      invs.forEach(i => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${i.id}</td>
+          <td>${i.status}</td>
+          <td>${i.legal_number || ""}</td>
+          <td>${i.customer_name || ""}</td>
+          <td>${i.due_date || ""}</td>
+          <td>${i.reminder_count || 0}</td>
+          <td><button>Abrir</button></td>
+        `;
+        tr.querySelector("button").onclick = () => openInvoice(i.id);
+        rowsEl.appendChild(tr);
+      });
+    }
+
+    async function openInvoice(id) {
+      const b = await api(`/invoices/${id}`);
+      const totals = JSON.parse(b.invoice.totals_snapshot);
+      const tax = JSON.parse(b.invoice.tax_context_snapshot);
+      const st = totals.settlement || {};
+
+      const splitRows = (b.splits || []).map(sp => `
+        <tr>
+          <td>${esc(sp.artist_stage_name || sp.artist_name)}</td>
+          <td>${sp.share_percent}</td>
+          <td>${sp.irpf_rate}</td>
+          <td>${sp.gross_amount}</td>
+          <td>${sp.withholding_amount}</td>
+          <td>${sp.net_amount}</td>
+        </tr>`).join("");
+
+      const payoutRows = (b.payouts || []).map(p => `
+        <tr>
+          <td>${esc(p.artist_stage_name || p.artist_name)}</td>
+          <td>${p.amount}</td>
+          <td>${esc(p.method)}</td>
+          <td>${esc(p.paid_at)}</td>
+        </tr>`).join("");
+
+      const defaultSplits = JSON.stringify([{ artist_id: artists[0]?.id || 1, share_percent: 100 }], null, 2);
+
+      detail.innerHTML = `
+        <div><b>#${b.invoice.id}</b> — ${b.invoice.status} — ${b.invoice.legal_number || "(borrador)"}</div>
+        <div class="muted">IVA: ${tax.rule} — ${tax.legal_text}</div>
+        <div class="muted">Factura: Base ${totals.base} | IVA ${totals.vat} | Total ${totals.total}</div>
+
+        <div class="row">
+          <a target="_blank" href="/api/admin/billing/invoices/${b.invoice.id}/pdf">PDF factura</a>
+          &nbsp;|&nbsp;
+          <a target="_blank" href="/api/admin/billing/invoices/${b.invoice.id}/settlement-pdf">PDF liquidación</a>
+        </div>
+
+        <hr/>
+
+        <h3>Settings (solo DRAFT/PENDING_REVIEW)</h3>
+        <div class="grid">
+          <div><label>Comisión %</label><input id="ed_comm" value="${b.invoice.commission_rate}"/></div>
+          <div><label>Gastos a artista</label>
+            <select id="ed_exp">
+              <option value="1" ${b.invoice.expenses_to_artist ? "selected":""}>Sí</option>
+              <option value="0" ${!b.invoice.expenses_to_artist ? "selected":""}>No</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <button id="saveSet">Guardar settings</button>
+          <span id="stSet" class="muted"></span>
+        </div>
+
+        <hr/>
+
+        <h3>Liquidación</h3>
+        <div class="muted">Servicios ${st.service_base||0} | Gastos ${st.expenses_base||0} | Comisión ${st.commission_rate||0}% (${st.commission_amount||0}) | Pool ${st.payout_pool||0}</div>
+        <div class="muted">Bruto ${st.artist_gross_total||0} | Ret. ${st.artist_withholding_total||0} | Neto ${st.artist_net_total||0}</div>
+
+        <h3>Reparto artistas (JSON)</h3>
+        <p class="muted">Formato: [{ "artist_id": 1, "share_percent": 60, "irpf_rate": 15 }, ...]. irpf_rate opcional (si falta usa default del artista). Debe sumar 100.</p>
+        <div class="grid">
+          <div>
+            <label>Artistas disponibles</label>
+            <select id="artist_pick">${artistOptions()}</select>
+          </div>
+          <div class="muted" style="padding-top:24px;">(solo para ayudarte a ver IDs)</div>
+        </div>
+        <textarea id="splits_json" style="width:100%; height:120px;">${esc(defaultSplits)}</textarea>
+        <div class="row">
+          <button id="applySplits">Aplicar reparto</button>
+          <span id="stSplits" class="muted"></span>
+        </div>
+
+        <table class="table">
+          <thead><tr><th>Artista</th><th>%</th><th>IRPF%</th><th>Bruto</th><th>Ret.</th><th>Neto</th></tr></thead>
+          <tbody>${splitRows || '<tr><td colspan="6" class="muted">Sin reparto</td></tr>'}</tbody>
+        </table>
+
+        <hr/>
+
+        <h3>Pagos a artistas</h3>
+        <div class="grid">
+          <div><label>Artista</label><select id="pay_artist">${artistOptions()}</select></div>
+          <div><label>Importe (vacío = neto split)</label><input id="pay_amt" placeholder=""/></div>
+        </div>
+        <div class="row">
+          <button id="doPay">Registrar pago</button>
+          <span id="stPay" class="muted"></span>
+        </div>
+        <table class="table">
+          <thead><tr><th>Artista</th><th>Importe</th><th>Método</th><th>Fecha</th></tr></thead>
+          <tbody>${payoutRows || '<tr><td colspan="4" class="muted">Sin pagos</td></tr>'}</tbody>
+        </table>
+
+        <hr/>
+
+        <h3>Acciones</h3>
+        <div class="row">
+          ${(b.invoice.status === "DRAFT" || b.invoice.status === "PENDING_REVIEW") ? '<button id="issue">Emitir</button>' : ''}
+          ${b.invoice.status === "ISSUED" ? '<button id="send">Marcar enviada</button>' : ''}
+          <button id="payClient">Registrar cobro cliente</button>
+          <button id="credit">Rectificar</button>
+        </div>
+      `;
+
+      document.getElementById("saveSet").onclick = async () => {
+        const stEl = document.getElementById("stSet");
+        stEl.textContent = "...";
+        try {
+          await api(`/invoices/${id}`, { method: "PUT", body: {
+            commission_rate: Number(document.getElementById("ed_comm").value || 0),
+            expenses_to_artist: Number(document.getElementById("ed_exp").value || 0)
+          }});
+          stEl.textContent = "OK";
+          await loadInvoices();
+          await openInvoice(id);
+        } catch (e) { stEl.textContent = e.message; }
+      };
+
+      document.getElementById("applySplits").onclick = async () => {
+        const stEl = document.getElementById("stSplits");
+        stEl.textContent = "...";
+        try {
+          const raw = document.getElementById("splits_json").value;
+          const splits = JSON.parse(raw);
+          await api(`/invoices/${id}/splits`, { method: "PUT", body: { splits } });
+          stEl.textContent = "OK";
+          await openInvoice(id);
+        } catch (e) { stEl.textContent = e.message; }
+      };
+
+      const issueBtn = document.getElementById("issue");
+      if (issueBtn) issueBtn.onclick = async () => {
+        try {
+          await api(`/invoices/${id}/issue`, { method: "POST" });
+          await loadInvoices();
+          await openInvoice(id);
+        } catch (e) { alert(e.message); }
+      };
+
+      const sendBtn = document.getElementById("send");
+      if (sendBtn) sendBtn.onclick = async () => {
+        try {
+          await api(`/invoices/${id}/send`, { method: "POST" });
+          await loadInvoices();
+          await openInvoice(id);
+        } catch (e) { alert(e.message); }
+      };
+
+      document.getElementById("payClient").onclick = async () => {
+        const amt = Number(prompt("Importe cobrado del cliente:", String(totals.total)));
+        if (!amt) return;
+        await api(`/invoices/${id}/payments`, { method: "POST", body: { amount: amt, method: "TRANSFER" } });
+        await loadInvoices();
+        await openInvoice(id);
+      };
+
+      document.getElementById("doPay").onclick = async () => {
+        const stEl = document.getElementById("stPay");
+        stEl.textContent = "...";
+        try {
+          const aid = Number(document.getElementById("pay_artist").value);
+          const ar = document.getElementById("pay_amt").value.trim();
+          const body = { artist_id: aid };
+          if (ar !== "") body.amount = Number(ar);
+          await api(`/invoices/${id}/payouts`, { method: "POST", body });
+          stEl.textContent = "OK";
+          await openInvoice(id);
+        } catch (e) { stEl.textContent = e.message; }
+      };
+
+      document.getElementById("credit").onclick = async () => {
+        const reason = prompt("Motivo:", "Rectificativa");
+        const out = await api(`/invoices/${id}/credit-note`, { method: "POST", body: { reason } });
+        alert(`Rectificativa creada (DRAFT): #${out.invoice.id}`);
+        await loadInvoices();
+      };
+    }
+
+    document.getElementById("reload").onclick = () => loadInvoices().catch(e => s.textContent = e.message);
+
+    document.getElementById("create").onclick = async () => {
+      s.textContent = "...";
+      try {
+        const vatVal = document.getElementById("vat_rate").value.trim();
+        const body = {
+          customer_id: Number(document.getElementById("customer_id").value),
+          issue_date: document.getElementById("issue_date").value.trim() || null,
+          due_date: document.getElementById("due_date").value.trim() || null,
+          notes: document.getElementById("notes").value.trim() || null,
+          commission_rate: Number(document.getElementById("commission_rate").value || 0),
+          expenses_to_artist: Number(document.getElementById("expenses_to_artist").value || 0),
+          lines: [{
+            kind: document.getElementById("kind").value,
+            description: document.getElementById("desc").value.trim(),
+            qty: Number(document.getElementById("qty").value || 1),
+            unit_price: Number(document.getElementById("unit").value || 0),
+            discount: 0,
+            vat_rate: vatVal === "" ? null : Number(vatVal)
+          }]
+        };
+        if (!body.lines[0].description) throw new Error("Descripción requerida");
+        const out = await api("/invoices/draft", { method: "POST", body });
+        s.textContent = `Borrador #${out.invoice.id}`;
+        await loadInvoices();
+      } catch (e) { s.textContent = e.message; }
+    };
+
+    (async () => {
+      await loadCustomers();
+      await loadArtists();
+      await loadInvoices();
+    })().catch(e => s.textContent = e.message);
+  </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* La Bonita - Tutorial UI refinado */
+.tutorial-help-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9997;
+  border: 1px solid #d8c235;
+  background: linear-gradient(135deg, #fff36a, #ffd95e);
+  color: #1f1f1f;
+  border-radius: 999px;
+  padding: 11px 16px;
+  font: 700 13px Inter, system-ui, sans-serif;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.tutorial-help-btn:hover {
+  transform: translateY(-1px);
+}
+
+.tutorial-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: rgba(10, 10, 10, 0.48);
+}
+
+.tutorial-spotlight {
+  position: fixed;
+  z-index: 9999;
+  border: 2px solid #ffd95e;
+  border-radius: 12px;
+  box-shadow: 0 0 0 9999px rgba(10, 10, 10, 0.5), 0 14px 32px rgba(0, 0, 0, 0.34);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.tutorial-card {
+  position: fixed;
+  z-index: 10000;
+  width: min(390px, calc(100vw - 24px));
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+  padding: 14px;
+  color: #222;
+  font: 14px/1.45 Inter, system-ui, sans-serif;
+}
+
+.tutorial-card h3 {
+  margin: 0;
+  font: 700 18px/1.2 "Space Grotesk", Inter, system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.tutorial-card p {
+  margin: 10px 0 0;
+  color: #444;
+}
+
+.tutorial-instruction {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #f4d98a;
+  background: #fff9df;
+  color: #6f5700;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tutorial-demo-box {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #f4d98a;
+  border-radius: 12px;
+  background: #fffdf0;
+}
+
+.tutorial-demo-box button {
+  border: 1px solid #d8c235;
+  background: linear-gradient(135deg, #fff36a, #ffd95e);
+  color: #212121;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: 800 13px Inter, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.tutorial-demo-box button:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.tutorial-demo-out {
+  font-size: 12px;
+  color: #5f5f5f;
+  line-height: 1.45;
+}
+
+.tutorial-instruction.done {
+  border-color: #bcebc9;
+  background: #effff5;
+  color: #156b3a;
+}
+
+.tutorial-progress-wrap {
+  margin-top: 12px;
+}
+
+.tutorial-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+  font-weight: 700;
+}
+
+.tutorial-progress-bar {
+  margin-top: 6px;
+  height: 7px;
+  border-radius: 999px;
+  background: #ededed;
+  overflow: hidden;
+}
+
+.tutorial-progress-bar > div {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #ffe96d, #ffc443);
+  transition: width 0.18s ease;
+}
+
+.tutorial-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.tutorial-actions button {
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  color: #212121;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font: 700 13px Inter, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.tutorial-actions button.primary {
+  border-color: #d8c235;
+  background: linear-gradient(135deg, #fff36a, #ffd95e);
+}
+
+.tutorial-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.tutorial-card.tutorial-waiting .tutorial-actions button.primary {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.tutorial-pulse {
+  animation: tutorialPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes tutorialPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 217, 94, 0.48);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 217, 94, 0);
+  }
+}
+
+@media (max-width: 760px) {
+  .tutorial-help-btn {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .tutorial-card {
+    left: 12px !important;
+    right: 12px !important;
+    top: auto !important;
+    bottom: 74px !important;
+    width: auto;
+  }
+}

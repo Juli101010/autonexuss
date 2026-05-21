@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; margin: 24px; }
+.card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; max-width: 1100px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+input, select, textarea { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+button { padding: 8px 12px; margin-right: 8px; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { border-bottom: 1px solid #eee; padding: 8px; text-align: left; vertical-align: top; }
+.muted { color: #666; }
+.badge { font-weight: bold; }
+.row { margin-top: 10px; }

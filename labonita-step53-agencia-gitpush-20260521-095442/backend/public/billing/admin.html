@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Admin</title>
+  <link rel="stylesheet" href="/billing/style.css"/>
+</head>
+<body>
+  <div class="card">
+    <h2>Admin</h2>
+    <p>
+      <a href="/billing/customers.html">Clientes</a> |
+      <a href="/billing/artists.html">Artistas</a> |
+      <a href="/billing/invoices.html">Facturas</a> |
+      <a href="/billing/series.html">Series</a> |
+      <a href="/billing/reminders.html">Impagos</a> |
+      <a href="/billing/emails.html">Emails outbox</a> |
+      <a href="/billing/sync.html">DelSol (outbox)</a> |
+      <button id="logout">Salir</button>
+    </p>
+    <p class="muted">Emisor: LaBonita (configurable en .env)</p>
+  </div>
+
+  <script type="module">
+    import { clearToken } from "./app.js";
+    document.getElementById("logout").onclick = () => { clearToken(); location.href = "/billing/login.html"; };
+  </script>
+</body>
+</html>
+

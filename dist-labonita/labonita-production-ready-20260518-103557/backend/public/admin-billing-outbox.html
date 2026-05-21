@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Billing Outbox</title>
+</head>
+<body>
+  <h1>Billing Outbox (Core → Billing)</h1>
+  <p>
+    <a href="/admin.html">← Volver</a> |
+    <a href="/admin-facturacion.html">Facturación</a>
+  </p>
+
+  <div>
+    <button id="refreshBtn">Actualizar</button>
+    <button id="processBtn">Procesar pendientes</button>
+  </div>
+
+  <pre id="status"></pre>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Petición</th>
+        <th>Acción</th>
+        <th>Estado</th>
+        <th>Intentos</th>
+        <th>Error</th>
+        <th>Creado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script type="module" src="/js/admin-billing-outbox.js"></script>
+</body>
+</html>

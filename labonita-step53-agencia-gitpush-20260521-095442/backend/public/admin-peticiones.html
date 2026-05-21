@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Peticiones + Checklist</title>
+  <link rel="stylesheet" href="/css/app.css" />
+  <style>
+    body { margin: 0; background: #f6f6f6; color: #1f1f1f; font-family: Inter, system-ui, Arial, sans-serif; }
+    .page { max-width: 1240px; margin: 0 auto; padding: 20px; }
+    .panel { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 14px; }
+    .layout { display: grid; grid-template-columns: minmax(320px, 380px) 1fr; gap: 14px; }
+    .list-item { border: 1px solid #e6e6e6; border-radius: 10px; padding: 10px; margin-bottom: 8px; cursor: pointer; }
+    .list-item:hover { background: #fafafa; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .toolbar a, .toolbar button {
+      border: 1px solid #d8d8d8; background: #fff; color: #222; border-radius: 10px;
+      padding: 8px 12px; text-decoration: none; cursor: pointer; font: inherit;
+    }
+    .muted { color: #666; }
+    @media (max-width: 1024px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="panel" style="margin-bottom:14px;">
+      <h1 style="margin-top:0;">Admin - Peticiones + Checklist</h1>
+      <div class="toolbar">
+        <a href="/admin.html">Volver</a>
+        <button id="logoutBtn" type="button">Salir</button>
+      </div>
+    </section>
+
+    <section class="layout">
+      <article class="panel">
+        <h2 style="margin-top:0;">Peticiones</h2>
+        <button id="reloadBtn" type="button">Actualizar</button>
+        <div id="list" style="margin-top:12px;">Cargando...</div>
+      </article>
+
+      <article class="panel">
+        <h2 style="margin-top:0;">Detalle</h2>
+        <div id="detail" class="muted">Selecciona una peticion.</div>
+      </article>
+    </section>
+  </main>
+  <script type="module" src="/js/admin-peticiones.js"></script>
+</body>
+</html>

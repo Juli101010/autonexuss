@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfil</title>
+</head>
+<body>
+  <h1>Perfil (Artista)</h1>
+  <p><b>Campos obligatorios:</b> Nombre artístico, Nombre legal, Teléfono, País, NIF/NIE, País residencia fiscal, IBAN.</p>
+
+  <p>
+    <a href="/artist.html">← Volver</a>
+    |
+    <button id="logoutBtn">Salir</button>
+  </p>
+
+  <h2>Datos personales</h2>
+  <div>
+    <input id="artist_name" placeholder="Nombre artístico" />
+    <input id="legal_name" placeholder="Nombre legal" />
+    <input id="phone" placeholder="Teléfono" />
+  </div>
+
+  <h2>Dirección</h2>
+  <div>
+    <input id="address_line1" placeholder="Dirección línea 1" />
+    <input id="address_line2" placeholder="Dirección línea 2" />
+    <input id="city" placeholder="Ciudad" />
+    <input id="region" placeholder="Provincia/Región" />
+    <input id="postal_code" placeholder="Código postal" />
+    <input id="country" placeholder="País" />
+  </div>
+
+  <h2>Fiscal / Banco</h2>
+  <div>
+    <input id="tax_id" placeholder="NIF/NIE" />
+    <input id="vat_number" placeholder="VAT (si aplica)" />
+    <input id="residence_country" placeholder="País residencia fiscal" />
+    <input id="irpf_rate" placeholder="IRPF (ej: 0.02)" />
+    <input id="bank_iban" placeholder="IBAN" />
+    <input id="bank_bic" placeholder="BIC" />
+  </div>
+
+  <p id="status" style="color:#b00;"></p>
+  <button id="saveBtn">Guardar</button>
+
+  <script type="module" src="/js/profile.js"></script>
+<div class="footer">
+  <div class="brand-bar"><img class="brand-logo" src="/img/labonita-logo.png" alt="LaBonita" /><div><strong>LaBonita</strong><br/><small>© 2026 LaBonita. Todos los derechos reservados.</small></div></div>
+  <small>Sistema desarrollado por <strong>JLJO Studio</strong> (Julián Orellano).</small>
+</div>
+</body>
+</html>

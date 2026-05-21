@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Bonita | Administracion</title>
+  <link rel="stylesheet" href="/css/app.css" />
+  <style>
+    body { margin: 0; background: #f6f6f6; color: #1f1f1f; font-family: Inter, system-ui, Arial, sans-serif; }
+    .page { max-width: 1140px; margin: 0 auto; padding: 20px; }
+    .header { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 16px; margin-bottom: 14px; }
+    .header h1 { margin: 0; font-size: 24px; }
+    .header p { margin: 6px 0 0; color: #666; }
+    .nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .nav a, .nav button {
+      border: 1px solid #d8d8d8; background: #fff; color: #222; border-radius: 10px;
+      padding: 8px 12px; text-decoration: none; cursor: pointer; font: inherit;
+    }
+    .panel { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 14px; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="header">
+      <h1>Panel de administracion</h1>
+      <p>Gestion de asociadas, peticiones, facturacion y controles.</p>
+      <div class="nav">
+        <a href="/admin-socios.html">Asociadas</a>
+        <a href="/admin-peticiones.html">Peticiones + checklist</a>
+        <a href="/admin-facturacion.html">Facturacion</a>
+        <a href="/admin-billing-outbox.html">Billing outbox</a>
+        <a href="/admin-controles.html">Controles (exports)</a>
+        <a href="/billing/admin.html">Modulo billing</a>
+        <button id="logoutBtn" type="button">Salir</button>
+      </div>
+    </section>
+    <section class="panel">
+      <div id="data">Cargando...</div>
+    </section>
+  </main>
+  <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

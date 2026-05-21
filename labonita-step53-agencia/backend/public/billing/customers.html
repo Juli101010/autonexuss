@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Clientes</title>
+  <link rel="stylesheet" href="/billing/style.css"/>
+</head>
+<body>
+  <div class="card">
+    <p><a href="/billing/admin.html">← Volver</a></p>
+    <h2>Clientes</h2>
+
+    <div class="grid">
+      <div>
+        <h3>Crear / editar</h3>
+        <input type="hidden" id="id"/>
+        <div><label>Nombre</label><input id="name"/></div>
+        <div class="grid">
+          <div><label>NIF</label><input id="tax_id" placeholder="opcional"/></div>
+          <div><label>VAT ID</label><input id="vat_id" placeholder="opcional"/></div>
+        </div>
+        <div class="grid">
+          <div><label>País ISO2</label><input id="country_code" value="ES"/></div>
+          <div>
+            <label>VIES validado</label>
+            <select id="vies_valid"><option value="0">No</option><option value="1">Sí</option></select>
+          </div>
+        </div>
+        <div><label>Email (recordatorios)</label><input id="email" type="email" placeholder="opcional"/></div>
+        <div><label>Dirección</label><input id="address" placeholder="opcional"/></div>
+        <div class="grid">
+          <div><label>Ciudad</label><input id="city" placeholder="opcional"/></div>
+          <div><label>CP</label><input id="postal" placeholder="opcional"/></div>
+        </div>
+        <div class="row">
+          <button id="save">Guardar</button>
+          <button id="clear">Limpiar</button>
+          <span id="s" class="muted"></span>
+        </div>
+      </div>
+
+      <div>
+        <h3>Listado</h3>
+        <button id="reload">Actualizar</button>
+        <table class="table" style="margin-top:10px;">
+          <thead><tr><th>ID</th><th>Nombre</th><th>País</th><th>Email</th><th>VAT</th><th>VIES</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p class="muted">Click en una fila para editar.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { api } from "./app.js";
+    const s = document.getElementById("s");
+    const el = (id) => document.getElementById(id);
+
+    function formBody() {
+      return {
+        name: el("name").value.trim(),
+        tax_id: el("tax_id").value.trim() || null,
+        vat_id: el("vat_id").value.trim() || null,
+        country_code: (el("country_code").value.trim() || "ES").toUpperCase(),
+        email: el("email").value.trim() || null,
+        address: el("address").value.trim() || null,
+        city: el("city").value.trim() || null,
+        postal: el("postal").value.trim() || null,
+        vies_valid: Number(el("vies_valid").value || 0)
+      };
+    }
+
+    function fillForm(r) {
+      el("id").value = r?.id || "";
+      el("name").value = r?.name || "";
+      el("tax_id").value = r?.tax_id || "";
+      el("vat_id").value = r?.vat_id || "";
+      el("country_code").value = r?.country_code || "ES";
+      el("email").value = r?.email || "";
+      el("address").value = r?.address || "";
+      el("city").value = r?.city || "";
+      el("postal").value = r?.postal || "";
+      el("vies_valid").value = String(r?.vies_valid || 0);
+    }
+
+    async function load() {
+      const rows = await api("/customers");
+      const tb = el("rows");
+      tb.innerHTML = "";
+      rows.forEach(r => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${r.id}</td><td>${r.name}</td><td>${r.country_code}</td><td>${r.email||""}</td><td>${r.vat_id||""}</td><td>${r.vies_valid ? "Sí":"No"}</td>`;
+        tr.onclick = () => fillForm(r);
+        tb.appendChild(tr);
+      });
+    }
+
+    el("reload").onclick = () => load().catch(e => s.textContent = e.message);
+    el("clear").onclick = () => fillForm(null);
+    el("save").onclick = async () => {
+      s.textContent = "...";
+      try {
+        const body = formBody();
+        if (!body.name) throw new Error("Nombre requerido");
+        const id = el("id").value;
+        if (id) await api(`/customers/${id}`, { method: "PUT", body });
+        else await api("/customers", { method: "POST", body });
+        s.textContent = "OK";
+        await load();
+        fillForm(null);
+      } catch (e) { s.textContent = e.message; }
+    };
+
+    fillForm(null);
+    load().catch(e => s.textContent = e.message);
+  </script>
+</body>
+</html>
+

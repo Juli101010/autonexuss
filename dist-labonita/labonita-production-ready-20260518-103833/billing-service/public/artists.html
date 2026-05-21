@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Artistas</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <div class="card">
+    <p><a href="/admin.html">← Volver</a></p>
+    <h2>Artistas</h2>
+
+    <div class="grid">
+      <div>
+        <h3>Crear / editar</h3>
+        <input type="hidden" id="id"/>
+        <div><label>Nombre legal</label><input id="name"/></div>
+        <div><label>Nombre artístico</label><input id="stage_name" placeholder="opcional"/></div>
+        <div class="grid">
+          <div><label>NIF</label><input id="tax_id" placeholder="opcional"/></div>
+          <div><label>IBAN</label><input id="iban" placeholder="opcional"/></div>
+        </div>
+        <div class="grid">
+          <div>
+            <label>Socio</label>
+            <select id="is_member"><option value="0">No</option><option value="1">Sí</option></select>
+          </div>
+          <div>
+            <label>IRPF default (%)</label>
+            <input id="default_irpf_rate" placeholder="vacío = auto"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <button id="save">Guardar</button>
+          <button id="clear">Limpiar</button>
+          <span id="s" class="muted"></span>
+        </div>
+      </div>
+
+      <div>
+        <h3>Listado</h3>
+        <button id="reload">Actualizar</button>
+        <table class="table" style="margin-top:10px;">
+          <thead><tr><th>ID</th><th>Artístico</th><th>Nombre</th><th>Socio</th><th>IRPF</th><th>IBAN</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p class="muted">Click en una fila para editar.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { api } from "./app.js";
+    const s = document.getElementById("s");
+    const el = (id) => document.getElementById(id);
+
+    function body() {
+      const ir = el("default_irpf_rate").value.trim();
+      return {
+        name: el("name").value.trim(),
+        stage_name: el("stage_name").value.trim() || null,
+        tax_id: el("tax_id").value.trim() || null,
+        iban: el("iban").value.trim() || null,
+        is_member: Number(el("is_member").value || 0),
+        default_irpf_rate: ir === "" ? null : Number(ir),
+        country_code: "ES"
+      };
+    }
+
+    function fill(r) {
+      el("id").value = r?.id || "";
+      el("name").value = r?.name || "";
+      el("stage_name").value = r?.stage_name || "";
+      el("tax_id").value = r?.tax_id || "";
+      el("iban").value = r?.iban || "";
+      el("is_member").value = String(r?.is_member || 0);
+      el("default_irpf_rate").value = (r?.default_irpf_rate === null || r?.default_irpf_rate === undefined) ? "" : String(r.default_irpf_rate);
+    }
+
+    async function load() {
+      const rows = await api("/artists");
+      const tb = el("rows");
+      tb.innerHTML = "";
+      rows.forEach(r => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${r.id}</td><td>${r.stage_name||""}</td><td>${r.name}</td><td>${r.is_member?"Sí":"No"}</td><td>${r.default_irpf_rate ?? ""}</td><td>${r.iban||""}</td>`;
+        tr.onclick = () => fill(r);
+        tb.appendChild(tr);
+      });
+    }
+
+    el("reload").onclick = () => load().catch(e => s.textContent = e.message);
+    el("clear").onclick = () => fill(null);
+    el("save").onclick = async () => {
+      s.textContent = "...";
+      try {
+        const b = body();
+        if (!b.name) throw new Error("Nombre requerido");
+        const id = el("id").value;
+        if (id) await api(`/artists/${id}`, { method: "PUT", body: b });
+        else await api("/artists", { method: "POST", body: b });
+        s.textContent = "OK";
+        await load();
+        fill(null);
+      } catch (e) { s.textContent = e.message; }
+    };
+
+    fill(null);
+    load().catch(e => s.textContent = e.message);
+  </script>
+</body>
+</html>

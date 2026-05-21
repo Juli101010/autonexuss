@@ -1,0 +1,4051 @@
+{
+  "created_at": "2026-05-19T05:30:18.475Z",
+  "environment": {
+    "env_file": "C:\\Users\\Julian\\AppData\\Local\\Temp\\delsol_ns006_442bccea5d88452abb945a823257aaa0.env",
+    "login_url": "https://api.sdelsol.com/login/Autenticar",
+    "admin_url": "https://api.sdelsol.com/admin",
+    "ejercicio": "2026",
+    "has_codigo_fabricante": true,
+    "has_codigo_cliente": true,
+    "has_base_datos": true,
+    "has_password": true
+  },
+  "results": [
+    {
+      "label": "all_tables_count",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": [
+        {
+          "total": 71
+        }
+      ]
+    },
+    {
+      "label": "filtered_tables_information_schema",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": [
+        {
+          "TABLE_NAME": "F_CON"
+        },
+        {
+          "TABLE_NAME": "F_EMP"
+        },
+        {
+          "TABLE_NAME": "F_NOM"
+        },
+        {
+          "TABLE_NAME": "F_TRA"
+        }
+      ]
+    },
+    {
+      "label": "filtered_tables_sysobjects",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": [
+        {
+          "name": "F_CON"
+        },
+        {
+          "name": "F_EMP"
+        },
+        {
+          "name": "F_NOM"
+        },
+        {
+          "name": "F_TRA"
+        }
+      ]
+    },
+    {
+      "label": "filtered_columns_information_schema",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": [
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CODCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 1
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TRACON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 2
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CCFCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 3
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FFOCON",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 4
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FPRCON",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 5
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FINCON",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 6
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FFICON",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 7
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "NFOCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 8
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "DISCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 9
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "OCUCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 10
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "OFECON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 11
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PEMCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 12
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "OLECON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 13
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TCRCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 14
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "NOMCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 15
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "AP1CON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 16
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "AP2CON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 17
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ETNCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 18
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ETRCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 19
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ETPCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 20
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ETECON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 21
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TJPCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 22
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HJPCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 23
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "NHCCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 24
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FTECON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 25
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "NHFCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 26
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CEFCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 27
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ETCCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 28
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PJUCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 29
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TFDCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 30
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PNFCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 31
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CBOCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 32
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "AUTCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 33
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "LCICON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 34
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "COFCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 35
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TEMCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 36
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TTRCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 37
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "IFOCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 38
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CLOCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 39
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ACTCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 40
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "EJECON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 41
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "INTCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 42
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TACCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 43
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PDFCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 44
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CTACON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 45
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CBDCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 46
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CBECON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 47
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "EIICON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 48
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "EIDCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 49
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ESMCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 50
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TMBCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 51
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CAMCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 52
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CCOCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 53
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ULICON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 54
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CEICON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 55
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CEACON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 56
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CBFCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 57
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CBTCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 58
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PEGCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 59
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HCOCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 60
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PPDCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 61
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "IFDCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 62
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HFDCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 63
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "IFPCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 64
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HFPCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 65
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "COTCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 66
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CI7CON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 67
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "SUBCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 68
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ESTCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 69
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TSUCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 70
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CSUCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 71
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ICBCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 72
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CORCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 73
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TJOCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 74
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "NDSCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 75
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FRECON",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 76
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ERECON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 77
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PRECON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 78
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CRECON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 79
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PFECON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 80
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HJMCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 81
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CPRCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 82
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "OJOCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 83
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HSMCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 84
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HSHCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 85
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HSECON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 86
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HPHPCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 87
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HIHPCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 88
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HPHNCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 89
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HIHNCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 90
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "AEMCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 91
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "AECCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 92
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "EAUCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 93
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PCACON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 94
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CAECON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 95
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "IDICON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 96
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FILCON",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 97
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FFLCON",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 98
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CLACON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 99
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "RLECON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 100
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CRDCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 101
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "MTRCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 102
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TVFCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 103
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FDECON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 104
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "GJUCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 105
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ETCCCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 106
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "MCOCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 107
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ETACON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 108
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "IBOCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 109
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "LLACON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 110
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TPTCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 111
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "ITUCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 112
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HTUCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 113
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FCUCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 114
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PERCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 115
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TCHCON",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 116
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TCICON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 117
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TCBCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 118
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PDFPCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 119
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PRUCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 120
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "NCDCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 121
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "OMICON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 122
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CATCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 123
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "TRLCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 124
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "CASCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 125
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HCTCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 126
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "HCPCON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 127
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FOACON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 128
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PPLCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 129
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "AJUCON",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 130
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PJ2CON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 131
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PJ3CON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 132
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "FPDCON",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 133
+        },
+        {
+          "TABLE_NAME": "F_CON",
+          "COLUMN_NAME": "PJ4CON",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 134
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "CODEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 1
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "NIFEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 2
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "DENEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 3
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "NOMEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 4
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "SIGEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 5
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "DOMEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 6
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "NUMEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 7
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ESCEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 8
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "PISEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 9
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "PRTEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 10
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "POBEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 11
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "MUNEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 12
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "CPOEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 13
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "PROEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 14
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TELEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 15
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "FAXEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 16
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJEEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 17
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "CLAEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 18
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "REGEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 19
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TOMEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 20
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "FOLEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 21
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "HOJEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 22
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "INSEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 23
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EMAEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 24
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "WEBEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 25
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "MOVEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 26
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ECOEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 27
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EADEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 28
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ECBEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 29
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AGESEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 30
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AGETEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 31
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ACONEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 32
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ACOTEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 33
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ALABEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 34
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ATPVEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 35
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AC1EMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 36
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AC2EMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 37
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AC3EMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 38
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "FJUEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 39
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "PCOEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 40
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJEGEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 41
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJECEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 42
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJELEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 43
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJETEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 44
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "UVDEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 45
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EBAEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 46
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TRAEMP",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 47
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TVEEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 48
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TVCEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 49
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ACCEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 50
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "CODNOM",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 1
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "FECNOM",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 2
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TRANOM",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 3
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TIPNOM",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 4
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "MESNOM",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 5
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "LDENOM",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 6
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "LHANOM",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 7
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "LDVNOM",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 8
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TDENOM",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 9
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TDDNOM",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 10
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TOTNOM",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 11
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "EMBNOM",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 12
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "COPNOM",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 13
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TRSNOM",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 14
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "FCANOM",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 15
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TFANOM",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 16
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TCNNOM",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 17
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TCANOM",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 18
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TCENOM",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 19
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TGCNOM",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 20
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "TCONOM",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 21
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "ANANOM",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 22
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "PJRNOM",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 23
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "NHONOM",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 24
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "NHCNOM",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 25
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "BFPNOM",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 26
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "ITRNOM",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 27
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "ANJRNOM",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 28
+        },
+        {
+          "TABLE_NAME": "F_NOM",
+          "COLUMN_NAME": "EMANOM",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 29
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CODTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 1
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DNITRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 2
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NSSTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 3
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NOCTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 4
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NOMTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 5
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "AP1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 6
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "AP2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 7
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TC2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 8
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "SIGTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 9
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DOMTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 10
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NUMTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 11
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BLQTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 12
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ESCTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 13
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PISTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 14
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PRTTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 15
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CPOTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 16
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MUNTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 17
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PROTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 18
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CAUTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 19
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PAITRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 20
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PTETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 21
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TELTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 22
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MOVTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 23
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "OTFTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 24
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EMATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 25
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FNATRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 26
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NPATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 27
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NMATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 28
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "SEXTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 29
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ECITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 30
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FOTTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 31
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "OBSTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 32
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DTATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 33
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CENTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 34
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FALTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 35
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FBATRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 36
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FANTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 37
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "COLTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 38
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CNVTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 39
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CATTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 40
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "GCOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 41
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "COCTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 42
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "COPTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 43
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FCOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 44
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CHDTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 45
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CHITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 46
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH1TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 47
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH2TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 48
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH3TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 49
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH4TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 50
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH5TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 51
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH6TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 52
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH7TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 53
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD1TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 54
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD2TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 55
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD3TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 56
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD4TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 57
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD5TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 58
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD6TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 59
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD7TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 60
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FP1TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 61
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FB1TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 62
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BA1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 63
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EN1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 64
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "OF1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 65
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DC1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 66
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NC1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 67
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "U2FTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 68
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FP2TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 69
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FB2TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 70
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BA2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 71
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EN2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 72
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "OF2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 73
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DC2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 74
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NC2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 75
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RSFATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 76
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RNCOTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 77
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RSLATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 78
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTCOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 79
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMINTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 80
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RAMRTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 81
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRCMTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 82
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMGETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 83
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RPACTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 84
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RPPVTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 85
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTOTTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 86
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RIRRTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 87
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RGDETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 88
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RPCOTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 89
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRNETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 90
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRCGTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 91
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRPATRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 92
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRMGTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 93
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRDITRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 94
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRNRTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 95
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RSMRTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 96
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMPETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 97
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMDETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 98
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMASTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 99
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMDITRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 100
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTBATRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 101
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTAHTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 102
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTIATRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 103
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTTRTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 104
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ESTTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 105
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PJOTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 106
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "HJOTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 107
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "SBOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 108
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FIBTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 109
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMFITRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 110
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMFFTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 111
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ITETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 112
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IEMTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 113
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IBRMTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 114
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TRJTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 115
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MPPVTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 116
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMTOTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 117
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IRCATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 118
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IRRATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 119
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IRRUTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 120
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CBATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 121
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RGLTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 122
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CINTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 123
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ICDTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 124
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DIATRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 125
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MMITRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 126
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TINTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 127
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "VFATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 128
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "GMITRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 129
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CDETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 130
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BDINTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 131
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BDPITRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 132
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BDPPTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 133
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FCVTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 134
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IEPTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 135
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CIETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 136
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MNOTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 137
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DEPTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 138
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RIRRBTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 139
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NPVTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 140
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IDITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 141
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NDVTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 142
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ESMTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 143
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ANJRTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 144
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ANCDTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 145
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CECTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 146
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CRGLTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 147
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "INATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 148
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ESUTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 149
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IITETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 150
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EMAFTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 151
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EMESTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 152
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CHHTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 153
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "N190TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 154
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TDVTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 155
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "HBOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 156
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RDRETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 157
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRPVTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 158
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BCMTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 159
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRCETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 160
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTRNTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 161
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ACUITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 162
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CALTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 163
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CDOTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 164
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CUETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 165
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IB1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 166
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BI1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 167
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IB2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 168
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BI2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 169
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BFITRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 170
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BFFTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 171
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BDHTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 172
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DSPTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 173
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FSPTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 174
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "REGTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 175
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "AUCTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 176
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "JPBTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 177
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IPVTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 178
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CBMTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 179
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "VRMTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 180
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FPTTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 181
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "VNITRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 182
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CLATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 183
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "SCLTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 184
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IMETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 185
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CIIETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 186
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PIMTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 187
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PTDTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 188
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PTCTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 189
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TTETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 190
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PIITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 191
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FUMTRA",
+          "DATA_TYPE": "datetime",
+          "ORDINAL_POSITION": 192
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ANCTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 193
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CSTTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 194
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MEITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 195
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EXTTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 196
+        }
+      ]
+    },
+    {
+      "label": "f_emp_columns",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": [
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "CODEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 1
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "NIFEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 2
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "DENEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 3
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "NOMEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 4
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "SIGEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 5
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "DOMEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 6
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "NUMEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 7
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ESCEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 8
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "PISEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 9
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "PRTEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 10
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "POBEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 11
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "MUNEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 12
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "CPOEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 13
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "PROEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 14
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TELEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 15
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "FAXEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 16
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJEEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 17
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "CLAEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 18
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "REGEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 19
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TOMEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 20
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "FOLEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 21
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "HOJEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 22
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "INSEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 23
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EMAEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 24
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "WEBEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 25
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "MOVEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 26
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ECOEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 27
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EADEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 28
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ECBEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 29
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AGESEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 30
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AGETEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 31
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ACONEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 32
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ACOTEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 33
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ALABEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 34
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ATPVEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 35
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AC1EMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 36
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AC2EMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 37
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "AC3EMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 38
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "FJUEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 39
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "PCOEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 40
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJEGEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 41
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJECEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 42
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJELEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 43
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EJETEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 44
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "UVDEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 45
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "EBAEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 46
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TRAEMP",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 47
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TVEEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 48
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "TVCEMP",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 49
+        },
+        {
+          "TABLE_NAME": "F_EMP",
+          "COLUMN_NAME": "ACCEMP",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 50
+        }
+      ]
+    },
+    {
+      "label": "f_tra_columns",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": [
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CODTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 1
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DNITRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 2
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NSSTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 3
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NOCTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 4
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NOMTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 5
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "AP1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 6
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "AP2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 7
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TC2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 8
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "SIGTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 9
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DOMTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 10
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NUMTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 11
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BLQTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 12
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ESCTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 13
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PISTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 14
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PRTTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 15
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CPOTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 16
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MUNTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 17
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PROTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 18
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CAUTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 19
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PAITRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 20
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PTETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 21
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TELTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 22
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MOVTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 23
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "OTFTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 24
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EMATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 25
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FNATRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 26
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NPATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 27
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NMATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 28
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "SEXTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 29
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ECITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 30
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FOTTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 31
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "OBSTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 32
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DTATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 33
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CENTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 34
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FALTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 35
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FBATRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 36
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FANTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 37
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "COLTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 38
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CNVTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 39
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CATTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 40
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "GCOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 41
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "COCTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 42
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "COPTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 43
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FCOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 44
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CHDTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 45
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CHITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 46
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH1TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 47
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH2TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 48
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH3TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 49
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH4TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 50
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH5TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 51
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH6TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 52
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CH7TRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 53
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD1TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 54
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD2TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 55
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD3TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 56
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD4TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 57
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD5TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 58
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD6TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 59
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CD7TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 60
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FP1TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 61
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FB1TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 62
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BA1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 63
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EN1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 64
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "OF1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 65
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DC1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 66
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NC1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 67
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "U2FTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 68
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FP2TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 69
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FB2TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 70
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BA2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 71
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EN2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 72
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "OF2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 73
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DC2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 74
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NC2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 75
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RSFATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 76
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RNCOTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 77
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RSLATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 78
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTCOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 79
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMINTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 80
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RAMRTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 81
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRCMTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 82
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMGETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 83
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RPACTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 84
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RPPVTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 85
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTOTTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 86
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RIRRTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 87
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RGDETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 88
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RPCOTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 89
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRNETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 90
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRCGTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 91
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRPATRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 92
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRMGTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 93
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRDITRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 94
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRNRTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 95
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RSMRTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 96
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMPETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 97
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMDETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 98
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMASTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 99
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMDITRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 100
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTBATRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 101
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTAHTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 102
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTIATRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 103
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTTRTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 104
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ESTTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 105
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PJOTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 106
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "HJOTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 107
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "SBOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 108
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FIBTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 109
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMFITRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 110
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMFFTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 111
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ITETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 112
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IEMTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 113
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IBRMTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 114
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TRJTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 115
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MPPVTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 116
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RMTOTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 117
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IRCATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 118
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IRRATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 119
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IRRUTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 120
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CBATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 121
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RGLTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 122
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CINTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 123
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ICDTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 124
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DIATRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 125
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MMITRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 126
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TINTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 127
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "VFATRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 128
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "GMITRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 129
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CDETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 130
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BDINTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 131
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BDPITRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 132
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BDPPTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 133
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FCVTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 134
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IEPTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 135
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CIETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 136
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MNOTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 137
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DEPTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 138
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RIRRBTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 139
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NPVTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 140
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IDITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 141
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "NDVTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 142
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ESMTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 143
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ANJRTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 144
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ANCDTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 145
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CECTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 146
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CRGLTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 147
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "INATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 148
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ESUTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 149
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IITETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 150
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EMAFTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 151
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EMESTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 152
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CHHTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 153
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "N190TRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 154
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TDVTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 155
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "HBOTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 156
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RDRETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 157
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRPVTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 158
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BCMTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 159
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RRCETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 160
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "RTRNTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 161
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ACUITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 162
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CALTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 163
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CDOTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 164
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CUETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 165
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IB1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 166
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BI1TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 167
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IB2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 168
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BI2TRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 169
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BFITRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 170
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BFFTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 171
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "BDHTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 172
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "DSPTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 173
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FSPTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 174
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "REGTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 175
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "AUCTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 176
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "JPBTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 177
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IPVTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 178
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CBMTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 179
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "VRMTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 180
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FPTTRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 181
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "VNITRA",
+          "DATA_TYPE": "date",
+          "ORDINAL_POSITION": 182
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CLATRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 183
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "SCLTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 184
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "IMETRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 185
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CIIETRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 186
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PIMTRA",
+          "DATA_TYPE": "decimal",
+          "ORDINAL_POSITION": 187
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PTDTRA",
+          "DATA_TYPE": "bigint",
+          "ORDINAL_POSITION": 188
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PTCTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 189
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "TTETRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 190
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "PIITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 191
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "FUMTRA",
+          "DATA_TYPE": "datetime",
+          "ORDINAL_POSITION": 192
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "ANCTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 193
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "CSTTRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 194
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "MEITRA",
+          "DATA_TYPE": "int",
+          "ORDINAL_POSITION": 195
+        },
+        {
+          "TABLE_NAME": "F_TRA",
+          "COLUMN_NAME": "EXTTRA",
+          "DATA_TYPE": "varchar",
+          "ORDINAL_POSITION": 196
+        }
+      ]
+    },
+    {
+      "label": "nominas_columns",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": []
+    },
+    {
+      "label": "trabajadores_columns",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": []
+    },
+    {
+      "label": "counts_known_candidates",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": [
+        {
+          "F_EMP": 1,
+          "F_TRA": 1448
+        }
+      ]
+    },
+    {
+      "label": "count_nominas_if_exists",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": []
+    },
+    {
+      "label": "count_trabajadores_if_exists",
+      "ok": true,
+      "respuesta": "OK",
+      "rows": []
+    }
+  ],
+  "conclusion": "La base consultada expone tablas candidatas laborales/Nominasol. Se puede preparar un segundo paso con pruebas de lectura por entidad y mapeo campo a campo antes de escribir.",
+  "next_step": "Elegir una tabla candidata de trabajadores/nominas, validar claves primarias por lectura y pedir confirmación antes de cualquier EscribirRegistro."
+}

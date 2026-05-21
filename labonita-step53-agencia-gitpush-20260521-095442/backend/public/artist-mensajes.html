@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artista - Mensajes</title>
+  <link rel="stylesheet" href="/css/app.css" />
+  <style>
+    body { margin: 0; background: #f6f6f6; color: #1f1f1f; font-family: Inter, system-ui, Arial, sans-serif; }
+    .page { max-width: 1240px; margin: 0 auto; padding: 20px; }
+    .panel { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 14px; }
+    .layout { display: grid; grid-template-columns: minmax(320px, 360px) 1fr; gap: 14px; }
+    .item { border: 1px solid #e6e6e6; border-radius: 10px; padding: 10px; margin-bottom: 8px; cursor: pointer; }
+    .item:hover { background: #fafafa; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .toolbar a, .toolbar button {
+      border: 1px solid #d8d8d8; background: #fff; color: #222; border-radius: 10px;
+      padding: 8px 12px; text-decoration: none; cursor: pointer; font: inherit;
+    }
+    .muted { color: #666; }
+    textarea {
+      width: 100%;
+      min-height: 96px;
+      border: 1px solid #d8d8d8;
+      border-radius: 8px;
+      padding: 10px;
+      box-sizing: border-box;
+      resize: vertical;
+      font: inherit;
+    }
+    .footer {
+      margin-top: 16px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .brand-bar { display: flex; align-items: center; gap: 10px; }
+    .brand-logo { width: 42px; height: auto; }
+    @media (max-width: 1024px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="panel" style="margin-bottom:14px;">
+      <h1 style="margin-top:0;">Artista - Mensajes por peticion</h1>
+      <div class="toolbar">
+        <a href="/artist.html">Volver</a>
+        <button id="logoutBtn" type="button">Salir</button>
+      </div>
+    </section>
+
+    <section class="layout">
+      <article class="panel">
+        <h2 style="margin-top:0;">Mis peticiones</h2>
+        <button id="reloadBtn" type="button">Actualizar</button>
+        <div id="petitions" style="margin-top:12px;">Cargando...</div>
+      </article>
+
+      <article class="panel">
+        <h2 style="margin-top:0;">Thread</h2>
+        <div id="thread" class="muted">Selecciona una peticion.</div>
+        <div id="composer" style="display:none; margin-top:12px;">
+          <textarea id="body" placeholder="Escribe un mensaje a administracion..."></textarea>
+          <div class="toolbar" style="margin-bottom:0;">
+            <button id="sendBtn" type="button">Enviar</button>
+            <span id="status" class="muted"></span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="footer">
+      <div class="brand-bar">
+        <img class="brand-logo" src="/img/labonita-logo.png" alt="LaBonita" />
+        <div>
+          <strong>LaBonita</strong><br />
+          <small>&copy; 2026 LaBonita. Todos los derechos reservados.</small>
+        </div>
+      </div>
+      <small>Sistema desarrollado por <strong>JLJO Studio</strong> (Julian Orellano).</small>
+    </section>
+  </main>
+  <script type="module" src="/js/artist-mensajes.js"></script>
+</body>
+</html>

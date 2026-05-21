@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Emails outbox</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <div class="card">
+    <p><a href="/admin.html">← Volver</a></p>
+    <h2>Emails outbox</h2>
+    <button id="reload">Actualizar</button>
+    <span id="s" class="muted"></span>
+
+    <table class="table" style="margin-top:10px;">
+      <thead><tr><th>ID</th><th>To</th><th>Subject</th><th>Status</th><th>Factura</th><th></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <div id="preview" class="muted" style="margin-top:12px;">Seleccioná un email.</div>
+  </div>
+
+  <script type="module">
+    import { api } from "./app.js";
+    const s = document.getElementById("s");
+    const rowsEl = document.getElementById("rows");
+    const preview = document.getElementById("preview");
+
+    async function load() {
+      const rows = await api("/emails");
+      rowsEl.innerHTML = "";
+      preview.textContent = "Seleccioná un email.";
+      rows.forEach(r => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${r.id}</td>
+          <td>${r.to_email}</td>
+          <td>${r.subject}</td>
+          <td>${r.status}</td>
+          <td>${r.related_invoice_id || ""}</td>
+          <td>${r.status === "PENDING" ? `<button>Marcar SENT</button>` : ""}</td>
+        `;
+        tr.onclick = () => {
+          preview.innerHTML = `<h3>Preview</h3><div><b>${r.subject}</b></div><pre style="white-space:pre-wrap;">${r.body}</pre>`;
+        };
+        const btn = tr.querySelector("button");
+        if (btn) btn.onclick = async (ev) => {
+          ev.stopPropagation();
+          await api(`/emails/${r.id}/mark-sent`, { method: "POST" });
+          await load();
+        };
+        rowsEl.appendChild(tr);
+      });
+    }
+
+    document.getElementById("reload").onclick = () => load().catch(e => s.textContent = e.message);
+    load().catch(e => s.textContent = e.message);
+  </script>
+</body>
+</html>

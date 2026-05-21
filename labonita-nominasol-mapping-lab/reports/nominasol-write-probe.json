@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-05-19T10:59:53.846Z",
+  "base_alias": ".env.ns006.local",
+  "tables": [
+    {
+      "table": "F_TRA",
+      "select_ok": true,
+      "update_ok": true,
+      "key": {
+        "CODTRA": 50006
+      },
+      "sample": {
+        "CODTRA": 50006,
+        "NOMTRA": "<redacted>",
+        "AP1TRA": "<redacted>",
+        "AP2TRA": "<redacted>",
+        "__table": "F_TRA"
+      },
+      "update_response": {
+        "respuesta": "OK",
+        "resultado": null
+      },
+      "error": null
+    },
+    {
+      "table": "F_CON",
+      "select_ok": true,
+      "update_ok": true,
+      "key": {
+        "CODCON": 456
+      },
+      "sample": {
+        "CODCON": 456,
+        "TRACON": 35,
+        "NOMCON": "<redacted>",
+        "AP1CON": "<redacted>",
+        "__table": "F_CON"
+      },
+      "update_response": {
+        "respuesta": "OK",
+        "resultado": null
+      },
+      "error": null
+    },
+    {
+      "table": "F_NOM",
+      "select_ok": false,
+      "update_ok": false,
+      "key": null,
+      "sample": null,
+      "update_response": null,
+      "error": {
+        "message": "F_NOM sin filas para prueba controlada",
+        "status": null,
+        "respuesta": null,
+        "resultado": null
+      }
+    }
+  ],
+  "conclusion": "Escritura parcial confirmada. Se requiere ajuste por tabla antes de activar integración completa."
+}

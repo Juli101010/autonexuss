@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Peticiones (Artista)</title>
+  <link rel="stylesheet" href="/css/app.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div style="max-width:1200px; margin:0 auto; padding:18px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
+      <div>
+        <h2 style="margin:0;">Peticiones</h2>
+        <div class="small" id="who">—</div>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="btn btn-primary" id="btnNew" type="button"><i class="fa-solid fa-plus"></i> Nueva</button>
+        <button class="btn" id="btnReload" type="button"><i class="fa-solid fa-rotate"></i> Refrescar</button>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:14px;">
+      <div class="card" style="padding:12px; overflow:auto; max-height:75vh;">
+        <input id="q" class="btn" placeholder="Buscar..." style="width:100%; margin-bottom:10px;" />
+        <div id="list">—</div>
+      </div>
+
+      <div class="card" style="padding:12px; overflow:auto; max-height:75vh;">
+        <div id="detail" class="small">Seleccioná una petición.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-actions" id="stickyActions" style="display:none;">
+    <button class="btn" id="btnSaveSticky" type="button"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+    <button class="btn btn-primary" id="btnSendSticky" type="button"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+  </div>
+
+  <script type="module" src="/js/artist-peticiones.js"></script>
+<div class="footer">
+  <div class="brand-bar"><img class="brand-logo" src="/img/labonita-logo.png" alt="LaBonita" /><div><strong>LaBonita</strong><br/><small>© 2026 LaBonita. Todos los derechos reservados.</small></div></div>
+  <small>Sistema desarrollado por <strong>JLJO Studio</strong> (Julián Orellano).</small>
+</div>
+</body>
+</html>

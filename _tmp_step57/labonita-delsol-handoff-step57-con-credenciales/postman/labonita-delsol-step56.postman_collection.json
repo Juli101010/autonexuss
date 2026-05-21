@@ -1,0 +1,60 @@
+{
+  "info": {
+    "name": "La Bonita · DELSOL STEP56",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "login_url", "value": "https://api.sdelsol.com/login/Autenticar" },
+    { "key": "admin_url", "value": "https://api.sdelsol.com/admin" },
+    { "key": "ejercicio", "value": "2026" },
+    { "key": "codigoFabricante", "value": "" },
+    { "key": "codigoCliente", "value": "" },
+    { "key": "baseDatosCliente", "value": "FS006" },
+    { "key": "passwordBase64", "value": "" },
+    { "key": "token", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "01 Autenticar",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{login_url}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"codigoFabricante\": \"{{codigoFabricante}}\",\n  \"codigoCliente\": \"{{codigoCliente}}\",\n  \"baseDatosCliente\": \"{{baseDatosCliente}}\",\n  \"password\": \"{{passwordBase64}}\"\n}"
+        }
+      }
+    },
+    {
+      "name": "02 Ultima factura",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": "{{admin_url}}/LanzarConsulta",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ejercicio\": \"{{ejercicio}}\",\n  \"consulta\": \"SELECT MAX(CODFAC) AS ultimaFactura FROM F_FAC WHERE TIPFAC = '1'\"\n}"
+        }
+      }
+    },
+    {
+      "name": "03 Leer factura 207 cabecera",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": "{{admin_url}}/LanzarConsulta",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ejercicio\": \"{{ejercicio}}\",\n  \"consulta\": \"SELECT TIPFAC, CODFAC, REFFAC, FECFAC, CLIFAC, CNOFAC, CNIFAC, NET1FAC, BAS1FAC, PIVA1FAC, IIVA1FAC, TOTFAC, ESTFAC, EDRFAC FROM F_FAC WHERE TIPFAC = '1' AND CODFAC = 207\"\n}"
+        }
+      }
+    }
+  ]
+}
